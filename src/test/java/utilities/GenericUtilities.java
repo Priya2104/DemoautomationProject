@@ -30,6 +30,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import factory.BaseClass;
 
@@ -215,6 +217,24 @@ public class GenericUtilities {
 
 		}
 
+	}
+	
+	public void  fnScreenResolutionExample() {
+		 
+	    
+	        // Get the default toolkit
+	        Toolkit toolkit = Toolkit.getDefaultToolkit();
+	 
+	        // Get the screen size from the toolkit
+	        Dimension screenSize = toolkit.getScreenSize();
+	 
+	        // Extract width and height
+	        int screenWidth = (int) screenSize.getWidth();
+	        int screenHeight = (int) screenSize.getHeight();
+	 
+	        // Print the screen resolution
+	        System.out.println("Screen Resolution: " + screenWidth + "x" + screenHeight);
+	    
 	}
 
 	public void doubleclickOnWebElement(WebElement clickableElement) {

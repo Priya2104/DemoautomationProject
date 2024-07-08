@@ -263,6 +263,8 @@ public class SystemAndReferenceMasterPage extends BasePage {
     public void clickOnMasterLogMaster() throws InterruptedException
     {
     	//Thread.sleep(60);
+    	
+    	utils.fnScreenResolutionExample();
 
     	//utils.waitForElementclickable(Duration.ofSeconds(60), systemandref);
     	//utils.clickOnWebElement(systemandref);
@@ -377,7 +379,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
     public void ClickOnLanguageMaster() throws IncorrectXpathException, InterruptedException
     {
        	Thread.sleep(5000);
-    	utils.waitForElementclickable(Duration.ofSeconds(120),languageMaster);
+    	//utils.waitForElementclickable(Duration.ofSeconds(120),languageMaster);
     	utils.clickOnWebElement(languageMaster);
     	
          String strPageHeader=utils.getText(pageHeader).trim().toLowerCase();
