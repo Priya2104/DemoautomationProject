@@ -1,0 +1,629 @@
+16:37:54.712 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+16:37:54.728 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+16:37:54.728 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+16:37:54.728 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+16:37:54.744 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+16:37:54.744 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+16:37:54.808 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+16:37:54.810 [main] TRACE - Resolving type for handle themefd26doctype
+16:37:54.870 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+16:37:54.889 [main] TRACE - Resolving type for handle ctstylesheet4257type
+16:37:54.889 [main] TRACE - Resolving type for handle ctfonts6623type
+16:37:54.889 [main] TRACE - Resolving type for handle ctfont14d8type
+16:37:54.902 [main] TRACE - Resolving type for handle ctfills2c6ftype
+16:37:54.902 [main] TRACE - Resolving type for handle ctfill550ctype
+16:37:54.902 [main] TRACE - Resolving type for handle ctborders0d66type
+16:37:54.902 [main] TRACE - Resolving type for handle ctborderf935type
+16:37:54.918 [main] TRACE - Resolving type for handle ctcellxfs1322type
+16:37:54.918 [main] TRACE - Resolving type for handle ctxf97f7type
+16:37:54.918 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+16:37:54.918 [main] TRACE - Resolving type for handle ctdxfsb26atype
+16:37:54.918 [main] TRACE - Resolving type for handle sstf81fdoctype
+16:37:54.934 [main] TRACE - Resolving type for handle ctsst44f3type
+16:37:54.934 [main] TRACE - Resolving type for handle ctrsta472type
+16:37:54.965 [main] TRACE - Resolving type for handle ctdrawing2748type
+16:37:54.965 [main] TRACE - Resolving type for handle workbookec17doctype
+16:37:54.981 [main] TRACE - Resolving type for handle ctworkbook83c3type
+16:37:54.981 [main] TRACE - Resolving type for handle ctsheets49fdtype
+16:37:54.981 [main] TRACE - Resolving type for handle ctsheet4dbetype
+16:37:54.981 [main] TRACE - Resolving type for handle strelationshipid1e94type
+16:37:54.996 [main] TRACE - Resolving type for handle worksheetf539doctype
+16:37:55.027 [main] TRACE - Resolving type for handle ctworksheet530dtype
+16:37:55.038 [main] TRACE - Resolving type for handle ctsheetdata8408type
+16:37:55.041 [main] TRACE - Resolving type for handle ctrowdd39type
+16:37:55.047 [main] TRACE - Resolving type for handle ctcell842btype
+16:37:55.058 [main] TRACE - Resolving type for handle stcellrefe4e0type
+16:37:55.072 [main] TRACE - Resolving type for handle ctcols627ctype
+16:37:55.079 [main] TRACE - Resolving type for handle ctcola95ftype
+16:37:55.154 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+16:37:55.161 [main] TRACE - Resolving type for handle ctbookviewsb864type
+16:37:55.161 [main] TRACE - Resolving type for handle ctbookviewf677type
+16:37:55.169 [main] TRACE - Resolving type for handle stcelltypebf95type
+16:37:55.169 [main] TRACE - Resolving type for handle stxstringf179type
+16:38:09.030 [main] INFO  - element is present
+16:38:09.553 [main] ERROR - SanityGroupName31032024163808  is entered
+16:38:09.553 [main] ERROR - SanityGroupName31032024163808  is not entered
+16:38:09.554 [main] INFO  - entered Group name
+16:38:09.554 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+16:38:09.554 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+16:38:09.554 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+16:38:09.554 [main] DEBUG - Parsing relationship: /_rels/.rels
+16:38:14.941 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+16:38:14.941 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+16:38:14.956 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+16:38:14.956 [main] DEBUG - Parsing relationship: /_rels/.rels
+21:54:37.133 [main] INFO  - Goto my Merx Application-->Click on Login.
+21:54:37.162 [main] INFO  - Entering email and password.. 
+21:54:37.316 [main] INFO  - Entering user IDjohndoe@test.com
+21:54:40.486 [main] INFO  - clicked on Sign in button...
+21:54:46.218 [main] INFO  - The user has landing to the Merchandise page
+21:54:56.421 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+21:54:57.684 [main] INFO  - Click on group Tab.
+21:54:57.863 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:54:57.863 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:54:57.863 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+21:54:57.863 [main] DEBUG - Parsing relationship: /_rels/.rels
+21:54:58.098 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+21:54:58.113 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+21:54:58.113 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+21:54:58.113 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+21:54:58.113 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+21:54:58.113 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+21:54:58.145 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+21:54:58.145 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+21:54:58.145 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+21:54:58.145 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+21:54:58.145 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+21:54:58.160 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+21:54:58.160 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+21:54:58.160 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+21:54:58.223 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+21:54:58.239 [main] TRACE - Resolving type for handle themefd26doctype
+21:54:58.317 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+21:54:58.317 [main] TRACE - Resolving type for handle ctstylesheet4257type
+21:54:58.317 [main] TRACE - Resolving type for handle ctfonts6623type
+21:54:58.333 [main] TRACE - Resolving type for handle ctfont14d8type
+21:54:58.333 [main] TRACE - Resolving type for handle ctfills2c6ftype
+21:54:58.350 [main] TRACE - Resolving type for handle ctfill550ctype
+21:54:58.350 [main] TRACE - Resolving type for handle ctborders0d66type
+21:54:58.350 [main] TRACE - Resolving type for handle ctborderf935type
+21:54:58.365 [main] TRACE - Resolving type for handle ctcellxfs1322type
+21:54:58.365 [main] TRACE - Resolving type for handle ctxf97f7type
+21:54:58.365 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+21:54:58.381 [main] TRACE - Resolving type for handle ctdxfsb26atype
+21:54:58.383 [main] TRACE - Resolving type for handle sstf81fdoctype
+21:54:58.397 [main] TRACE - Resolving type for handle ctsst44f3type
+21:54:58.413 [main] TRACE - Resolving type for handle ctrsta472type
+21:54:58.428 [main] TRACE - Resolving type for handle ctdrawing2748type
+21:54:58.445 [main] TRACE - Resolving type for handle workbookec17doctype
+21:54:58.445 [main] TRACE - Resolving type for handle ctworkbook83c3type
+21:54:58.460 [main] TRACE - Resolving type for handle ctsheets49fdtype
+21:54:58.460 [main] TRACE - Resolving type for handle ctsheet4dbetype
+21:54:58.460 [main] TRACE - Resolving type for handle strelationshipid1e94type
+21:54:58.460 [main] TRACE - Resolving type for handle worksheetf539doctype
+21:54:58.475 [main] TRACE - Resolving type for handle ctworksheet530dtype
+21:54:58.483 [main] TRACE - Resolving type for handle ctsheetdata8408type
+21:54:58.483 [main] TRACE - Resolving type for handle ctrowdd39type
+21:54:58.492 [main] TRACE - Resolving type for handle ctcell842btype
+21:54:58.492 [main] TRACE - Resolving type for handle stcellrefe4e0type
+21:54:58.492 [main] TRACE - Resolving type for handle ctcols627ctype
+21:54:58.507 [main] TRACE - Resolving type for handle ctcola95ftype
+21:54:58.583 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+21:54:58.586 [main] TRACE - Resolving type for handle ctbookviewsb864type
+21:54:58.586 [main] TRACE - Resolving type for handle ctbookviewf677type
+21:54:58.586 [main] TRACE - Resolving type for handle stcelltypebf95type
+21:54:58.602 [main] TRACE - Resolving type for handle stxstringf179type
+21:55:12.668 [main] INFO  - element is present
+21:55:12.985 [main] ERROR - SanityGroupName31032024215512  is entered
+21:55:12.985 [main] ERROR - SanityGroupName31032024215512  is not entered
+21:55:12.987 [main] INFO  - entered Group name
+21:55:12.995 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:55:12.996 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:55:12.997 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+21:55:12.997 [main] DEBUG - Parsing relationship: /_rels/.rels
+21:55:18.332 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+21:55:18.336 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+21:55:18.338 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+21:55:18.342 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:09:17.847 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:09:17.871 [main] INFO  - Entering email and password.. 
+22:09:18.033 [main] INFO  - Entering user IDjohndoe@test.com
+22:09:21.184 [main] INFO  - clicked on Sign in button...
+22:09:28.567 [main] INFO  - The user has landing to the Merchandise page
+22:09:38.769 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:09:39.999 [main] INFO  - Click on group Tab.
+22:09:40.147 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:09:40.164 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:09:40.164 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:09:40.167 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:09:40.431 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:09:40.431 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:09:40.431 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:09:40.431 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:09:40.446 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:09:40.446 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:09:40.468 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:09:40.468 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:09:40.478 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:09:40.478 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:09:40.478 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:09:40.478 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:09:40.478 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:09:40.478 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:09:40.557 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:09:40.557 [main] TRACE - Resolving type for handle themefd26doctype
+22:09:40.620 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:09:40.620 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:09:40.635 [main] TRACE - Resolving type for handle ctfonts6623type
+22:09:40.635 [main] TRACE - Resolving type for handle ctfont14d8type
+22:09:40.635 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:09:40.635 [main] TRACE - Resolving type for handle ctfill550ctype
+22:09:40.651 [main] TRACE - Resolving type for handle ctborders0d66type
+22:09:40.651 [main] TRACE - Resolving type for handle ctborderf935type
+22:09:40.651 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:09:40.668 [main] TRACE - Resolving type for handle ctxf97f7type
+22:09:40.668 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:09:40.668 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:09:40.668 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:09:40.668 [main] TRACE - Resolving type for handle ctsst44f3type
+22:09:40.683 [main] TRACE - Resolving type for handle ctrsta472type
+22:09:40.714 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:09:40.730 [main] TRACE - Resolving type for handle workbookec17doctype
+22:09:40.730 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:09:40.745 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:09:40.745 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:09:40.745 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:09:40.745 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:09:40.761 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:09:40.768 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:09:40.777 [main] TRACE - Resolving type for handle ctrowdd39type
+22:09:40.777 [main] TRACE - Resolving type for handle ctcell842btype
+22:09:40.777 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:09:40.793 [main] TRACE - Resolving type for handle ctcols627ctype
+22:09:40.793 [main] TRACE - Resolving type for handle ctcola95ftype
+22:09:40.903 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:09:40.903 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:09:40.918 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:09:40.918 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:09:40.934 [main] TRACE - Resolving type for handle stxstringf179type
+22:09:54.882 [main] INFO  - element is present
+22:09:55.205 [main] ERROR - SanityGroupName31032024220954  is entered
+22:09:55.206 [main] ERROR - SanityGroupName31032024220954  is not entered
+22:09:55.208 [main] INFO  - entered Group name
+22:09:55.215 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:09:55.216 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:09:55.217 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:09:55.218 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:10:00.589 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:10:00.605 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:10:00.605 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:10:00.605 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:20:21.991 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:20:22.014 [main] INFO  - Entering email and password.. 
+22:21:24.331 [main] INFO  - Entering user IDjohndoe@test.com
+22:21:27.384 [main] INFO  - clicked on Sign in button...
+22:21:50.549 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:21:50.570 [main] INFO  - Entering email and password.. 
+22:21:50.722 [main] INFO  - Entering user IDjohndoe@test.com
+22:21:53.864 [main] INFO  - clicked on Sign in button...
+22:22:03.319 [main] INFO  - The user has landing to the Merchandise page
+22:22:13.531 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:22:14.743 [main] INFO  - Click on group Tab.
+22:22:14.859 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:22:14.874 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:22:14.874 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:22:14.880 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:22:15.079 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:22:15.083 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:22:15.083 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:22:15.083 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:22:15.083 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:22:15.083 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:22:15.095 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:22:15.095 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:22:15.095 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:22:15.111 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:22:15.111 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:22:15.111 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:22:15.111 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:22:15.111 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:22:15.220 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:22:15.220 [main] TRACE - Resolving type for handle themefd26doctype
+22:22:15.299 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:22:15.315 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:22:15.315 [main] TRACE - Resolving type for handle ctfonts6623type
+22:22:15.331 [main] TRACE - Resolving type for handle ctfont14d8type
+22:22:15.331 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:22:15.347 [main] TRACE - Resolving type for handle ctfill550ctype
+22:22:15.347 [main] TRACE - Resolving type for handle ctborders0d66type
+22:22:15.347 [main] TRACE - Resolving type for handle ctborderf935type
+22:22:15.347 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:22:15.362 [main] TRACE - Resolving type for handle ctxf97f7type
+22:22:15.362 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:22:15.362 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:22:15.362 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:22:15.362 [main] TRACE - Resolving type for handle ctsst44f3type
+22:22:15.382 [main] TRACE - Resolving type for handle ctrsta472type
+22:22:15.394 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:22:15.409 [main] TRACE - Resolving type for handle workbookec17doctype
+22:22:15.409 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:22:15.409 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:22:15.425 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:22:15.425 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:22:15.425 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:22:15.425 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:22:15.441 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:22:15.441 [main] TRACE - Resolving type for handle ctrowdd39type
+22:22:15.441 [main] TRACE - Resolving type for handle ctcell842btype
+22:22:15.456 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:22:15.472 [main] TRACE - Resolving type for handle ctcols627ctype
+22:22:15.482 [main] TRACE - Resolving type for handle ctcola95ftype
+22:22:15.582 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:22:15.598 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:22:15.598 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:22:15.613 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:22:15.613 [main] TRACE - Resolving type for handle stxstringf179type
+22:22:29.892 [main] INFO  - element is present
+22:22:30.206 [main] ERROR - SanityGroupName31032024222229  is entered
+22:22:30.206 [main] ERROR - SanityGroupName31032024222229  is not entered
+22:22:30.208 [main] INFO  - entered Group name
+22:22:30.213 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:22:30.214 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:22:30.214 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:22:30.215 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:22:35.561 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:22:35.561 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:22:35.561 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:22:35.561 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:23:02.564 [main] INFO  - element is present
+22:23:02.564 [main] INFO  - element exists
+22:23:02.732 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:23:02.732 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:23:02.732 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:23:02.746 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:28:24.893 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:28:24.915 [main] INFO  - Entering email and password.. 
+22:28:25.087 [main] INFO  - Entering user IDjohndoe@test.com
+22:28:28.222 [main] INFO  - clicked on Sign in button...
+22:28:32.773 [main] INFO  - The user has landing to the Merchandise page
+22:28:42.962 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:28:43.326 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:28:43.341 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:28:43.347 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:28:43.347 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:28:43.593 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:28:43.609 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:28:43.609 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:28:43.609 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:28:43.609 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:28:43.609 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:28:43.625 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:28:43.625 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:28:43.640 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:28:43.640 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:28:43.640 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:28:43.640 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:28:43.640 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:28:43.640 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:28:43.687 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:28:43.687 [main] TRACE - Resolving type for handle themefd26doctype
+22:28:43.766 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:28:43.782 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:28:43.782 [main] TRACE - Resolving type for handle ctfonts6623type
+22:28:43.782 [main] TRACE - Resolving type for handle ctfont14d8type
+22:28:43.798 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:28:43.798 [main] TRACE - Resolving type for handle ctfill550ctype
+22:28:43.798 [main] TRACE - Resolving type for handle ctborders0d66type
+22:28:43.814 [main] TRACE - Resolving type for handle ctborderf935type
+22:28:43.814 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:28:43.814 [main] TRACE - Resolving type for handle ctxf97f7type
+22:28:43.829 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:28:43.829 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:28:43.829 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:28:43.849 [main] TRACE - Resolving type for handle ctsst44f3type
+22:28:43.861 [main] TRACE - Resolving type for handle ctrsta472type
+22:28:43.908 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:28:43.923 [main] TRACE - Resolving type for handle workbookec17doctype
+22:28:43.923 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:28:43.939 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:28:43.939 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:28:43.939 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:28:43.949 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:28:43.956 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:28:43.956 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:28:43.956 [main] TRACE - Resolving type for handle ctrowdd39type
+22:28:43.956 [main] TRACE - Resolving type for handle ctcell842btype
+22:28:43.971 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:28:43.971 [main] TRACE - Resolving type for handle ctcols627ctype
+22:28:43.986 [main] TRACE - Resolving type for handle ctcola95ftype
+22:28:44.065 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:28:44.065 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:28:44.065 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:28:44.065 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:28:44.081 [main] TRACE - Resolving type for handle stxstringf179type
+22:31:38.712 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:31:38.737 [main] INFO  - Entering email and password.. 
+22:31:38.907 [main] INFO  - Entering user IDjohndoe@test.com
+22:31:42.053 [main] INFO  - clicked on Sign in button...
+22:31:46.291 [main] INFO  - The user has landing to the Merchandise page
+22:31:56.490 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:31:56.802 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:31:56.802 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:31:56.802 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:31:56.802 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:31:56.991 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:31:56.991 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:31:56.991 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:31:56.991 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:31:56.991 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:31:56.991 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:31:57.022 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:31:57.022 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:31:57.030 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:31:57.038 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:31:57.038 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:31:57.038 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:31:57.038 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:31:57.038 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:31:57.102 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:31:57.119 [main] TRACE - Resolving type for handle themefd26doctype
+22:31:57.196 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:31:57.196 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:31:57.212 [main] TRACE - Resolving type for handle ctfonts6623type
+22:31:57.212 [main] TRACE - Resolving type for handle ctfont14d8type
+22:31:57.227 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:31:57.230 [main] TRACE - Resolving type for handle ctfill550ctype
+22:31:57.230 [main] TRACE - Resolving type for handle ctborders0d66type
+22:31:57.230 [main] TRACE - Resolving type for handle ctborderf935type
+22:31:57.230 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:31:57.244 [main] TRACE - Resolving type for handle ctxf97f7type
+22:31:57.244 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:31:57.244 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:31:57.244 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:31:57.244 [main] TRACE - Resolving type for handle ctsst44f3type
+22:31:57.259 [main] TRACE - Resolving type for handle ctrsta472type
+22:31:57.291 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:31:57.291 [main] TRACE - Resolving type for handle workbookec17doctype
+22:31:57.306 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:31:57.330 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:31:57.330 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:31:57.338 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:31:57.338 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:31:57.338 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:31:57.354 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:31:57.354 [main] TRACE - Resolving type for handle ctrowdd39type
+22:31:57.369 [main] TRACE - Resolving type for handle ctcell842btype
+22:31:57.369 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:31:57.385 [main] TRACE - Resolving type for handle ctcols627ctype
+22:31:57.385 [main] TRACE - Resolving type for handle ctcola95ftype
+22:31:57.448 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:31:57.448 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:31:57.463 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:31:57.463 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:31:57.463 [main] TRACE - Resolving type for handle stxstringf179type
+22:32:02.426 [main] INFO  - element is present
+22:36:30.739 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:36:30.766 [main] INFO  - Entering email and password.. 
+22:36:30.940 [main] INFO  - Entering user IDjohndoe@test.com
+22:36:34.126 [main] INFO  - clicked on Sign in button...
+22:36:40.580 [main] INFO  - The user has landing to the Merchandise page
+22:36:50.768 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:36:51.195 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:36:51.195 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:36:51.211 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:36:51.211 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:36:51.421 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:36:51.432 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:36:51.432 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:36:51.432 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:36:51.435 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:36:51.437 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:36:51.453 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:36:51.458 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:36:51.464 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:36:51.464 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:36:51.464 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:36:51.468 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:36:51.468 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:36:51.468 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:36:51.542 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:36:51.543 [main] TRACE - Resolving type for handle themefd26doctype
+22:36:51.612 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:36:51.612 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:36:51.612 [main] TRACE - Resolving type for handle ctfonts6623type
+22:36:51.612 [main] TRACE - Resolving type for handle ctfont14d8type
+22:36:51.628 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:36:51.628 [main] TRACE - Resolving type for handle ctfill550ctype
+22:36:51.628 [main] TRACE - Resolving type for handle ctborders0d66type
+22:36:51.628 [main] TRACE - Resolving type for handle ctborderf935type
+22:36:51.644 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:36:51.644 [main] TRACE - Resolving type for handle ctxf97f7type
+22:36:51.644 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:36:51.644 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:36:51.644 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:36:51.660 [main] TRACE - Resolving type for handle ctsst44f3type
+22:36:51.660 [main] TRACE - Resolving type for handle ctrsta472type
+22:36:51.693 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:36:51.708 [main] TRACE - Resolving type for handle workbookec17doctype
+22:36:51.708 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:36:51.708 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:36:51.723 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:36:51.728 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:36:51.728 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:36:51.738 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:36:51.739 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:36:51.747 [main] TRACE - Resolving type for handle ctrowdd39type
+22:36:51.755 [main] TRACE - Resolving type for handle ctcell842btype
+22:36:51.755 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:36:51.772 [main] TRACE - Resolving type for handle ctcols627ctype
+22:36:51.781 [main] TRACE - Resolving type for handle ctcola95ftype
+22:36:51.841 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:36:51.849 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:36:51.849 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:36:51.849 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:36:51.849 [main] TRACE - Resolving type for handle stxstringf179type
+22:40:08.981 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:40:09.009 [main] INFO  - Entering email and password.. 
+22:40:09.187 [main] INFO  - Entering user IDjohndoe@test.com
+22:40:12.345 [main] INFO  - clicked on Sign in button...
+22:40:17.193 [main] INFO  - The user has landing to the Merchandise page
+22:40:27.390 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:40:27.760 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:40:27.767 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:40:27.767 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:40:27.767 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:40:28.018 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:40:28.018 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:40:28.018 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:40:28.018 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:40:28.018 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:40:28.018 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:40:28.033 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:40:28.033 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:40:28.051 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:40:28.051 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:40:28.051 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:40:28.051 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:40:28.051 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:40:28.051 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:40:28.096 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:40:28.096 [main] TRACE - Resolving type for handle themefd26doctype
+22:40:28.175 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:40:28.179 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:40:28.191 [main] TRACE - Resolving type for handle ctfonts6623type
+22:40:28.191 [main] TRACE - Resolving type for handle ctfont14d8type
+22:40:28.191 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:40:28.191 [main] TRACE - Resolving type for handle ctfill550ctype
+22:40:28.207 [main] TRACE - Resolving type for handle ctborders0d66type
+22:40:28.207 [main] TRACE - Resolving type for handle ctborderf935type
+22:40:28.207 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:40:28.207 [main] TRACE - Resolving type for handle ctxf97f7type
+22:40:28.207 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:40:28.207 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:40:28.223 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:40:28.223 [main] TRACE - Resolving type for handle ctsst44f3type
+22:40:28.240 [main] TRACE - Resolving type for handle ctrsta472type
+22:40:28.270 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:40:28.270 [main] TRACE - Resolving type for handle workbookec17doctype
+22:40:28.270 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:40:28.286 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:40:28.286 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:40:28.286 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:40:28.286 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:40:28.304 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:40:28.310 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:40:28.310 [main] TRACE - Resolving type for handle ctrowdd39type
+22:40:28.318 [main] TRACE - Resolving type for handle ctcell842btype
+22:40:28.318 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:40:28.334 [main] TRACE - Resolving type for handle ctcols627ctype
+22:40:28.334 [main] TRACE - Resolving type for handle ctcola95ftype
+22:40:28.396 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:40:28.412 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:40:28.412 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:40:28.412 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:40:28.427 [main] TRACE - Resolving type for handle stxstringf179type
+22:40:33.975 [main] INFO  - element is present
+22:40:34.338 [main] ERROR - NameDepartment31032024224033  is entered
+22:40:34.338 [main] ERROR - NameDepartment31032024224033  is not entered
+22:40:34.341 [main] INFO  - entered department name
+22:40:34.346 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:40:34.347 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:40:34.348 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:40:34.348 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:40:55.972 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:40:55.972 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:40:55.972 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:40:55.972 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:44:21.265 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:44:21.286 [main] INFO  - Entering email and password.. 
+22:44:21.447 [main] INFO  - Entering user IDjohndoe@test.com
+22:44:24.591 [main] INFO  - clicked on Sign in button...
+22:44:29.285 [main] INFO  - The user has landing to the Merchandise page
+22:44:39.475 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:44:39.805 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:44:39.805 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:44:39.805 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:44:39.805 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:44:40.073 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:44:40.073 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:44:40.073 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:44:40.073 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:44:40.073 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:44:40.073 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:44:40.088 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:44:40.088 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:44:40.088 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:44:40.104 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:44:40.104 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:44:40.104 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:44:40.104 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:44:40.104 [main] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:44:40.151 [main] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:44:40.151 [main] TRACE - Resolving type for handle themefd26doctype
+22:44:40.214 [main] TRACE - Resolving type for handle stylesheet5d8bdoctype
+22:44:40.214 [main] TRACE - Resolving type for handle ctstylesheet4257type
+22:44:40.214 [main] TRACE - Resolving type for handle ctfonts6623type
+22:44:40.229 [main] TRACE - Resolving type for handle ctfont14d8type
+22:44:40.229 [main] TRACE - Resolving type for handle ctfills2c6ftype
+22:44:40.229 [main] TRACE - Resolving type for handle ctfill550ctype
+22:44:40.245 [main] TRACE - Resolving type for handle ctborders0d66type
+22:44:40.245 [main] TRACE - Resolving type for handle ctborderf935type
+22:44:40.245 [main] TRACE - Resolving type for handle ctcellxfs1322type
+22:44:40.245 [main] TRACE - Resolving type for handle ctxf97f7type
+22:44:40.260 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+22:44:40.260 [main] TRACE - Resolving type for handle ctdxfsb26atype
+22:44:40.276 [main] TRACE - Resolving type for handle sstf81fdoctype
+22:44:40.276 [main] TRACE - Resolving type for handle ctsst44f3type
+22:44:40.292 [main] TRACE - Resolving type for handle ctrsta472type
+22:44:40.307 [main] TRACE - Resolving type for handle ctdrawing2748type
+22:44:40.324 [main] TRACE - Resolving type for handle workbookec17doctype
+22:44:40.339 [main] TRACE - Resolving type for handle ctworkbook83c3type
+22:44:40.345 [main] TRACE - Resolving type for handle ctsheets49fdtype
+22:44:40.355 [main] TRACE - Resolving type for handle ctsheet4dbetype
+22:44:40.358 [main] TRACE - Resolving type for handle strelationshipid1e94type
+22:44:40.360 [main] TRACE - Resolving type for handle worksheetf539doctype
+22:44:40.371 [main] TRACE - Resolving type for handle ctworksheet530dtype
+22:44:40.371 [main] TRACE - Resolving type for handle ctsheetdata8408type
+22:44:40.387 [main] TRACE - Resolving type for handle ctrowdd39type
+22:44:40.387 [main] TRACE - Resolving type for handle ctcell842btype
+22:44:40.387 [main] TRACE - Resolving type for handle stcellrefe4e0type
+22:44:40.402 [main] TRACE - Resolving type for handle ctcols627ctype
+22:44:40.418 [main] TRACE - Resolving type for handle ctcola95ftype
+22:44:40.512 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+22:44:40.528 [main] TRACE - Resolving type for handle ctbookviewsb864type
+22:44:40.528 [main] TRACE - Resolving type for handle ctbookviewf677type
+22:44:40.546 [main] TRACE - Resolving type for handle stcelltypebf95type
+22:44:40.546 [main] TRACE - Resolving type for handle stxstringf179type
+22:44:46.241 [main] INFO  - element is present
+22:44:46.538 [main] ERROR - NameDepartment31032024224446  is entered
+22:44:46.538 [main] ERROR - NameDepartment31032024224446  is not entered
+22:44:46.540 [main] INFO  - entered department name
+22:44:46.547 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:44:46.548 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:44:46.549 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:44:46.550 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:45:05.988 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:45:05.988 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:45:05.988 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:45:05.988 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:45:41.297 [main] INFO  - Goto my Merx Application-->Click on Login.
+22:45:41.315 [main] INFO  - Entering email and password.. 
+22:45:41.482 [main] INFO  - Entering user IDjohndoe@test.com
+22:45:44.631 [main] INFO  - clicked on Sign in button...
+22:45:50.208 [main] INFO  - The user has landing to the Merchandise page
+22:46:00.412 [main] INFO  - Goto my Merx Application-->Click on Login.. 
+22:46:00.774 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:46:00.789 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:46:00.789 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+22:46:00.789 [main] DEBUG - Parsing relationship: /_rels/.rels
+22:46:00.994 [main] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:46:00.994 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:46:00.994 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:46:00.994 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:46:00.994 [main] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:46:01.010 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:46:01.010 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:46:01.010 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:46:01.025 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:46:01.025 [main] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:46:01.025 [main] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
