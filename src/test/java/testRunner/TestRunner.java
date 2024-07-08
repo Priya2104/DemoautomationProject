@@ -23,7 +23,7 @@ import org.testng.annotations.DataProvider;
          // tags ="@BusinessSetup or @GroupSetup or @ClassSetup or  @DepartmentSetup or SubClassSetup or DivisionSetup"
 		  //tags="@LanguageMasterAdd"
         //tags="@LogoMasterMobile or  @LogoMasterDesktop or  @LogoMasterDesktopError or @LogoMasterMobileError or @LanguageMasterAdd"
-		 tags="@MerchendiseSetup"
+		 tags="@LanguageMasterAdd"
 		)
 public class TestRunner extends AbstractTestNGCucumberTests
 {

@@ -1,5 +1,6 @@
 package factory;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
@@ -111,7 +112,7 @@ public class BaseClass {
 
 	public static synchronized Properties getProperties() throws IOException {
 		if (properties.get() == null) {
-			FileReader file = new FileReader(System.getProperty("user.dir") + "/src/test/resources/config.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "config.properties");
 			Properties p = new Properties();
 			p.load(file);
 			properties.set(p);
