@@ -111,7 +111,7 @@ public class BaseClass {
 
 	public static synchronized Properties getProperties() throws IOException {
 		if (properties.get() == null) {
-			FileReader file = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + "/src/test/resources/config.properties");
 			Properties p = new Properties();
 			p.load(file);
 			properties.set(p);
