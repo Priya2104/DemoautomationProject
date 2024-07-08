@@ -264,7 +264,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
     {
     	//Thread.sleep(60);
     	
-    	utils.fnScreenResolutionExample();
+    	//utils.fnScreenResolutionExample();
 
     	//utils.waitForElementclickable(Duration.ofSeconds(60), systemandref);
     	//utils.clickOnWebElement(systemandref);

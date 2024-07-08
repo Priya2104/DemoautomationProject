@@ -58,7 +58,12 @@ public class BaseClass {
 			        options.addArguments("--disable-gpu");
 			        options.addArguments("--no-sandbox");
 			        options.addArguments("--disable-dev-shm-usage");
-			        options.addArguments("--window-size=1920,1080");
+			        
+
+			        String windowSize = System.getProperty("window.size", "1920x1080");
+			        options.addArguments("--window-size=" + windowSize);
+			        
+			       // options.addArguments("--window-size=1920,1080");
 
 			        // Initialize WebDriver
 			        driver.set(new ChromeDriver(options));
