@@ -41,7 +41,7 @@ Scenario Outline: add new language
   
   Examples:
 		  | LanguageCode | LanguageName | LanguageShortName | ApplicableCountries | Status |
-		  | Lan | LanDes | Hindi | 109 | Active |
+		  | Lan | LanDes | Hi | 109 | Active |
 @CityMasterAdd
 Scenario Outline: add new citymaster
   When I click on CITY MASTER

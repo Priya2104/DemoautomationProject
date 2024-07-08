@@ -24,7 +24,7 @@ public class SystemAndReferenceMasterSteps {
 	WebDriver driver;
 	String Subclass_name, SubClass_Value;
 	
-	public static String langCode,langName;
+	public static String langCode,langName,langshortcode;
 	public static String cityCode,cityName;
 	
 	
@@ -59,7 +59,10 @@ public class SystemAndReferenceMasterSteps {
 		 
 		 System.out.println(langName);
 		 
-		sysandrefmaster.AddLanguageMaster(langCode, langName, languageShortName, applicableCountries, status);
+		 langshortcode=languageShortName+utils.generateRandomChars(3);
+		 
+		 		 
+		sysandrefmaster.AddLanguageMaster(langCode, langName, langshortcode, applicableCountries, status);
 	}
 
 	@Then("I should validate LANGUAGE MASTER in the table")
