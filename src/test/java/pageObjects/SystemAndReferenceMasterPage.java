@@ -378,9 +378,16 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     public void ClickOnLanguageMaster() throws IncorrectXpathException, InterruptedException
     {
-       	Thread.sleep(5000);
+       	Thread.sleep(10000);
     	//utils.waitForElementclickable(Duration.ofSeconds(120),languageMaster);
-    	utils.clickOnWebElement(languageMaster);
+    	
+       	utils.clickOnWebElement(languageMaster);
+       	
+     	Thread.sleep(10000);
+        	
+       	utils.clickOnWebElement(addLanguageButton);
+       	
+       	/*
     	
          String strPageHeader=utils.getText(pageHeader).trim().toLowerCase();
          
@@ -398,10 +405,10 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	builder.moveToElement(addLanguageButton).click().perform();
     	Thread.sleep(2000);
     	addLanguageButton.isDisplayed();  	
+    	*/
     	
     	
-    	
-    	addLanguageButton.click();
+    	//addLanguageButton.click();
     }
     
     public void AddDGMaster(String strDGCode,String strDGDescription,String strActive,String strDgSubCode,String strDgSubDesc,String inpUNUnimber,String inpUNUDescription) throws InterruptedException
