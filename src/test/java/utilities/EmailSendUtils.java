@@ -61,7 +61,7 @@ public class EmailSendUtils {
 
 				try {
 					EmailAttachmentsSender.sendEmailWithAttachments(SERVER, PORT, FROM, PASSWORD, TO, SUBJECT, messageBody,
-							PROJECT_PATH+attachmentFile_Html);
+							attachmentFile_Html);
 
 					System.out.println("****************************************");
 					System.out.println("Email sent successfully.");
