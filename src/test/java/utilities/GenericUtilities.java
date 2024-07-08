@@ -57,6 +57,17 @@ public class GenericUtilities {
 		js = (JavascriptExecutor) driver;
 
 	}
+	
+	public String generateRandomNumbers(int length) {
+	    String candidateChars = "1234567890"; // Only numeric digits
+	    StringBuilder sb = new StringBuilder();
+	    Random random = new Random();
+	    for (int i = 0; i < length; i++) {
+	        sb.append(candidateChars.charAt(random.nextInt(candidateChars.length())));
+	    }
+
+	    return sb.toString();
+	}
 
 	/**
 	 * Choosing the Right Locator

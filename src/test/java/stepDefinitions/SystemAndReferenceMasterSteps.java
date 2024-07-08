@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import java.awt.AWTException;
+import java.time.Duration;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -24,8 +25,10 @@ public class SystemAndReferenceMasterSteps {
 	WebDriver driver;
 	String Subclass_name, SubClass_Value;
 	
-	public static String langCode,langName,langshortcode;
+	
 	public static String cityCode,cityName;
+	public static String langCode,langName,langshortcode;
+	public static String DgSubClassCode,inpUNUnimber;
 	
 	
 	String TestData_filePath = "testData/TestData.properties";
@@ -117,6 +120,23 @@ public class SystemAndReferenceMasterSteps {
 		
 	}
 	
+	@Then("I should validate DG MASTER in the table")
+	public void validate_DG_MASTER_Table() throws IncorrectXpathException, InterruptedException
+	{
+		sysandrefmaster.validateDGyMaster(DgSubClassCode);
+		
+		   String strDGSubClass = Mnp.getCellValue(3, 3);
+	        System.out.println(strDGSubClass);
+
+	        Assert.assertEquals(strDGSubClass,DgSubClassCode);
+	        
+	       // String strCityName = Mnp.getCellValue(3, 2);
+	        //System.out.println(strCityName);
+	   
+	  //      Assert.assertEquals(strCityName,cityName);  
+		
+	}
+	
 	@When("I click on CITY MASTER")
      public void I_click_on_CITY_MASTER () throws InterruptedException
      {
@@ -124,6 +144,35 @@ public class SystemAndReferenceMasterSteps {
 		sysandrefmaster.clickOnCityMaster();
      }
 	
+	
+	//**
+	@When("I click on DG MASTER")
+    public void I_click_on_DG_MASTER () throws InterruptedException
+    {
+		sysandrefmaster.clickOnMasterLogMaster();
+		sysandrefmaster.clickOnDGMaster();
+    }
+	
+	@When("I create a new DG MASTER {string},{string},{string},{string},{string},{string}")
+	public void createNewDGeMaster(String dgCode,String dgDescription,String status,String strDgSubClass,String strDgSubDesc,String inpUNUDescription) throws InterruptedException  {
+		
+		DgSubClassCode=strDgSubClass+utils.generateRandomChars(6);
+		
+		System.out.println(DgSubClassCode);
+		 
+		inpUNUnimber=utils.generateRandomNumbers(4);
+		
+		System.out.println(inpUNUnimber);
+		// Sy	// Sysm.out.println(cityCode);sm.out.println(cityCode);
+		// cityName=cityNameMaster+utils.generateRandomChars(6);
+		 
+		// System.out.println(langName);
+		sysandrefmaster.addDGMasterbutton();
+		sysandrefmaster.AddDGMaster(dgCode,dgDescription,status,DgSubClassCode,strDgSubDesc,inpUNUnimber,inpUNUDescription);
+	}
+
+	
+	//***
 	
 	@When("I create a new CITY MASTER {string},{string},{string},{string},{string},{string}")
 	public void createNewCityeMaster(String cityCodeMaster, String cityNameMaster, String strCountryName, String strSateName, String strStrTimeZone,String status)  {

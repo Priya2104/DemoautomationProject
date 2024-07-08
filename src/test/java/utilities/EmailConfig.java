@@ -16,9 +16,9 @@ public class EmailConfig {
 	public static final String PORT = "587";
 
 	public static final String FROM = "pullaiag@pepkorit.com";
-	public static final String PASSWORD = "";
+	public static final String PASSWORD = "rgml dpll ssgw eviv";
 
 	/* "**********@gmail.com", */
-	public static final String[] TO = {"prakashk@pepkorit.com","vinaym@pepkorit.com","anjaiahm@pepkorit.com"};
+	public static final String[] TO = {"prakashk@pepkorit.com"};
 	public static final String SUBJECT = Project_Name;
 }

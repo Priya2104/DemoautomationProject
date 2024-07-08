@@ -74,6 +74,8 @@ public class SystemAndReferenceMasterPage extends BasePage {
     @FindBy(xpath ="//span[text()='City Master']")
     WebElement cityMaster; 
     
+  
+    
     @FindBy(xpath ="//span[text()='Add City']")
     WebElement cityMasterAddButton; 
 
@@ -117,6 +119,9 @@ public class SystemAndReferenceMasterPage extends BasePage {
 	
 	@FindBy(xpath="//input[@type='file']")
 	WebElement filepathXapth;
+	
+	@FindBy(xpath="(//input[@type='file'])[1]")
+	WebElement filepathXapthDG;
 	
 	@FindBy(xpath="(//input[@type='file'])[3]")
 	WebElement filepathXapthMob;
@@ -174,6 +179,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
 	WebElement searchCityCode;
 	
 	
+	
 	@FindBy(xpath="(//*[name()='svg'][@class='p-icon pi-filter-icon'])[2]")
 	WebElement filterIcon;
 	
@@ -189,6 +195,49 @@ public class SystemAndReferenceMasterPage extends BasePage {
 	
 			@FindBy(xpath="(//img[@alt='merx-topbar-logo'])[3]")
 			WebElement footerLogo;
+			
+			  @FindBy(xpath ="//span[text()='Dangerous Goods Master']")
+			    WebElement dgMaster;
+			  
+			  @FindBy(xpath ="//span[text()='Add Dangerous Goods']")
+			    WebElement dgMasterAddButton;
+			  
+			  @FindBy(xpath="//input[@id='dgClassCodeId']")
+				WebElement inpDGCode;
+			  
+			  @FindBy(xpath="//input[@id='dgClassDescriptionId']")
+				WebElement inpDGDescription;
+	
+			  @FindBy(xpath="//span[normalize-space()='Save and Continue']")
+			  WebElement btnSaveAndContinue;
+			  
+			  @FindBy(xpath="//input[@id='dgSubclassCodeId']")
+				WebElement inpDGSubclassCode;
+			  
+			  @FindBy(xpath="//input[@id='dgSubclassDescriptionId']")
+				WebElement inpDGSubclassdgSubclassDescription;
+			  
+			  @FindBy(xpath="//input[@placeholder='UN Number']")
+			  WebElement inpUNNumber;
+			  
+			  @FindBy(xpath="//input[@placeholder='UN Description']")
+			  WebElement inpDGUNDesc;			  
+			  
+			  @FindBy(xpath="//span[contains(@class, 'p-button-label') and contains(text(), 'Add UN Number')]")
+			  WebElement btnAddUNNumber;
+			  
+			  
+			  @FindBy(xpath="(//*[contains(text(), 'Save and Continue')])[2]")
+			  WebElement btnSaveAndContinue1;
+			  
+			  @FindBy(xpath="//input[@placeholder='Search DG Subclass Code']")
+				WebElement searchDGClassCode;
+			  
+			  
+				
+             @FindBy(xpath="//span[@role='combobox' and @class='p-element p-dropdown-label p-inputtext p-placeholder ng-star-inserted' and @aria-label='Select DG Class']")
+             WebElement filterDGSubclass;
+
 	
     public SystemAndReferenceMasterPage(WebDriver driver) {
     	super(driver);
@@ -226,14 +275,19 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     public void clickOnCityMaster() throws InterruptedException
     {
-    	//Thread.sleep(60);
-
-    	//utils.waitForElementclickable(Duration.ofSeconds(60), systemandref);
-    	//utils.clickOnWebElement(systemandref);
+    	
     	Thread.sleep(20);
     	utils.waitForElementclickable(Duration.ofSeconds(60),cityMaster );
     	utils.clickElementWithJavaScript(cityMaster);
     }
+    
+    public void clickOnDGMaster() throws InterruptedException
+    {
+    	Thread.sleep(20);
+    	utils.waitForElementclickable(Duration.ofSeconds(60),dgMaster );
+    	utils.clickElementWithJavaScript(dgMaster);
+    }
+   
     
     public void addCityMasterbutton()
     {
@@ -241,6 +295,12 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	utils.clickElementWithJavaScript(cityMasterAddButton);
     }
     
+    
+    public void addDGMasterbutton()
+    {
+    	utils.waitForElementclickable(Duration.ofSeconds(60),dgMasterAddButton);
+    	utils.clickElementWithJavaScript(dgMasterAddButton);
+    }
     public void selectImage()
     {
        	utils.waitForElementclickable(Duration.ofSeconds(60),logoMaster);
@@ -273,6 +333,21 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	
     }
     
+    public void validateDGyMaster(String strDGCode) throws IncorrectXpathException, InterruptedException
+    {
+    	//utils.clickElementWithJavaScript(filterDGSubclass);
+    	utils.setValueInEditBox(searchDGClassCode, strDGCode);
+    	
+    	//utils.doesElementExist(filterIcon);
+    	Thread.sleep(2000);
+    	
+    	searchDGClassCode.sendKeys(Keys.ENTER);
+    	
+    	
+    	
+    	
+    	Thread.sleep(5000);
+    }
     public void validateCityMaster(String strcityCode,String strCityName ) throws IncorrectXpathException, InterruptedException
     {
     	utils.setValueInEditBox(searchCityCode, strcityCode);
@@ -322,6 +397,64 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	
     	
     	addLanguageButton.click();
+    }
+    
+    public void AddDGMaster(String strDGCode,String strDGDescription,String strActive,String strDgSubCode,String strDgSubDesc,String inpUNUnimber,String inpUNUDescription) throws InterruptedException
+    {
+    	utils.waitForElementclickable(Duration.ofSeconds(60), inpDGCode);
+    	
+    	utils.setValueInEditBox(inpDGCode, strDGCode);
+    	
+    	
+    	utils.waitForElementclickable(Duration.ofSeconds(60), inpDGDescription);
+    	utils.setValueInEditBox(inpDGDescription, strDGDescription);
+    	
+    	Mnp.valActivaStatus();
+    	
+    	utils.clickElementWithJavaScript(btnSaveAndContinue);
+    	
+    	
+    	utils.waitForElementclickable(Duration.ofSeconds(60), inpDGSubclassCode);
+    	
+    	utils.setValueInEditBox(inpDGSubclassCode, strDgSubCode);
+    	
+    	utils.setValueInEditBox(inpDGSubclassdgSubclassDescription, strDgSubDesc);
+    	
+    	String uploadFile = new File("src/test/resources/Warehouse Add.png").getAbsolutePath();
+    	
+    	Thread.sleep(4000);
+    	
+    	filepathXapthDG.sendKeys(uploadFile);  
+  	  
+  		//utils.waitForElementclickable(Duration.ofSeconds(60), desktopUploadButton);
+  		
+  		System.out.println(inpUNUnimber);
+    	utils.setValueInEditBox(inpUNNumber,inpUNUnimber);
+    	
+    	utils.setValueInEditBox(inpDGUNDesc,inpUNUDescription);
+    	
+	//utils.clickElementWithJavaScript(checkedboxApplicableCountries);
+    	
+    	Mnp.valActivaStatus();
+    	
+    	utils.clickElementWithJavaScript(btnAddUNNumber);
+    	
+    	
+    	utils.clickElementWithJavaScript(btnSaveAndContinue1); 	   	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     }
     
     public void AddLanguageMaster(String languageCodes, String languageNames, String languageShortNames, String applicableCountries, String status)

@@ -47,7 +47,7 @@ public class BaseClass {
 			}
 			
 			
-			// browser
+			// browsers
 			switch (getProperties().getProperty("browser").toLowerCase()) {
 				case "chrome":
 					System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -58,6 +58,7 @@ public class BaseClass {
 			        options.addArguments("--disable-gpu");
 			        options.addArguments("--no-sandbox");
 			        options.addArguments("--disable-dev-shm-usage");
+			        options.addArguments("--window-size=1920,1080");
 
 			        // Initialize WebDriver
 			        driver.set(new ChromeDriver(options));
@@ -77,7 +78,16 @@ public class BaseClass {
 		} else if (getProperties().getProperty("execution_env").equalsIgnoreCase("local")) {
 			switch (getProperties().getProperty("browser").toLowerCase()) {
 				case "chrome":
-					driver.set(new ChromeDriver());
+				     ChromeOptions options = new ChromeOptions();
+				        options.addArguments("--headless");
+				        options.addArguments("--disable-gpu");
+				        options.addArguments("--no-sandbox");
+				        options.addArguments("--disable-dev-shm-usage");
+				        options.addArguments("--window-size=1920,1080");
+					    driver.set(new ChromeDriver(options));
+					    
+					   // driver.set(new ChromeDriver());
+					    
 					break;
 				case "edge":
 					driver.set(new EdgeDriver());
