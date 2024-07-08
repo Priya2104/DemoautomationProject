@@ -8,9 +8,9 @@ node('selenium') {
 	stage('Test Execution') {
 		sh '''
 			env | sort
-			#apk add chromium
-			#apk add chromium-chromedriver
-			#apk add maven
+			apk add chromium
+			apk add chromium-chromedriver
+			apk add maven
 			mvn clean && mvn install
 			#ls -l		
 		'''
