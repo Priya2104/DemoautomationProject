@@ -11,6 +11,8 @@ import javax.mail.MessagingException;
 //import static org.selenium.constants.FrameworkConstants.YES;
 import static utilities.EmailConfig.*;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.Properties;
 
 public class EmailSendUtils {
@@ -48,7 +50,8 @@ public class EmailSendUtils {
 				 
 				  String EXTENT_REPORT_FOLDER_PATH = PROJECT_PATH + attachmentFile_ExtentReport;
 				  
-				  String attachmentFile_Html = "/reports/ExtentPdf.pdf";  
+				  String attachmentFile_Html=System.getProperty("user.dir")+ File.separator + "reports" + File.separator + "ExtentPdf.pdf";
+				  //String attachmentFile_Html = "/reports/ExtentPdf.pdf";  
 				  //String reports="D:\\MERX_Pepkor_Automation\\master-pepkor-merx-qa\\reports\\myreport.html";
 				  
 				  

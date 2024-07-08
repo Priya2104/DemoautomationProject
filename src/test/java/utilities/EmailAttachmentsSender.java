@@ -12,7 +12,7 @@ public class EmailAttachmentsSender {
 	public static void sendEmailWithAttachments(String host, String port, final String userName, final String password,
 			String[] toAddress, String subject, String message, String... attachFiles)
 			throws AddressException, MessagingException {
-		// sets SMTP server properties
+		// sets SMTP server propertiess
 
 		Properties properties = new Properties();
 		properties.put("mail.smtp.host", host);
