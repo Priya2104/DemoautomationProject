@@ -266,10 +266,12 @@ public class SystemAndReferenceMasterPage extends BasePage {
 
     	//utils.waitForElementclickable(Duration.ofSeconds(60), systemandref);
     	//utils.clickOnWebElement(systemandref);
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
     	utils.waitForElementclickable(Duration.ofSeconds(60), masterMenu);
     	Thread.sleep(2000);
-    	utils.clickElementWithJavaScript(masterMenu);
+    	//utils.clickElementWithJavaScript(masterMenu);
+    	utils.clickOnWebElement(masterMenu);
+    	System.out.println("click on Master menu");
     }
     
     
@@ -374,7 +376,8 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     public void ClickOnLanguageMaster() throws IncorrectXpathException, InterruptedException
     {
-       	utils.waitForElementclickable(Duration.ofSeconds(120),languageMaster);
+       	Thread.sleep(5000);
+    	utils.waitForElementclickable(Duration.ofSeconds(120),languageMaster);
     	utils.clickOnWebElement(languageMaster);
     	
          String strPageHeader=utils.getText(pageHeader).trim().toLowerCase();
