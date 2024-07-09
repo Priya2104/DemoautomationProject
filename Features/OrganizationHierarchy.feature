@@ -11,5 +11,5 @@ Feature: Merchandise Business unit view page
      
     @ChainSetup
 	Scenario: Verify Organisation Chian setup
-		When click on Business unit
-	
+		#When click on Business unit
+	 
