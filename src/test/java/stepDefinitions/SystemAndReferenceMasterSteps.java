@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import java.awt.AWTException;
 import java.time.Duration;
+import java.util.List;
+import java.util.Map;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +31,7 @@ public class SystemAndReferenceMasterSteps {
 	public static String cityCode,cityName;
 	public static String langCode,langName,langshortcode;
 	public static String DgSubClassCode,inpUNUnimber;
-	
+	public static String stateCode,stateName;
 	
 	String TestData_filePath = "testData/TestData.properties";
 	PropertiesReader testdata = new PropertiesReader(TestData_filePath);  
@@ -137,6 +139,9 @@ public class SystemAndReferenceMasterSteps {
 		
 	}
 	
+	
+	
+	
 	@When("I click on CITY MASTER")
      public void I_click_on_CITY_MASTER () throws InterruptedException
      {
@@ -236,7 +241,232 @@ public class SystemAndReferenceMasterSteps {
 		
 		{
 		
-			
+			//******************************Start	
+		}//Currency
+		@When("User clicks on Masters menu")
+		public void user_clicks_on_masters_menu() {
+			sysandrefmaster.masterClick();
+		    
 		}
+		@When("user clicks on Currency Master menu")
+		public void user_clicks_on_currency_master_menu() {
+			sysandrefmaster.currencyMastermasterClick();
+		}
+		@Then("user navigate to the Currency Page")
+		public void user_navigate_to_the_currency_page() {
+			 String currencyHeader=" CURRENCY MASTER ".trim();
+		  String headercur=  sysandrefmaster.addCurrencyMaster_Click();
+		 // System.out.println(headercur);
+		  org.testng.Assert.assertEquals(headercur, currencyHeader);
+		  sysandrefmaster.addCurrency_Click();
+			
+		   }
+		@When("User Provides all the Currency mandatory details as {string},{string},{string},{string},{string}")
+		public void user_provides_all_the_mandatory_details_as(String string, String string2, String string3, String string4, String string5) {
+			sysandrefmaster.provideCurrencyDetails(string, string2, string3, string4, string5);
+		}
+		@Then("User Validate the success message")
+		public void user_validate_the_success_message() {
+		    System.out.println("");
+		}
+
+		//Search and edit
+		@When("User provide Currency Code as {string} and Currency Name as {string} and filter the record")
+		public void user_provide_currency_code_as_and_currency_name_as_and_filter_the_record(String string, String string2) {
+			sysandrefmaster.provide_details_forSearchField(string, string2);
+		}
+		@When("User update the Currency records with data")
+		public void user_update_the_records_with_data(List<String> details) {
+		    System.out.println(details.get(0));
+		    System.out.println(details.get(1));
+		    System.out.println(details.get(2));
+		    System.out.println(details.get(3));
+		    sysandrefmaster.updateCurrencyDetails(details.get(0), details.get(1), details.get(2), details.get(3));
+		    
+		   }
+		@Then("User Validate the success message as {string}")
+		public void user_validate_the_success_message_as(String SuccessMessage) {
+			sysandrefmaster.getMessage(SuccessMessage);
+		}
+
+		//Country Master steps
+
+		@When("user clicks on Country Master menu")
+		public void user_clicks_on_country_master_menu() {
+			sysandrefmaster.countryMasterMenu_Click();
+		}
+		@Then("user navigate to the Country Page")
+		public void user_navigate_to_the_country_page() {
+			sysandrefmaster.addCountryMasterClick();
+		}
+		@When("User Provides all the Country mandatory details as {string},{string},{string},{string},{string},{string},{string}")
+		public void user_provides_all_the_mandatory_details_as(String contrycode, String countryname, String ISO1, String ISO2,String ISO3, String TimeZone, String status) {
+			sysandrefmaster.provideCountryDetails(contrycode, countryname, ISO1, ISO2, ISO3, TimeZone, status);
+		}
+
+		//UpdateCountry
+		@When("User provide Country Code as {string} and Country Name as {string} and filter the record")
+		public void user_provide_country_code_as_and_country_name_as_and_filter_the_record(String countrycode, String countryname) {
+			sysandrefmaster.provide_details_forSearchField(countrycode, countryname);  
+		}
+		@When("User update the Country records with data")
+		public void user_update_the_country_records_with_data(List<String> details) {
+			System.out.println(details.get(0));
+			System.out.println(details.get(1));
+			System.out.println(details.get(2));
+			System.out.println(details.get(3));
+			System.out.println(details.get(4));
+			System.out.println(details.get(5));
+			
+			sysandrefmaster.updateCountryDetails(details.get(0), details.get(1), details.get(2), details.get(3),details.get(4),details.get(5));
+		}
+
+		//UOM Master
+
+		@When("user clicks on UOM menu")
+		public void user_clicks_on_uom_menu() {
+			sysandrefmaster.uom_Master_Menu_Click();
+		}
+		@Then("user navigate to the UOM master Page")
+		public void user_navigate_to_the_uom_master_page() {
+			sysandrefmaster.click_AddUOM();
+		   
+		}
+		@When("User Provides all the UOM mandatory details as {string},{string},{string},{string}")
+		public void user_provides_all_the_mandatory_details_as(String measurename,String symbol,String MeasureUnit,String status) {
+			sysandrefmaster.provideUOMDetails(measurename, symbol, MeasureUnit, status);
+		}
+
+		//UOM filter
+
+		@When("User provide UOMmeasurecode as {string} and UOMMeasure Name as {string} and filter the record")
+		public void user_provide_uo_mmeasurecode_as_and_uom_measure_name_as_and_filter_the_record(String string, String string2) {
+			sysandrefmaster.provide_details_forSearchField(string, string2);
+		}
+		@When("User update the UOM records with data")
+		public void user_update_the_uom_records_with_data(List<String> details) {
+			sysandrefmaster.updateUOMDetails(details.get(0), details.get(1), details.get(2), details.get(3));
+		}
+
+
+		//Suburb master 
+
+		@When("user clicks on Suburb menu")
+		public void user_clicks_on_suburb_menu() {
+			sysandrefmaster.addSuburbMenu_Click();
+		}
+		@Then("user navigate to the Suburb master Page")
+		public void user_navigate_to_the_suburb_master_page() {
+			sysandrefmaster.addSuburb_Button_click();
+		}
+		@When("User Provides all the Suburb mandatory details as {string},{string},{string},{string},{string},{string},{string}")
+		public void user_provides_all_the_suburb_mandatory_details_as(String subcode, String subname, String country, String state, String city, String postalcode, String status) {
+			sysandrefmaster.provideSuburbDetails(subcode, subname, country, state, city, postalcode, status);
+		}
+
+
+		//Suburb search and update
+		@When("User provide Suburbcode as {string} and Suburbname as {string} and filter the record")
+		public void user_provide_suburbcode_as_and_suburbname_as_and_filter_the_record(String subcode, String subname) {
+			sysandrefmaster.provide_details_forSearchField(subcode, subname);
+		}
+		@When("User update the Suburb records with data")
+		public void user_update_the_suburb_records_with_data(List<String> details) {
+			
+			sysandrefmaster.updateSuburbDetails(details.get(0), details.get(1), details.get(2), details.get(3),details.get(4),details.get(5));
+		}
+		
+		//HTS Master
+		
+		@When("user clicks on HTS menu")
+		public void user_clicks_on_hts_menu() {
+			sysandrefmaster.addHTSMaster_Click();
+		}
+		@Then("user navigate to the HTS master Page")
+		public void user_navigate_to_the_hts_master_page() {
+			sysandrefmaster.addHTS_Button_Click();
+		}
+		@Then("User Provides all the HTS mandatory details as {string},{string},{string}")
+		public void user_provides_all_the_hts_mandatory_details_as(String HTSCode, String HTSDescription, String status) {
+			sysandrefmaster.provideHTSDetails(HTSCode, HTSDescription, status);
+			 
+		    
+		}
+		
+		//HTS Search and edit
+		@When("User provide HTScode as {string} and HTSName as {string} and filter the record")
+		public void user_provide_ht_scode_as_and_hts_name_as_and_filter_the_record(String string, String string2) {
+		String HTSCode=	getProperties("HTSCode");
+		String HTSDes=	getProperties("HTSDescription");
+			sysandrefmaster.provide_details_forSearchField(HTSCode, HTSDes);
+		}
+		@When("User update the HTS records with data")
+		public void user_update_the_hts_records_with_data(io.cucumber.datatable.DataTable dataTable) {
+			
+			Map<String,String> maphts=dataTable.asMap();
+			sysandrefmaster.updateHTSDetails(maphts.get("HTS Code"), maphts.get("HTS Description"), maphts.get("status"));
+		}
+		public String getProperties(String getfor) {
+			  String TestData_filePath = "testData/TestData.properties";
+			    String Config_filePath ="src/test/resources/config.properties";
+			    PropertiesReader testdata = new PropertiesReader(TestData_filePath);  
+			 return  testdata.getProperty(getfor);
+		}
+
+//******************************End
+
+	//  Start by Sai 
+		  
+		  @When("I click on STATE MASTER")
+			public void clickStateMasterButton() throws InterruptedException, IncorrectXpathException {
+				sysandrefmaster.clickOnMasterLogMaster();
+				sysandrefmaster.clickOnStateMaster();
+				sysandrefmaster.addStateMasterbutton();
+			}
+		@When("I create a new STATE MASTER {string},{string},{string},{string},{string}")
+			public void createNewStateMaster(String stateCodeMaster, String stateNameMaster, String countryAssociated, String timeZone, String status) throws InterruptedException  {
+				
+				stateCode=stateCodeMaster+utils.generateRandomChars(6);
+				
+				 System.out.println(stateCode);
+				 stateName=stateNameMaster+utils.generateRandomChars(6);
+				
+				 System.out.println(stateName);
+				
+				sysandrefmaster.addStateMaster(stateCode, stateName, countryAssociated, timeZone, status);
+			}
+		
+		
+		@Then("I should validate STATE MASTER in the table")
+			public void validateStateMasterInTable() throws IncorrectXpathException, InterruptedException {
+			
+			       sysandrefmaster.validateStateMaster(stateCode,stateName);
+					
+					   String strStateCode = Mnp.getCellValue(3, 1);
+				        System.out.println(strStateCode);
+
+				        System.out.println(strStateCode);
+
+				        Assert.assertEquals(strStateCode,stateCode);
+				        
+				        String strStateName = Mnp.getCellValue(3, 2);
+				        System.out.println(strStateName);
+
+				        System.out.println(strStateName);
+
+				        Assert.assertEquals(strStateName,stateName);      
+				           
+				        
+				    	//sysandrefmaster.validateLanguageMaster(langCode,langName);  
+				
+				
+			}
+			
+
+		  
+		  //  end by sai
+		    
+		
+	
 		
 }

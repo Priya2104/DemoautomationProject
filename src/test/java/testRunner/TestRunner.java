@@ -23,7 +23,11 @@ import org.testng.annotations.DataProvider;
          // tags ="@BusinessSetup or @GroupSetup or @ClassSetup or  @DepartmentSetup or SubClassSetup or DivisionSetup"
 		  //tags="@LanguageMasterAdd"
         //tags="@LogoMasterMobile or  @LogoMasterDesktop or  @LogoMasterDesktopError or @LogoMasterMobileError or @LanguageMasterAdd"
-		 tags="@LanguageMasterAdd"
+		 //tags="@PKHD-338_View_and_edit_CurrencyMaster"
+        // tags="@BUMandatoryFieldEmptyError or @DivisionErrorMessage or @GropuErrorMessage or @DepartmentErrorMessage or @ClassErrorMessage or @SubClassErrorMessage"
+               	 
+       // tags="@LogoMasterDesktop or @LogoMasterMobile or @LogoMasterDesktopError or @LogoMasterMobileError or @LanguageMasterAdd or @CityMasterAdd or @AddDGMasterAdd or @PKHD-338_CurrencyMaster or @PKHD-338_View_and_edit_CurrencyMaster or @PKHD-4842 or @PKHD-339_CountryMaster or @PKHD-4843 or @PKHD-4845 or @PKHD-4846 or @PKHD-4847 or @PKHD-4848 or @PKHD-507_HTSMaster or @PKHD-609_Search_edit_HTS or @StateMasterAdd"
+        tags="@AddDGMasterAdd"
 		)
 public class TestRunner extends AbstractTestNGCucumberTests
 {

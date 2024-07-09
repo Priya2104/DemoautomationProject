@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -175,9 +176,12 @@ public class SystemAndReferenceMasterPage extends BasePage {
 	@FindBy(xpath="//input[@type='text' and @placeholder='Search Language Name']")
 	WebElement searchLang;
 	
-	@FindBy(xpath="//input[@placeholder='Search City Code']")
+	
+	
+	@FindBy(xpath="//input[@type='text' and @placeholder='Search State/Province Code']")
 	WebElement searchCityCode;
 	
+	//input[@type='text' and @placeholder='Search State/Province Code']
 	
 	
 	@FindBy(xpath="(//*[name()='svg'][@class='p-icon pi-filter-icon'])[2]")
@@ -227,7 +231,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
 			  WebElement btnAddUNNumber;
 			  
 			  
-			  @FindBy(xpath="(//*[contains(text(), 'Save and Continue')])[2]")
+			  @FindBy(xpath="//div[@id='pn_id_191_content']//p-button[@class='p-element ng-star-inserted']//button[@type='button']")
 			  WebElement btnSaveAndContinue1;
 			  
 			  @FindBy(xpath="//input[@placeholder='Search DG Subclass Code']")
@@ -237,6 +241,142 @@ public class SystemAndReferenceMasterPage extends BasePage {
 				
              @FindBy(xpath="//span[@role='combobox' and @class='p-element p-dropdown-label p-inputtext p-placeholder ng-star-inserted' and @aria-label='Select DG Class']")
              WebElement filterDGSubclass;
+             
+             
+           //Anjaiahmartha
+             
+             @FindBy(xpath="//span[text()='Masters']") 
+             WebElement Masters;
+             @FindBy(xpath="//span[text()='Currency Master']") 
+             WebElement currencyMaster;
+             @FindBy(xpath="//h2[text()=' Currency Master ']") WebElement currencymasterheader;
+             @FindBy(xpath="//span[text()='Add Currency']") WebElement addcurrency;
+
+             @FindBy(css="input#currencyCode") WebElement currencycode;
+             @FindBy(css="input#countryCode") WebElement correncyname;
+             @FindBy(css="div#applicableCountries") WebElement applicableCountries;
+             @FindBy(xpath="//input[@type='text'][@role='searchbox']") WebElement coutryinput;
+             @FindBy(css="li#applicableCountries_0") WebElement CountryCheckBoxClick;
+             @FindBy(css="div#status") WebElement status_click;
+             @FindBy(css="ul[role='listbox'] li") List<WebElement> statusoptions;
+             @FindBy(css="input#numberOfDecimals") WebElement decimal_input;
+             @FindBy(xpath="//span[.='Save']") WebElement saveButton_;
+             @FindBy(xpath="//span[.='Cancel']") WebElement CXancelButton;
+             @FindBy(xpath="//span[starts-with(@class,'p-confirm-dialog-message')]") WebElement CancelText;
+             @FindBy(xpath="//span[.='No']") WebElement CancelNo;
+
+             @FindBy(css="li#status_0") WebElement ActiveClick;
+             @FindBy(css="li#status_1") WebElement InActiveClick;
+
+             //Search and edit 
+             @FindBy(xpath="(//tr[starts-with(@class,'remove-in-print ')]/th)[1]//input") WebElement SearchCurrencyCode;
+             @FindBy(xpath="(//tr[starts-with(@class,'remove-in-print ')]/th)[2]//input") WebElement SearchCurrencyName;
+             @FindBy(xpath="(//td[@id='row.id'])[1]") WebElement threedots;
+             @FindBy(xpath="//span[.='Edit']") WebElement edit;
+             @FindBy(xpath="//div[@role='checkbox']") WebElement checkbox;
+             @FindBy(xpath="//div[starts-with(@class,'p-toast-detail ng-tns-')]") WebElement UpdateSuccess;
+             @FindBy(xpath="//div[starts-with(@class,'p-dialog-content ng-')]//span") WebElement status_Confirmation;
+             @FindBy(xpath="//span[.='Yes']") WebElement ConfirmYes;
+             
+           //Country Master
+             @FindBy(xpath="//span[.='Country Master']") 
+             WebElement CountryMaster;
+             @FindBy(xpath="(//span[.='Country Master'])[2]") 
+             WebElement AddcountryMasterButton;
+             @FindBy(css="input#countryCode") 
+             WebElement Countrycode;
+             @FindBy(css="input#countryName") 
+             WebElement CountryName;
+             @FindBy(css="input#isoCode") 
+             WebElement ISO1code;
+             @FindBy(css="input#isoCode2") 
+             WebElement ISO2code;
+             @FindBy(css="input#isoCode3") 
+             WebElement ISO3code;
+             @FindBy(css="div#timeZone") 
+             WebElement TimeZone_Click;
+             @FindBy(css="li#timeZone_0") 
+             WebElement TimezoneCheckBoxOptionCLick; 
+             
+             //UOMMaster
+
+             @FindBy(xpath="//span[.='UOM Master']") WebElement UOM_Master_Menu;
+             @FindBy(xpath="//h2[.=' UOM MASTER ']") WebElement UOMMaster_header;
+             @FindBy(xpath="//span[.='Add UOM']") WebElement addUOM_button;
+             @FindBy(xpath="//h3[.=' UOM MASTER ']") WebElement addUOM_Master_Header;
+             @FindBy(css="input#name") WebElement MeasurementName;
+             @FindBy(css="input#symbol") WebElement symbol;
+             @FindBy(css="div#metricUnit") WebElement measurementUnit;
+             @FindBy(css="div#isActive") WebElement UOM_Status;
+             @FindBy(css="li#metricUnit_0") WebElement MeasureUnit_Click;
+             @FindBy(css="li#isActive_0") WebElement statusclick;
+             
+             //Suburb master
+
+             @FindBy(xpath="//span[text()='Suburb Master']") WebElement SuburbMenu;
+             @FindBy(xpath="//span[text()='Add Suburbs']") WebElement addSuburbbutton;
+             @FindBy(xpath="//h3[text()=' Suburb Master ']") WebElement addsuburnmasterheader;
+
+             @FindBy(css="input#suburbCode") WebElement suburbcode;
+             @FindBy(css="input#suburbName") WebElement suburbname;
+             @FindBy(css="div#country") WebElement country;
+             @FindBy(css="li#country_0") WebElement countryselect;
+             @FindBy(css="div#state") WebElement state;
+             @FindBy(css="li#state_0") WebElement stateselect;
+             @FindBy(css="div#city") WebElement city;
+             @FindBy(css="li#city_0") WebElement cityselect;
+             @FindBy(css="input#postalCode") WebElement postalcode;
+             @FindBy(xpath="//div[@class='p-card-content']/div/h2") WebElement Header_in_view_page;
+             @FindBy(xpath="//div[@class='p-card-content']/h3") WebElement header_in_addmaster_page;
+             
+
+             //HTS MAster
+             
+             @FindBy(xpath="//span[text()='HTS Master']") WebElement HTS_MasterMenu;
+             @FindBy(xpath="//span[.='Add HTS Code']") WebElement AddHTSMaster_Button;
+             @FindBy(css="input#htsCode") WebElement htscode;
+             @FindBy(css="input#htsDescription") WebElement htsdescription;
+             @FindBy(xpath="(//input[@type='text'][@role='combobox'])[1]") WebElement fromdate_click;
+             @FindBy(xpath="(//input[@type='text'][@role='combobox'])[2]") WebElement todate_click;
+             @FindBy(xpath="//tbody/tr/td/span") List<WebElement> alldates;
+             @FindBy(xpath="(//div[starts-with(@class,'p-datepicker-header ng')]//button)[4]") WebElement calender_next_arrow;
+             
+
+             //Sai Kumar
+         	@FindBy(xpath="//span[text()='State Master']")
+         	WebElement stateMaster;
+         	
+         	@FindBy(xpath="//span[text()='Add State']")
+         	WebElement addStateButton;
+         	
+         	@FindBy(xpath="//input[@id='stateCode']")
+         	WebElement inpStateCode;
+         	
+         	@FindBy(xpath="//input[@id='stateName']")
+         	WebElement inpStateName;
+         	
+         	@FindBy(xpath="//span[@aria-label='Select Country']")
+         	WebElement inpStateCountrydd;
+         	@FindBy(xpath="(//li[@id='applicableCountries_0'])[1]")
+         	WebElement inpStateCountryList;
+         	
+         	
+         	@FindBy(xpath="//div[@class='p-multiselect-label p-placeholder']")
+         	WebElement inpStateTimeZone;
+         	
+         	@FindBy(xpath="(//*[name()='svg'][@class='p-checkbox-icon p-icon'])[1]")
+         	WebElement inpMultiTimeZone;
+         	
+         	@FindBy(xpath="//span[@class='layout-menuitem-text ng-tns-c3391058336-27']")
+         	WebElement inpStateStatus;
+         	
+         	@FindBy(xpath="//input[@type='text' and @placeholder='Search State/Province Name']")
+         	WebElement searchState;
+         	
+         	//@FindBy(xpath="//input[@type='text' and @placeholder='Search Language Name']")
+        	//WebElement searchState;
+         	
+         	//Sai Kumar
 
 	
     public SystemAndReferenceMasterPage(WebDriver driver) {
@@ -337,6 +477,26 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	
     }
     
+    
+    public void validateStateMaster(String strcityCode,String strStateName ) throws IncorrectXpathException, InterruptedException
+    {
+    	
+    	
+    	Thread.sleep(5000);
+    	
+    	utils.setValueInEditBox(searchCityCode, strcityCode);
+    	
+    	//utils.doesElementExist(filterIcon);
+    	Thread.sleep(2000);
+    	
+    	searchCityCode.sendKeys(Keys.ENTER);
+    	
+    	
+    	
+    	
+    	Thread.sleep(5000);
+    }
+    	
     public void validateDGyMaster(String strDGCode) throws IncorrectXpathException, InterruptedException
     {
     	//utils.clickElementWithJavaScript(filterDGSubclass);
@@ -432,30 +592,34 @@ public class SystemAndReferenceMasterPage extends BasePage {
     	
     	utils.setValueInEditBox(inpDGSubclassdgSubclassDescription, strDgSubDesc);
     	
-    	String uploadFile = new File("src/test/resources/Warehouse Add.png").getAbsolutePath();
+    	Mnp.valActivaStatus();
     	
-    	Thread.sleep(4000);
+    	String uploadFile = new File("src/test/resources/SamplePNGImage_3mbmb.png").getAbsolutePath();
+    	
+    	Thread.sleep(500);
     	
     	filepathXapthDG.sendKeys(uploadFile);  
   	  
   		//utils.waitForElementclickable(Duration.ofSeconds(60), desktopUploadButton);
   		
   		System.out.println(inpUNUnimber);
+  		
     	utils.setValueInEditBox(inpUNNumber,inpUNUnimber);
     	
     	utils.setValueInEditBox(inpDGUNDesc,inpUNUDescription);
     	
 	//utils.clickElementWithJavaScript(checkedboxApplicableCountries);
     	
-    	Mnp.valActivaStatus();
+    	Thread.sleep(2000);
     	
-    	utils.clickElementWithJavaScript(btnAddUNNumber);
+    	utils.clickOnWebElement(btnAddUNNumber);
     	
+    	Thread.sleep(10000);
     	
-    	utils.clickElementWithJavaScript(btnSaveAndContinue1); 	   	
+    	//utils.clickElementWithJavaScript(btnSaveAndContinue1); 	   	
+    	utils.clickOnWebElement(btnSaveAndContinue1);
     	
-    	
-    	
+    	Thread.sleep(10000);
     	
     	
     	
@@ -619,6 +783,427 @@ public class SystemAndReferenceMasterPage extends BasePage {
     }
 
     
+    //***Anji
+    
+    
+    
+    
+    //HTS MAster
+    
+  public void addHTSMaster_Click() {
+    	utils.explicit_Wait(HTS_MasterMenu, 200);
+    	utils.clickElement_using_Size("//span[text()='HTS Master']", HTS_MasterMenu);
+    }
+  public void addHTS_Button_Click() {
+  	utils.explicit_Wait(AddHTSMaster_Button, 200);
+  	utils.getSuccessmsg(Header_in_view_page);
+  	utils.clickElement_using_Size("//span[.='Add HTS Code']", AddHTSMaster_Button);
+  }
+  
+  public void provideHTSDetails(String HTSCode,String HTSDescription,String status) {
+  	utils.getSuccessmsg(Header_in_view_page);
+  	String htsCode=HTSCode+randomString();
+  	setProperties("HTSCode",htsCode);
+  	String htsdes=HTSDescription+randomString_notspecial();
+  	setProperties("HTSDescription",htsdes);
+  	utils.sendkeys_ele(htscode, htsCode, 100);
+  	utils.sendkeys_ele(htsdescription,htsdes,100);
+  utils.effective_Frm_Date(fromdate_click, alldates);
+  utils.effective_To_Date(todate_click, calender_next_arrow, alldates);
+  
+  status_Options(status,status_click);
+  	
+  	validateCancel_Save();
+  	
+  }
+  	
+  public void setProperties(String setfor,String code) {
+	  String TestData_filePath = "testData/TestData.properties";
+	    String Config_filePath ="src/test/resources/config.properties";
+	    PropertiesReader testdata = new PropertiesReader(TestData_filePath);  
+	    testdata.setProperty(setfor, code);
+	   
+  }
+  public String getProperties(String getfor) {
+	  String TestData_filePath = "testData/TestData.properties";
+	    String Config_filePath ="src/test/resources/config.properties";
+	    PropertiesReader testdata = new PropertiesReader(TestData_filePath);  
+	 return  testdata.getProperty(getfor);
+	  
+	   
+  }
+  
+  public void updateHTSDetails(String HTSCode,String HTSDescription,String status) {
+	  	utils.getSuccessmsg(Header_in_view_page);
+	  	utils.sendkeys_ele(htscode, HTSCode+randomString(), 100);
+	  	utils.sendkeys_ele(htsdescription,HTSDescription+randomString_notspecial(),100);
+	  utils.effective_Frm_Date(fromdate_click, alldates);
+	  utils.effective_To_Date(todate_click, calender_next_arrow, alldates);
+	  
+	  status_Options(status,status_click);
+	  	
+	  	validateCancel_Save();
+	  	
+	  }
+    
+    
+  
+  //suburb naster
+  
+  public void addSuburbMenu_Click() {
+  	utils.explicit_Wait(SuburbMenu, 200);
+  	utils.clickElement_using_Size("//span[text()='Suburb Master']", SuburbMenu);
+  }
+
+
+  public void addSuburb_Button_click() {
+  	utils.explicit_Wait(addSuburbbutton, 200);
+  	String header=utils.clickElement_using_Size_getText("//div[@class='p-card-content']/div/h2", Header_in_view_page);
+  	System.out.println(header);
+  	utils.clickElement_using_Size("//span[text()='Add Suburbs']", addSuburbbutton);
+  }
+
+  public void provideSuburbDetails(String suburbco,String suburbna,String countryse,String statese,String cityse,String postalcodese,String status) {
+  	utils.getSuccessmsg(addsuburnmasterheader);
+  	utils.sendkeys_ele(suburbcode, suburbco+randomString(), 100);
+  	utils.sendkeys_ele(suburbname,suburbna+randomString(),100);
+  	
+  	utils.coutry_Select(country, countryse, coutryinput,countryselect, 150);
+  	utils.coutry_Select(state, statese, coutryinput,stateselect, 200);
+  	utils.coutry_Select(city, cityse, coutryinput,cityselect, 200);
+  	utils.sendkeys_ele(postalcode,postalcodese,100);
+  status_Options(status,status_click);
+  	
+  	validateCancel_Save();
+  	
+  	
+  	
+  	
+  }
+
+  public void updateSuburbDetails(String subname,String countryse,String statese,String cityse,String postalse,String statusop) {
+  	try {
+  		Thread.sleep(300);
+  	} catch (InterruptedException e) {
+  		// TODO Auto-generated catch block
+  		e.printStackTrace();
+  	}
+  	String header=utils.getSuccessmsg(header_in_addmaster_page);
+  	System.out.println(header.trim());
+  	utils.javascriptexecuterfor_sendkeys(suburbname,subname+randomString(),100);
+  	
+  	utils.coutry_Select(country, countryse, coutryinput,countryselect, 150);
+  	utils.coutry_Select(state, statese, coutryinput,stateselect, 150);
+  	utils.coutry_Select(city, cityse, coutryinput,cityselect, 150);
+ 
+  utils.sendkeys_ele(postalcode, postalse, 200);
+  	status_Options(statusop,status_click);
+  	
+  	validateCancel_Save();
+  	
+  	
+  	
+  }
+  
+  
+  // UOM
+  
+  public void uom_Master_Menu_Click() {
+  	utils.explicit_Wait(UOM_Master_Menu, 200);
+  	utils.clickElement_using_Size("//span[.='UOM Master']", UOM_Master_Menu);
+  	
+  }
+  public void click_AddUOM() {
+  	utils.explicit_Wait(UOMMaster_header, 200);
+  	String Actual=" UOM MASTER ".trim();
+  	String expected=utils.getSuccessmsg(UOMMaster_header);
+  	org.testng.Assert.assertEquals(expected, Actual);
+  	utils.clickElement_using_Size("//span[.='Add UOM']", addUOM_button);
+  }
+
+  public void provideUOMDetails(String measurename,String sym,String MeasureUnit,String status) {
+  	utils.getSuccessmsg(addUOM_Master_Header);
+  	utils.sendkeys_ele(MeasurementName, measurename+randomString(), 100);
+  	utils.sendkeys_ele(symbol,sym+randomString(),100);
+  	
+  	utils.coutry_Select(measurementUnit, MeasureUnit, coutryinput,MeasureUnit_Click, 150);
+  	status_Options(status,UOM_Status);
+  	
+  	validateCancel_Save();
+  	
+  	
+  	
+  }
+  public void updateUOMDetails(String measurename,String sym,String MeasureUnit,String status) {
+  	try {
+  		Thread.sleep(300);
+  	} catch (InterruptedException e) {
+  		// TODO Auto-generated catch block
+  		e.printStackTrace();
+  	}
+  	utils.getSuccessmsg(addUOM_Master_Header);
+  	utils.javascriptexecuterfor_sendkeys(MeasurementName,measurename+randomString(),100);
+  	utils.slowSendKeys(symbol, sym, 250);
+  	
+  	
+  	utils.coutry_Select(measurementUnit, MeasureUnit, coutryinput,MeasureUnit_Click, 150);
+  	//status_Options(status,UOM_Status);
+  	uom_Status_Options(status, UOM_Status, coutryinput,statusclick);
+  	validateCancel_Save();
+  	
+  	
+  	
+  }
+  
+  // country master
+  
+
+  public void countryMasterMenu_Click() {
+  	utils.explicit_Wait(CountryMaster, 200);
+  	utils.clickElementWithJavaScript1(CountryMaster);
+  }
+  public void addCountryMasterClick() {
+  	utils.explicit_Wait(AddcountryMasterButton, 220);
+  	utils.clickElementWithJavaScript(AddcountryMasterButton);
+  }
+
+
+  public void provideCountryDetails(String ccode,String cname,String ISO1,String ISO2,String ISO3,String selectTimeZone,String status) {
+  	utils.sendkeys_ele(Countrycode, ccode+randomString(), 10);
+  	utils.sendkeys_ele(CountryName,cname+randomString(),10);
+  	utils.sendkeys_ele(ISO1code, ISO1+randomString(), 200);
+  	utils.sendkeys_ele(ISO2code, ISO2+randomString(), 200);
+  	utils.sendkeys_ele(ISO3code, ISO3+randomString(), 200);
+  	utils.coutry_Select(TimeZone_Click, selectTimeZone, coutryinput,TimezoneCheckBoxOptionCLick, 150);
+  	status_Options(status,status_click);
+  	
+  	validateCancel_Save();
+  	
+  	
+  	
+  }
+  public void updateCountryDetails(String cname,String ISO1,String ISO2,String ISO3,String selectTimeZone,String status) {
+  	try {
+  		Thread.sleep(300);
+  	} catch (InterruptedException e) {
+  		// TODO Auto-generated catch block
+  		e.printStackTrace();
+  	}
+  	utils.javascriptexecuterfor_sendkeys(CountryName,cname+randomString(),50);
+  	utils.slowSendKeys(ISO1code, ISO1+randomString(), 250);
+  	utils.sendkeys_ele(ISO2code, ISO2+randomString(), 200);
+  	utils.sendkeys_ele(ISO3code, ISO3+randomString(), 200);
+  	
+  	utils.updateCountrySelectcoutry_Select(TimeZone_Click, selectTimeZone, coutryinput,checkbox,TimezoneCheckBoxOptionCLick, 200);
+  	status_Options(status,status_click);
+  	
+  	validateCancel_Save();
+  	
+  	
+  	
+  }
+
+  public void validateCancel_Save() {
+  	utils.clickElementWithJavaScript1(CXancelButton);
+  	String getCancelText=utils.getSuccessmsg(CancelText);
+  	System.out.println(getCancelText);
+  	utils.clickElementWithJavaScript1(CancelNo);
+  	utils.clickElementWithJavaScript1(saveButton_);
+  }
+
+  public String randomString() {
+  	String alpha="AbCDef123456cndjcu78jbkqs2d98@@&^H&%^)(^%$";
+  	Random ran=new Random();
+  	StringBuffer sb=new StringBuffer();
+  	int len=3;
+  	for(int i=0;i<len;i++) {
+  		int index=ran.nextInt(alpha.length());
+  		char rch=alpha.charAt(index);
+  		sb.append(rch);
+  		
+  		
+  	}
+  	return sb.toString();
+  }
+
+  public String randomString_notspecial() {
+  	String alpha="AbCDef123456cndjcu78jbkqs2d98H";
+  	Random ran=new Random();
+  	StringBuffer sb=new StringBuffer();
+  	int len=10;
+  	for(int i=0;i<len;i++) {
+  		int index=ran.nextInt(alpha.length());
+  		char rch=alpha.charAt(index);
+  		sb.append(rch);
+  		
+  		
+  	}
+  	return sb.toString();
+  }
+
+// currency master 
+  
+
+  public void masterClick() {
+  	try {
+  		utils.explicit_Wait(Masters,120);
+  		utils.clickElementWithJavaScript1(Masters);
+  	}catch(Exception e) {
+  		e.printStackTrace();
+  	}
+  }
+
+  public void currencyMastermasterClick() {
+  	
+  		utils.explicit_Wait(currencyMaster,120);
+  		utils.clickElementWithJavaScript1(currencyMaster);
+  	
+  }
+
+  public String addCurrencyMaster_Click()
+  {
+  	
+  	utils.explicitWat_click(currencymasterheader);
+  	String  headercur=utils.getSuccessmsg(currencymasterheader);
+  	return headercur;
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+
+  }
+  public void addCurrency_Click() {
+  	utils.explicit_Wait(addcurrency, 120);
+  	utils.clickElementWithJavaScript1(addcurrency);
+  }
+
+  public void provideCurrencyDetails(String ccode,String cname,String countries,String status,String decimals) {
+  	utils.sendkeys_ele(currencycode, ccode+randomString(), 10);
+  	utils.sendkeys_ele(correncyname,cname+randomString(),10);
+  	utils.coutry_Select(applicableCountries, countries, coutryinput, CountryCheckBoxClick,15);
+  	status_Options(status,status_click);
+  	
+  	
+  	utils.sendkeys_ele(decimal_input, decimals, 10);
+  	utils.clickElementWithJavaScript1(CXancelButton);
+  	String getCancelText=utils.getSuccessmsg(CancelText);
+  	System.out.println(getCancelText);
+  	utils.clickElementWithJavaScript1(CancelNo);
+  	utils.clickElementWithJavaScript1(saveButton_);
+  	
+  }
+  public void updateCurrencyDetails(String cname,String countries,String status,String decimals) {
+  	
+  	utils.javascriptexecuterfor_sendkeys(correncyname,cname+randomString(),10);
+  	utils.updateCountrySelectcoutry_Select(applicableCountries, countries, coutryinput,checkbox, CountryCheckBoxClick,200);
+  	status_Options(status,status_click);
+  //	utils.getSuccessmsg(status_Confirmation);
+  	//utils.clickElement_using_Size("//div[starts-with(@class,'p-dialog-content ng-')]//span", ConfirmYes);
+  	
+  	utils.sendkeys_ele(decimal_input, decimals, 100);
+  	validateCancel_Save();
+  	
+  }
+
+  public void status_Options(String status, WebElement statusele) {
+  	utils.explicit_Wait(statusele, 100);
+  	utils.clickElementWithJavaScript1(statusele);
+  	for(WebElement sta:statusoptions) {
+  		if(sta.getText().equalsIgnoreCase(status)) {
+  			sta.click();
+  			break;
+  		}
+  	}
+  }
+
+  public void uom_Status_Options(String status, WebElement statusele,WebElement statu,WebElement click) {
+  	utils.explicit_Wait(statusele, 100);
+  	
+  	utils.clickElementWithJavaScript1(statusele);
+  	utils.slowSendKeys(coutryinput, status, 15);
+  	click.click();
+  }
+
+  public void provide_details_forSearchField(String ccode,String cname) {
+  
+  	utils.wiatScreen(3000);
+  	utils.search_filter_select(SearchCurrencyCode, ccode, SearchCurrencyName, cname);
+  	utils.edit_Click(threedots, edit);
+  	
+//  	utils.sendkeys_ele(SearchCurrencyCode, ccode, 200);
+//  	utils.sendkeys_ele(SearchCurrencyName, cname, 200);
+  	
+  }
+  public void getMessage(String str) {
+  	String Actual=str.trim();
+  	try {
+  		Thread.sleep(1000);
+  	} catch (InterruptedException e) {
+  		// TODO Auto-generated catch block
+  		e.printStackTrace();
+  	}
+  	utils.explicit_Wait(UpdateSuccess, 200);
+  	String expected=utils.getSuccessmsg(UpdateSuccess);
+       System.out.println(expected);
+       Assert.assertEquals(expected.trim(), Actual);
+  }
+  
+    
+    //*** end by Anji
+    
+//Sai Kumar
+  public void clickOnStateMaster() throws InterruptedException
+  {
+  	//Thread.sleep(60);
+
+  	//utils.waitForElementclickable(Duration.ofSeconds(60), systemandref);
+  	//utils.clickOnWebElement(systemandref);
+  	Thread.sleep(20);
+  	utils.waitForElementclickable(Duration.ofSeconds(60),stateMaster );
+  	utils.clickElementWithJavaScript(stateMaster);
+  }
+  
+  public void addStateMasterbutton()
+  {
+  	utils.waitForElementclickable(Duration.ofSeconds(60),addStateButton );
+  	utils.clickElementWithJavaScript(addStateButton);
+  }
+  
+  public void addStateMaster(String stateCodes, String stateNames, String associatedCountries, String timeZones, String status) throws InterruptedException
+  {
+  	
+  	
+  	utils.waitForElementclickable(Duration.ofSeconds(60), inpStateCode);
+  	
+  	utils.setValueInEditBox(inpStateCode, stateCodes);
+  	
+  	utils.setValueInEditBox(inpStateName, stateNames);
+  	
+  	utils.clickOnWebElement(inpStateCountrydd);	
+  	
+  	utils.setValueInEditBox(searchBox, associatedCountries);
+  	
+  	utils.clickOnWebElement(inpStateCountryList);
+  	utils.clickOnWebElement(selectCountry);
+  	
+  	utils.clickOnWebElement(inpStateTimeZone);
+  	Thread.sleep(3000);
+      utils.setValueInEditBox(searchBox,timeZones);
+      
+      utils.clickElementWithJavaScript(checkedboxApplicableCountries);
+     
+      
+  	Mnp.valActivaStatus();
+  	
+  	utils.clickElementWithJavaScript(saveButton);
+  	
+  }
+  //Sai Kumar
+
+  
     public void erroValidation(String strtype,String strSize,String strcolor) throws InterruptedException, AWTException
     {
     	

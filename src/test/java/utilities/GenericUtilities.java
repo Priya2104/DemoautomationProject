@@ -3,6 +3,8 @@ package utilities;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -1232,6 +1234,447 @@ public class GenericUtilities {
          Assert.assertEquals(expectedColor, actualColor);
     }
 
+	//*****Anjaiah
+	
+	//packs
+    public void getTextele(WebElement ele) {
+    	try {
+    	System.out.println(	ele.getText().trim());
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    public void sendItemQuantity(WebElement ele,String s) {
+    	
+    	try {
+    		Thread.sleep(200);
+    		waitForElementToBeVisiblewithFluentWait(ele, 60);
+    		
+    	char[] ch=	s.toCharArray();
+    	for(char c:ch) {
+    	ele.sendKeys(String.valueOf(c));
+    	}
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    //pagination
+    public Long getNumberOfRowsUsingJS( String tableSelector) throws NoSuchElementException {
+    	  JavascriptExecutor js = (JavascriptExecutor) driver;
+    	  Long rowsCount = (Long) js.executeScript("return document.querySelector('" + tableSelector + " tr').length");
+    	  if (rowsCount == null || rowsCount == 0L) {
+    	    throw new NoSuchElementException("Table not found using selector: " + tableSelector);
+    	  }
+    	  return rowsCount;
+    	}
+
+    
+    public int getNumberOfRowsUsingJS(WebElement table) {
+    	String tableSelector = "#table";
+    	  JavascriptExecutor js = (JavascriptExecutor) driver;
+    	  int rowsCount = (int) js.executeScript("return document.querySelector('"+tableSelector+" tr').length");
+    	  return rowsCount;
+    	}
+    
+    public void selectElement(List<WebElement> ele,String ss) {
+    	try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+   for(int i=0;i<ele.size();i++) {
+	   ele.get(i).click() ;
+		   //break;
+	   
+   }
+}
+    
+    public int getTableRowCount(WebElement table) {
+	    List<WebElement> rows = table.findElements(By.xpath(".//tr"));
+	    for(int i=0;i<rows.size();i++) {
+	    	if(i==0) {
+	    		continue;
+	    	}
+	    	System.out.println(i);
+	    }
+		return rows.size();
+	    	
+	}
+    
+    public int getRowCount(List<WebElement> ele) {
+    	
+    	for(int i=0;i<ele.size()-1;i++)
+    	{System.out.println("Rows of table is :" +i);}
+    	return ele.size()-1;
+		
+    }
+    
+    public int getNumberOfRows(WebElement table) {
+    	try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	  List<WebElement> rows = table.findElements(By.xpath(".//tr"));
+    	
+    	 
+    	  
+    	 return rows.size()-2;
+    	}
+    
+    
+    public int getNumberOfRowsoftable(WebElement table) {
+    	try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    //	driver.manage().timeouts().getPageLoadTimeout();
+    	     	int tablesize=table.findElements(By.tagName("tr")).size();
+    	 
+    	  
+    	  return tablesize-2;
+    	}
+    public int  rowcountusinfcss() {
+    	wiatScreen(6500);
+    int ssize=	driver.findElements(By.cssSelector("table tr")).size();
+    //System.out.println("Number of records are "+(ssize-2));
+    return ssize-2;
+    }
+    
+    
+    public void page_select_eachpage(List<WebElement> ele) {
+    	List<WebElement> options=ele;
+    	
+    	
+    }
+    
+    public void wiatScreen(long mils) {
+    	try {
+			Thread.sleep(mils);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    
+    //Item management
+    public void clickOnWebElement_click(WebElement clickableElement) {
+
+        try {
+        	//waitForElementVisibilityFor(Duration.ofSeconds(500),clickableElement);
+        	 waitForElementToBeClickablewithFluentWait(clickableElement,250);
+        //	clickableElement.click();
+        	 clickElementWithJavaScript(clickableElement);
+        	
+           
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public void explicitWat_click(WebElement ele)  {
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(220)) ;
+    wait.until(ExpectedConditions.elementToBeClickable(ele));
+    try {
+    	Thread.sleep(300);
+    } catch (InterruptedException e) {
+    	// TODO Auto-generated catch block
+    	e.printStackTrace();
+    }
+    ele.click();
+    }
+        
+        public String getSuccessmsg(WebElement  ele) {
+         try {
+    		Thread.sleep(300);
+    	} catch (InterruptedException e) {
+    		// TODO Auto-generated catch block
+    		e.printStackTrace();
+    	}  
+       
+        String str= ele.getText().trim();
+        System.out.println(str);
+        return str;
+        }
+        public boolean clickableElement(WebElement ele) {
+        	if(ele.isDisplayed()&&(ele.isEnabled())) {
+        		return true;
+        	}
+        	return false;
+        }
+        
+        public void checkorRedioClick(WebElement ele) {
+        	try {
+        		clickElementWithJavaScript1(ele);
+        	}catch(Exception e) {
+        		e.printStackTrace();
+        	}
+        	}
+        
+       public void explicit_Wait(WebElement ele,long sec) {
+    	   try {
+			Thread.sleep(300);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	   WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(sec));
+    	   wait.until(ExpectedConditions.elementToBeClickable(ele));
+       }
+        
+        public void sendkeys_ele(WebElement ele, String str,long delay) {
+        	wiatScreen(2000);
+        	explicit_Wait(ele, delay);
+        	ele.click();
+        	ele.clear();
+        	ele.sendKeys(str);
+        }
+        public void sendkeys_ele_Date(WebElement ele, String str,long delay) {
+        	wiatScreen(2000);
+        	explicit_Wait(ele, delay);
+        	
+        	ele.clear();
+        	ele.sendKeys(str);
+        }
+        public void sendkeys_ele1(WebElement ele, String str,long delay) {
+        	explicit_Wait(ele, delay);
+        	ele.click();
+        	ele.clear();
+        	
+        	ele.sendKeys(str);
+        }
+        
+        public void coutry_Select(WebElement ele,String str,WebElement input,WebElement eleclick,long delay) {
+        	
+        	String [] st=str.split(",");
+        	System.out.println(st);
+        	
+        		explicit_Wait(ele, delay);
+        		wiatScreen(1000);
+            	ele.click();
+            	
+        		for(int i=0;i<st.length;i++) {
+        			input.clear();
+        			System.out.println("datat is : "+st[i]);
+        			slowSendKeys(input, st[i], delay);
+                	clickElementWithJavaScript1(eleclick);// li#applicableCountries_0
+        			
+                	
+        		}
+        	
+        	
+        }
+public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElement input,WebElement checkbox,WebElement CountryCheckBoxClick,long delay) {
+        	
+        	String [] st=str.split(",");
+        	System.out.println(st);
+        	
+        		explicit_Wait(ele, delay);
+            	ele.click();
+            	explicit_Wait(checkbox, delay);
+            	checkbox.click();
+            	checkbox.click();
+        		for(int i=0;i<st.length;i++) {
+        			input.clear();
+        			System.out.println(st[i]);
+        			slowSendKeys(input, st[i], delay);
+                	clickElementWithJavaScript1(CountryCheckBoxClick);
+                	
+        		}
+        	
+        	
+        }
+        public void search_filter_select(WebElement ele1,String ccode,WebElement ele2, String cname) {
+        	explicit_Wait(ele1,220);
+        	sendkeys_ele(ele1, ccode, 120);
+        	explicit_Wait(ele2,120);
+        	sendkeys_ele(ele2, cname, 120);
+        	Actions a=new Actions(BaseClass.getDriver());
+        	a.sendKeys(Keys.ENTER).build().perform();
+        	
+        	
+        }
+        
+        public void edit_Click(WebElement ele,WebElement ele1) {
+        	try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	explicit_Wait(ele, 200);
+        	ele.click();
+        	explicit_Wait(ele1, 200);
+        	clickElementWithJavaScript(ele1);
+        	
+        }
+        
+        public void clickElement_using_Size(String str,WebElement ele) {
+        	explicit_Wait(ele, 200);
+        	if(driver.findElements(By.xpath(str)).size()>0) {
+        		clickElementWithJavaScript1(ele);
+        		}
+        }
+        public String  clickElement_using_Size_getText(String str,WebElement ele) {
+        	explicit_Wait(ele, 200);
+        	String header = null;
+        	if(driver.findElements(By.xpath(str)).size()>0) {
+        		 getSuccessmsg(ele);
+        		}
+        	return header;
+        }
+        public void clickElementWithJavaScript1(WebElement element) {
+            try {
+          	wiatScreen(3500);
+            	waitForElementToBeClickablewithFluentWait(element, 250);
+//                JavascriptExecutor executor = (JavascriptExecutor) driver;
+//                executor.executeScript("arguments[0].click();", element);
+            	
+            	JavascriptExecutor js=(JavascriptExecutor)driver;
+            	js.executeScript("arguments[0].click();", element);
+            	
+            } catch (Exception e) {
+                // Handle any exceptions or log errors
+                e.printStackTrace();
+            }
+            
+        }
+        
+        public void javascriptexecuterfor_sendkeys(WebElement element, String text, long delay) {
+    		element.click();
+    		element.clear();
+    		try {
+    			Thread.sleep(1000);
+    		} catch (InterruptedException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+    		for (char c : text.toCharArray()) {
+    			element.sendKeys(String.valueOf(c));
+    			try {
+    				Thread.sleep(delay);
+    				
+    			} catch (InterruptedException e) {
+    				e.printStackTrace();
+    			}
+    		}
+    		element.clear();
+    		element.clear();
+    		//element.sendKeys(text);
+    		slowSendKeys(element, text, delay);
+    	}
+        
+        public String calender_Current_Date() {
+        	 Date today = new Date();
+        	    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        	    String formattedDate = formatter.format(today);
+        	    System.out.println("Formatted date: " + formattedDate);
+        	    return formattedDate;
+        }
+        
+        public void effective_Frm_Date(WebElement ele,List<WebElement> effdate) {
+        	wiatScreen(2000);
+        	String cal=calender_Current_Date().split("/")[0];
+        	if(cal.startsWith("0")) {
+        	cal=cal.replaceAll("0","");
+        	}
+        	System.out.println(cal);
+        	ele.click();
+        	             List<WebElement> call=  effdate;
+        	            
+        	
+        	for(WebElement aff:call) {
+        	            	
+        		if(aff.getText().equalsIgnoreCase(cal)) {
+        			aff.click();
+        			break;
+        		}
+        		currentMontFirstDate();
+        	            }
+        }
+  public void effective_To_Date(WebElement ele,WebElement  calender_next_arrow, List<WebElement> effdate) {
+        	wiatScreen(2000);
+        	String cal=calender_Current_Date().split("/")[0];
+        	if(cal.startsWith("0")) {
+        	cal=cal.replaceAll("0","");
+        	}
+        	System.out.println("Current date :"+cal);
+        	ele.click();
+        	
+        	calender_next_arrow.click();
+        	             List<WebElement> call=  effdate;
+        	            
+        	
+        	for(WebElement aff:call) {
+        	            	if(aff.isDisplayed()&&aff.isEnabled()) {
+        		if(aff.getText().equalsIgnoreCase(cal)) {
+        			aff.click();
+        			break;
+        		}
+        		
+        	            	}else {
+        	            		int cal1=Integer.parseInt(cal);
+        	            	int cal2=	(cal1)-3;
+        	            	String callNextcode=Integer.toString(cal2);
+        	            	System.out.println(callNextcode);
+        	         
+        	            		  WebElement tardate=	driver.findElement(By.xpath("//span[text()="+callNextcode+"]"));
+        	            		  tardate.click();
+        	            		  break;
+        }
+        	}
+        	nextMonth_specific_Date();	
+        	nextMonth_specific_Date();
+  }
+ 
+  public void nextMontFirstDate() {
+	  
+	 // Get the current date
+	      LocalDate today = LocalDate.now();
+
+	      // Get the first day of the next month
+	      LocalDate firstOfNextMonth = today.with(TemporalAdjusters.firstDayOfNextMonth());
+
+	      // Print the date
+	      System.out.println(" Next Month data: "+firstOfNextMonth);
+	      
+	    }
+	
+  public void currentMontFirstDate() {
+	  
+		 // Get the current date
+		      LocalDate today = LocalDate.now();
+
+		      // Get the first day of the next month
+		      LocalDate firstOfMonth = today.with(TemporalAdjusters.firstDayOfMonth());
+
+		      // Print the date
+		      System.out.println(" Current Month data: "+firstOfMonth);
+		      
+		    }
+		
+	  public void nextMonth_specific_Date() {
+		  LocalDate today = LocalDate.now();
+SimpleDateFormat sim=new SimpleDateFormat("dd/MM/yyyy");
+
+		    // Get a specific date in the next month (15th of next month)
+		    LocalDate specificDate = today.plusMonths(1).withDayOfMonth(15);
+
+		    // Print the date
+		    System.out.println("Next month specific date "+specificDate);
+	  }
+	
+	
+	
+	// end by Anji
+	
 	/**
 	 * @return void
 	 * @name : slowSendKeys

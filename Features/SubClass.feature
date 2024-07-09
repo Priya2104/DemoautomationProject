@@ -5,7 +5,7 @@ Feature: Mechandise sub class Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "PEP00002COMPANY12"
+    And User Can Select Company "AVENIDA"
     And Click on merchandise Menu
     
 
@@ -15,8 +15,8 @@ Feature: Mechandise sub class Setup page
     When click on subclass tab
     When User select class name in Subclass
     And Enter SubClass Name
-    And The user select Reporting category "Apparel"
-    And User select item Type "mobile"
+    And The user select Reporting category "REPOCAT0012"
+    And User select item Type "AutomationTest"
    #And The user select Alternative Hierarchy "Kids#Jeans#Spring Season#Christmas#Back To school#Bottoms#Cartoons"
     And verify that the Active status is selected by default from the Status dropdown
     And submit the page

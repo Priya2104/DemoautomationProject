@@ -552,7 +552,8 @@ public class MerchandiseDivisionPage extends BasePage {
 
     public void clickAddButtonGroup() throws IncorrectXpathException
     {
-    	utils.doesElementExist(btnGroup);
+    	utils.explicit_Wait(btnGroup,2000);
+    	//utils.doesElementExist(btnGroup);
     	driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
     	
     	clickAddButton(btnGroup);
@@ -583,7 +584,8 @@ public class MerchandiseDivisionPage extends BasePage {
     public void clickAddButton(WebElement element)
     {
         
-        utils.waitForElementclickable(Duration.ofSeconds(60), element);        
+        utils.waitForElementclickable(Duration.ofSeconds(60), element);
+        
     	utils.clickOnWebElement(element);
  
     }
