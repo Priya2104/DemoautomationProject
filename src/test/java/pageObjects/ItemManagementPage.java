@@ -51,6 +51,7 @@ public class ItemManagementPage extends BasePage {
 
     final private CloseableHttpClient client;
     
+    private int CompanyAPI_responsePkid,BusinessUnitAPI_responsePkid, DivisionAPI_responsePkid, GroupAPI_responsePkid, DepartmentAPI_responsePkid, ClassAPI_responsePkid, SubClassAPI_responsePkid;
     private String CompanyAPI_ID, BusinessUnitAPI_ID, DivisionAPI_ID, GroupAPI_ID, DepartmentAPI_ID, ClassAPI_ID, SubClassAPI_ID;
     private int CompanyAPI_responseID, BusinessUnitAPI_responseID, DivisionAPI_responseID, GroupAPI_responseID, DepartmentAPI_responseID, ClassAPI_responseID, SubClassAPI_responseID;
     private String CompanyAPI_responseName,BusinessUnitAPI_responseName, DivisionAPI_responseName, GroupAPI_responseName, DepartmentAPI_responseName, ClassAPI_responseName, SubClassAPI_responseName;
@@ -920,7 +921,7 @@ public class ItemManagementPage extends BasePage {
     }
 
     
-    //API data setup
+  //API data setup
     public void getCreateMerchandiseDataIDs() {
         //generate IDs
         CompanyAPI_ID = getReferenceIDs("companies");
@@ -951,73 +952,76 @@ public class ItemManagementPage extends BasePage {
         System.out.println("SubClassID: " + SubClassAPI_ID);
         testdata.setProperty("subClassCode", SubClassAPI_ID);
 
-        }
-        public void CreateMerchandiseData() {
+    }
+    public void CreateMerchandiseData() {
 
-        	  /*
-        //post and get company data
-        Map<String, String> companyData = postCompanyData("companies");
-        String CompanyAPI_responseCode = companyData.get("code");
-        CompanyAPI_responseName = companyData.get("name");
-        testdata.setProperty("companyName", CompanyAPI_responseName);
-        CompanyAPI_responseID = Integer.parseInt(companyData.get("id"));
-        System.out.println("CompanyAPI_responseID: " + CompanyAPI_responseID);
-        System.out.println("CompanyAPI_responseCode: " + CompanyAPI_responseCode);
-        System.out.println("CompanyAPI_responseName: " + CompanyAPI_responseName);
-      */
-        //post and get merchandise data
         Map<String, String> businessUnitData = postMerchandiseData("business-units");
-        String BusinessUnitAPI_responseCode = businessUnitData.get("code");
+
+        // Print the entire map to debug
+        System.out.println("businessUnitData: " + businessUnitData);
+
+        if (businessUnitData.get("pkid") != null) {
+            BusinessUnitAPI_responsePkid = Integer.parseInt(businessUnitData.get("pkid"));
+        } else {
+            System.out.println("pkid is null");
+        }
+
+        if (businessUnitData.get("id") != null) {
+            BusinessUnitAPI_responseID = Integer.parseInt(businessUnitData.get("id"));
+        } else {
+            System.out.println("id is null");
+        }
+
         BusinessUnitAPI_responseName = businessUnitData.get("name");
         testdata.setProperty("businessUnitName", BusinessUnitAPI_responseName);
-        BusinessUnitAPI_responseID = Integer.parseInt(businessUnitData.get("id"));
+
         System.out.println("BusinessUnitAPI_responseID: " + BusinessUnitAPI_responseID);
-        System.out.println("BusinessUnitAPI_responseCode: " + BusinessUnitAPI_responseCode);
         System.out.println("BusinessUnitAPI_responseName: " + BusinessUnitAPI_responseName);
 
         Map<String, String> divisionData = postMerchandiseData("divisions");
-        String DivisionAPI_responseCode = divisionData.get("code");
+        //String DivisionAPI_responseCode = divisionData.get("code");
+        DivisionAPI_responsePkid = Integer.parseInt(divisionData.get("pkid"));
         DivisionAPI_responseName = divisionData.get("name");
         DivisionAPI_responseID = Integer.parseInt(divisionData.get("id"));
         testdata.setProperty("divisionName", DivisionAPI_responseName);
         System.out.println("DivisionAPI_responseID: " + DivisionAPI_responseID);
-        System.out.println("DivisionAPI_responseCode: " + DivisionAPI_responseCode);
+        //System.out.println("DivisionAPI_responseCode: " + DivisionAPI_responseCode);
         System.out.println("DivisionAPI_responseName: " + DivisionAPI_responseName);
 
         Map<String, String> groupData = postMerchandiseData("groups");
-        String GroupAPI_responseCode = groupData.get("code");
+        GroupAPI_responsePkid = Integer.parseInt(groupData.get("pkid"));
         GroupAPI_responseName = groupData.get("name");
         GroupAPI_responseID = Integer.parseInt(groupData.get("id"));
         testdata.setProperty("groupName", GroupAPI_responseName);
         System.out.println("GroupAPI_responseID: " + GroupAPI_responseID);
-        System.out.println("GroupAPI_responseCode: " + GroupAPI_responseCode);
+        //System.out.println("GroupAPI_responseCode: " + GroupAPI_responseCode);
         System.out.println("GroupAPI_responseName: " + GroupAPI_responseName);
 
         Map<String, String> departmentData = postMerchandiseData("departments");
-        String DepartmentAPI_responseCode = departmentData.get("code");
+        DepartmentAPI_responsePkid = Integer.parseInt(departmentData.get("pkid"));
         DepartmentAPI_responseName = departmentData.get("name");
         testdata.setProperty("departmentName", DepartmentAPI_responseName);
         DepartmentAPI_responseID = Integer.parseInt(departmentData.get("id"));
         System.out.println("DepartmentAPI_responseID: " + DepartmentAPI_responseID);
-        System.out.println("DepartmentAPI_responseCode: " + DepartmentAPI_responseCode);
+        //System.out.println("DepartmentAPI_responseCode: " + DepartmentAPI_responseCode);
         System.out.println("DepartmentAPI_responseName: " + DepartmentAPI_responseName);
 
         Map<String, String> classData = postMerchandiseData("classes");
-        String ClassAPI_responseCode = classData.get("code");
+        ClassAPI_responsePkid = Integer.parseInt(classData.get("pkid"));
         ClassAPI_responseName = classData.get("name");
         ClassAPI_responseID = Integer.parseInt(classData.get("id"));
         testdata.setProperty("className", ClassAPI_responseName);
         System.out.println("ClassAPI_responseID: " + ClassAPI_responseID);
-        System.out.println("ClassAPI_responseCode: " + ClassAPI_responseCode);
+        //System.out.println("ClassAPI_responseCode: " + ClassAPI_responseCode);
         System.out.println("ClassAPI_responseName: " + ClassAPI_responseName);
 
         Map<String, String> subClassData = postMerchandiseData("sub-classes");
-        String SubClassAPI_responseCode = subClassData.get("code");
+        SubClassAPI_responsePkid = Integer.parseInt(subClassData.get("pkid"));
         SubClassAPI_responseName = subClassData.get("name");
         SubClassAPI_responseID = Integer.parseInt(subClassData.get("id"));
         testdata.setProperty("subClassName", SubClassAPI_responseName);
         System.out.println("SubClassAPI_responseID: " + SubClassAPI_responseID);
-        System.out.println("SubClassAPI_responseCode: " + SubClassAPI_responseCode);
+        //System.out.println("SubClassAPI_responseCode: " + SubClassAPI_responseCode);
         System.out.println("SubClassAPI_responseName: " + SubClassAPI_responseName);
 
     }
@@ -1061,19 +1065,30 @@ public class ItemManagementPage extends BasePage {
         try {
             String url = BaseAPIurl + "system-reference-data/v1/" + CompanyID;
             JSONObject json = new JSONObject();
-            json.put("code", CompanyAPI_ID);
+            // json.put("code", CompanyAPI_ID);
             json.put("name", "Company" + GenericUtilities.getSystemDate().replace("_", ""));
-            json.put("alternateHierarchies", "[1,2]");
-            json.put("accountableName", "user1");
+            //json.put("alternateHierarchies", "[1,2]");
+            JSONArray alternateHierarchies = new JSONArray();
+            JSONObject hierarchy = new JSONObject();
+            hierarchy.put("alternateHierarchyPkId", 168);
+            hierarchy.put("althierchyName", "q");
+            hierarchy.put("althierchyDescription", "q");
+            hierarchy.put("companyPkId", 1);
+            hierarchy.put("isActive", true);
+            hierarchy.put("isDeleted", false);
+
+            alternateHierarchies.put(hierarchy);
+            json.put("alternateHierarchies", alternateHierarchies);
+            //json.put("accountableName", "user1");
             json.put("reportCategoryId", "1");
             json.put("isActive", true);
             response = apiUtils.sendPostRequest(url, json.toString());
             JSONObject jsonResponse = new JSONObject(response);
             if (jsonResponse.has("data")) {
                 JSONObject data = jsonResponse.getJSONObject("data");
-                if (data.has("code")) {
-                    result.put("code", data.getString("code"));
-                }
+//                if (data.has("code")) {
+//                    result.put("code", data.getString("code"));
+//                }
                 if (data.has("name")) {
                     result.put("name", data.getString("name"));
                 }
@@ -1094,53 +1109,63 @@ public class ItemManagementPage extends BasePage {
             String url = BaseAPIurl + "merch-hierarchy/v1/" + MerchandiseID;
             JSONObject json = new JSONObject();
 
-            switch (MerchandiseID) {
+            switch (MerchandiseID)
+            {
                 case "business-units":
-                    json.put("code", BusinessUnitAPI_ID);
+                    //json.put("code", BusinessUnitAPI_ID);
                     json.put("name", "BU" + GenericUtilities.getSystemDate().replace("_", ""));
                     break;
                 case "divisions":
-                    json.put("code", DivisionAPI_ID);
+                    // json.put("code", DivisionAPI_ID);
                     json.put("name", "Div" + GenericUtilities.getSystemDate().replace("_", ""));
-                    json.put("businessUnitId", BusinessUnitAPI_responseID);
+                    json.put("merchBusinessUnitPkid", BusinessUnitAPI_responsePkid);
                     break;
                 case "groups":
-                    json.put("code", GroupAPI_ID);
+                    // json.put("code", GroupAPI_ID);
                     json.put("name", "Grp" + GenericUtilities.getSystemDate().replace("_", ""));
-                    json.put("divisionId", DivisionAPI_responseID);
+                    json.put("merchDivisionPkid", DivisionAPI_responsePkid);
                     break;
                 case "departments":
-                    json.put("code", DepartmentAPI_ID);
+                    // json.put("code", DepartmentAPI_ID);
                     json.put("name", "Dept" + GenericUtilities.getSystemDate().replace("_", ""));
-                    json.put("groupId", GroupAPI_responseID);
-                    json.put("itemTypeId","11");
+                    json.put("merchGroupPkid", GroupAPI_responsePkid);
+                    json.put("itemTypePkid","11");
                     break;
                 case "classes":
-                    json.put("code", ClassAPI_ID);
+                    // json.put("code", ClassAPI_ID);
                     json.put("name", "Class" + GenericUtilities.getSystemDate().replace("_", ""));
-                    json.put("departmentId", DepartmentAPI_responseID);
-                    json.put("itemTypeId","11");
+                    json.put("merchDepartmentPkid", DepartmentAPI_responsePkid);
+                    json.put("itemTypePkid","11");
                     break;
                 case "sub-classes":
-                    json.put("code", SubClassAPI_ID);
+                    // json.put("code", SubClassAPI_ID);
                     json.put("name", "SubClass" + GenericUtilities.getSystemDate().replace("_", ""));
-                    json.put("classId", ClassAPI_responseID);
-                    json.put("itemTypeId","11");
+                    json.put("merchClassPkid", ClassAPI_responsePkid);
+                    json.put("itemTypePkid","11");
                     break;
             }
             //json.put("companyId", CompanyAPI_responseID);
             json.put("companyId", "2");
-            int[] althier = {1, 2};
-            json.put("alternateHierarchies", althier);
-            json.put("accountableName", "user1");
+            JSONArray alternateHierarchies = new JSONArray();
+            JSONObject hierarchy = new JSONObject();
+            hierarchy.put("alternateHierarchyPkId", 168);
+            hierarchy.put("althierchyName", "q");
+            hierarchy.put("althierchyDescription", "q");
+            hierarchy.put("companyPkId", 1);
+            hierarchy.put("isActive", true);
+            hierarchy.put("isDeleted", false);
+
+            alternateHierarchies.put(hierarchy);
+            json.put("alternateHierarchies", alternateHierarchies);
+            //json.put("accountableName", "user1");
             json.put("reportCategoryId", "1");
             json.put("isActive", true);
             response = apiUtils.sendPostRequest(url, json.toString());
             JSONObject jsonResponse = new JSONObject(response);
             if (jsonResponse.has("data")) {
                 JSONObject data = jsonResponse.getJSONObject("data");
-                if (data.has("code")) {
-                    result.put("code", data.getString("code"));
+                if (data.has("pkid")) {
+                    result.put("pkid", String.valueOf(data.getInt("pkid")));
                 }
                 if (data.has("name")) {
                     result.put("name", data.getString("name"));

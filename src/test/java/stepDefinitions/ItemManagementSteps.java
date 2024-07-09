@@ -162,7 +162,7 @@ public class ItemManagementSteps {
 
 	@When("I Create Merchandise data with API request")
 	public void iCreateMerchansiseDataWithApiRequest() {
-		ItemMngt.getCreateMerchandiseDataIDs();
+		//ItemMngt.getCreateMerchandiseDataIDs();
 		ItemMngt.CreateMerchandiseData();
 	}
 
