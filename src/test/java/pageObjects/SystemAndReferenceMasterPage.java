@@ -231,7 +231,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
 			  WebElement btnAddUNNumber;
 			  
 			  
-			  @FindBy(xpath="//div[@id='pn_id_191_content']//p-button[@class='p-element ng-star-inserted']//button[@type='button']")
+			  @FindBy(xpath="(//p-button[contains(@label,'Save and Continue')])[2]")
 			  WebElement btnSaveAndContinue1;
 			  
 			  @FindBy(xpath="//input[@placeholder='Search DG Subclass Code']")

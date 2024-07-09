@@ -27,19 +27,9 @@ public class OrganizationHierarchySteps {
     MerxLoginPage Mlp;
     public Properties p;
   //public static String  strBusinessUnits;
+  
 
-
-    @Given("The user navigates to login page of Merx")
-    public void the_user_navigates_to_login_page_of_merx() {
-
-        BaseClass.getLogger().info("Goto my Merx Application-->Click on Login.");
-
-        Mlp = new MerxLoginPage(BaseClass.getDriver());
-        
-        //       
-
-
-    }
+   
 
 
 
