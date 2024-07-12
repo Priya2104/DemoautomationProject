@@ -53,14 +53,22 @@ public class MerchandiseSubClassSteps {
 			String DepartmentData, String ClassData, String Accountable, String Responsible, String Reporting_Category,
 			String Alternate_Hierarchy, String Status) throws InterruptedException, IOException {
 
-		BUPage.clickOnFilter();
+		
 
+		Thread.sleep(8000);
 		BUPage.recordInitialFilterCount();
 		MndivisionPage.applyBusinessUnitFilter(BusinessUnit);
 		GroupPage.applyDivisionFilter(DivisionData);
 		DepartmentPage.applyGroupFilter(GroupData);
 		ClassPage.applyDepartmentFilter(DepartmentData);
 		SubClassPage.applyClassFilter(ClassData);
+		BUPage.applyFilter();
+		BUPage.validateFilterAfterApply();
+
+		BUPage.validateResetNoFilter();
+		BUPage.validateResetFilter();
+		
+		
 
 		BUPage.selectAccountableFilter(Accountable);
 		BUPage.selectResponsibleFilter(Responsible);

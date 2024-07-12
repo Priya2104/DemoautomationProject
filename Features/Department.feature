@@ -5,7 +5,7 @@ Feature: Merchandise Department Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "DUNNS"
+    And User Can Select Company "AVENIDA"
     And Click on merchandise Menu
     #Then The user should be redirected to the Merchandise Page
 
@@ -29,13 +29,13 @@ Feature: Merchandise Department Setup page
     Then Validate depClassSubclass error message on the screen
   @DepartmentFilters
   Scenario Outline: Verify the filter functionality in Department view page
-    When The user on the Merchandise Pages
+    #When The user on the Merchandise Pages
     And click on department tab
     Then I apply Department filters "<BusinessUnit>","<DivisionUnit>","<GroupUnit>","<Accountable>","<Responsible>","<Reporting Category>","<Alternate Hierarchy>","<Status>"
-    And I Reset and check the Department filter results
+    #And I Reset and check the Department filter results
     Examples:
       | BusinessUnit | DivisionUnit | GroupUnit  | Accountable   | Responsible | Reporting Category | Alternate Hierarchy | Status |
-      | PEP00432     | SmartPhone   | SmartPhone | Clark, Ronald |             | Footwear           | Kids,Avengers,Jeans | Active |
+      | 1975     | 1173   | 971 |  |             | RC_SK1207           | ALTH_SK1207 | Active |
 #      | PEP00432     | SmartPhone   | SmartPhone |               |               |                    |                     |          |
 #      | PEP00432     | SmartPhone   | SmartPhone |               |               | Bath               | Avengers            | Active   |
 #      | PEP00432     | SmartPhone   | SmartPhone |               |               | Bath               | Jeans               | Inactive |

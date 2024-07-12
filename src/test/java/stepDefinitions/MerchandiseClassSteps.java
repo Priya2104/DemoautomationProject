@@ -51,21 +51,30 @@ public class MerchandiseClassSteps {
 	@Then("I apply class filters {string},{string},{string},{string},{string},{string},{string},{string},{string}")
 	public void i_apply_class_filters(String BusinessUnit,String DivisionData,String GroupData,String DepartmentData,String Accountable, String Responsible, String Reporting_Category, String Alternate_Hierarchy, String Status) throws InterruptedException, IOException {
 
-		BUPage.clickOnFilter();
+		//BUPage.clickOnFilter();
 
+		//BUPage.recordInitialFilterCount();
+		Thread.sleep(8000);
 		BUPage.recordInitialFilterCount();
 		MndivisionPage.applyBusinessUnitFilter(BusinessUnit);
 		GroupPage.applyDivisionFilter(DivisionData);
 		DepartmentPage.applyGroupFilter(GroupData);
 		ClassPage.applyDepartmentFilter(DepartmentData);
+		BUPage.applyFilter();
+		BUPage.validateFilterAfterApply();
+
+		BUPage.validateResetNoFilter();
+		BUPage.validateResetFilter();
+
+		
 		BUPage.selectAccountableFilter(Accountable);
 		BUPage.selectResponsibleFilter(Responsible);
 		BUPage.selectReportingCategoryFilter(Reporting_Category);
 		BUPage.selectAlternateHierarchyFilter(Alternate_Hierarchy);
 		BUPage.selectStatusFilter(Status);
-		BUPage.applyFilter();
+		//BUPage.applyFilter();
 
-		BUPage.validateFilterAfterApply();
+		//BUPage.validateFilterAfterApply();
 	}
 
 	@Then("I Reset and check the class filter results")

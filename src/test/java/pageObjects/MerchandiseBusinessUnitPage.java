@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -44,7 +45,7 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 	@FindBy(xpath = "//span[text()='Reset']")
 	WebElement resetBtn;
 
-	@FindBy(xpath = "//div[@id='alternateHierarchy']")
+	@FindBy(xpath = "//div[text()='Select Alternate Hierarchy']")
 	WebElement filtersVale_alternateHierarhcy;
 
 	@FindBy(xpath = "//div[@id='accountableName']")
@@ -53,13 +54,13 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 	@FindBy(xpath = "//div[@id='responsible']")
 	WebElement filtersVale_responsible;
 
-	@FindBy(xpath = "//div[@id='reportCategoryId']")
+	@FindBy(xpath = "//span[@aria-label='Select Reporting Category']")
 	WebElement filtersVale_reportCategory;
 
-	@FindBy(xpath = "//div[@id='isActive']")
+	@FindBy(xpath = "//span[@aria-label='Active' or @aria-label='Select Status']")
 	WebElement filtersVale_isActive;
 
-	@FindBy(xpath = "//span[@class='font-bold text-xl']")
+	@FindBy(xpath = "//p-paginator/div/span[contains(text(), ' of ')]")
 	WebElement totalRecords;
 
 	@FindBy(xpath = "//span[text()='Confirmation']")
@@ -148,10 +149,37 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 	WebElement Norecord_msg;
 	
 	// end of vinay xpaths
-	
+	@FindBy(xpath = "//p-columnfilter//button[@aria-label='Clear']")
+	private List<WebElement> clearButtons;
 
 	private String initial_record, Reset_Record, Final_Record;
+	
+	
+	public void clickVisibleClearButtons() {		
+	    for (WebElement button : clearButtons) {
+	        if (button.isDisplayed() && button.isEnabled()) {
+	            try {
+	                Thread.sleep(6000);
+	                // Move to the button and click it
+	                new Actions(driver).moveToElement(button).click().perform();
+	            } catch (Exception e) {
+	                System.out.println("Error clicking button: " + e.getMessage());
+	            }
+	        }
+	    }
+	}
+	
+	public void recordInitialFilterCount() {
+		String toatlRecodstext = totalRecords.getText();
+		String[] parts = toatlRecodstext.split(" ");
 
+		String value1 = parts[2]; // "10"
+		String value2 = parts[4]; // "85"
+		//initial_record = totalRecords.getText();
+		initial_record = value2;
+		System.out.print(initial_record);
+	}
+	
 	public void clickOnFilter() throws InterruptedException {
 		//utils.clickOnWebElement(filterBtn);
 		
@@ -161,30 +189,27 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 		utils.clickOnWebElement(filterBtn);
 	}
 
-	public void recordInitialFilterCount() {
-		initial_record = totalRecords.getText();
-	}
+
 
 	public void selectAccountableFilter(String Accountable) throws InterruptedException {
 		if (Accountable.isEmpty()) {
 			System.out.println("Ignoring Accountable filter");
 		} else {
+			clickVisibleClearButtons();
+			recordInitialFilterCount();
 			utils.waitForElementToBeClickablewithFluentWait(filtersVale_accountableName, 10);
 			utils.selectAndSearchDropdown(filtersVale_accountableName,
 					By.xpath("//li[@aria-label='" + Accountable + "']"), Accountable);
+			validateFilterAfterApply();
 		}
 	}
 
 	public void selectResponsibleFilter(String Responsible) throws InterruptedException {
-		utils.waitForElementToBeClickablewithFluentWait(filtersVale_responsible, 10);
-		// utils.selectAndSearchDropdown(filtersVale_responsible,By.xpath("//li[@aria-label='"+Responsible+"']"),Responsible);
-
-		// utils.clickElementWithJavaScript(filtersVale_responsible);
-		// WebElement resFilter =
-		// driver.findElement(By.xpath("//li[@aria-label='"+Responsible+"']"));
-		// resFilter.click();
 
 		if (!Responsible.isEmpty()) {
+			utils.waitForElementToBeClickablewithFluentWait(filtersVale_responsible, 10);
+			clickVisibleClearButtons();
+			recordInitialFilterCount();
 			Thread.sleep(2000);
 			filtersVale_responsible.click();
 			String[] ResponsibleValues = Responsible.split(",");
@@ -196,8 +221,9 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 					Thread.sleep(500);
 				}
 			}
+			validateFilterAfterApply();
 		} else {
-			System.out.println("Ignoring Alt Hierarchy");
+			System.out.println("Ignoring Responsible Filter");
 		}
 
 	}
@@ -206,20 +232,19 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 		if (Reporting_Category.isEmpty()) {
 			System.out.println("Ignoring Reporting Category filter");
 		} else {
+			clickVisibleClearButtons();
+			recordInitialFilterCount();
 			utils.waitForElementToBeClickablewithFluentWait(filtersVale_reportCategory, 10);
 			utils.selectAndSearchDropdown(filtersVale_reportCategory,
 					By.xpath("//li[@aria-label='" + Reporting_Category + "']"), Reporting_Category);
-			// filtersVale_reportCategory.click();
-			// WebElement repCatFilter =
-			// driver.findElement(By.xpath("//li[@aria-label='"+Reporting_Category+"']"));
-			// Thread.sleep(500);
-			// repCatFilter.click();
-			// Thread.sleep(500);
+			validateFilterAfterApply();
 		}
 	}
 
 	public void selectAlternateHierarchyFilter(String Alternate_Hierarchy) throws InterruptedException {
 		if (!Alternate_Hierarchy.isEmpty()) {
+			clickVisibleClearButtons();
+			recordInitialFilterCount();
 			Thread.sleep(2000);
 			filtersVale_alternateHierarhcy.click();
 			String[] hierarchyValues = Alternate_Hierarchy.split(",");
@@ -231,6 +256,7 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 					Thread.sleep(500);
 				}
 			}
+			validateFilterAfterApply();
 		} else {
 			System.out.println("Ignoring Alt Hierarchy");
 		}
@@ -240,14 +266,11 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 		if (Status.isEmpty()) {
 			System.out.println("Ignoring Status filter");
 		} else {
+			clickVisibleClearButtons();
+			recordInitialFilterCount();
 			utils.waitForElementToBeClickablewithFluentWait(filtersVale_isActive, 10);
 			utils.selectAndSearchDropdown(filtersVale_isActive, By.xpath("//li[@aria-label='" + Status + "']"), Status);
-			// filtersVale_isActive.click();
-			// WebElement statusFilter =
-			// driver.findElement(By.xpath("//li[@aria-label='"+Status+"']"));
-			// Thread.sleep(500);
-			// statusFilter.click();
-			// Thread.sleep(500);
+			validateFilterAfterApply();
 		}
 	}
 
@@ -258,7 +281,8 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 
 	}
 
-	public void validateFilterAfterApply() {
+	public void validateFilterAfterApply() throws InterruptedException {
+		Thread.sleep(8000);
 		Final_Record = totalRecords.getText();
 		if (initial_record.equals(Final_Record)) {
 			System.out.println("Filter not Applied");
@@ -269,7 +293,7 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 
 	public void validateResetNoFilter() throws InterruptedException {
 		utils.clickOnWebElement(resetBtn);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 
 		if (confirmation.isDisplayed()) {
 			confirmation_No.click();
@@ -277,14 +301,15 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 	}
 
 	public void validateResetFilter() throws InterruptedException {
+		Thread.sleep(2000);
 		utils.clickOnWebElement(resetBtn);
-		utils.clickOnWebElement(filterBtn);
-
+		//utils.clickOnWebElement(filterBtn);
+		Thread.sleep(3000);
 		if (confirmation.isDisplayed()) {
 			confirmation_Yes.click();
 		}
 		Thread.sleep(10000); // Hard wait cannot be removed because of the performance issue.
-		utils.clickOnWebElement(filterBtn);
+		//utils.clickOnWebElement(filterBtn);
 		Reset_Record = totalRecords.getText();
 		System.out.println(initial_record + "," + Final_Record + "," + Reset_Record);
 		if (initial_record.equals(Reset_Record)) {

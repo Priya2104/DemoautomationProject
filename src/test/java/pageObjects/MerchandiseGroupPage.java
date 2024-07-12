@@ -47,7 +47,7 @@ public class MerchandiseGroupPage extends BasePage {
     WebElement inpGrpName;
 
 
-    @FindBy(xpath = "//div[@id='divisionId']")
+    @FindBy(xpath = "//div[@id='merchDivisionPkid']")
     WebElement filtersVale_divisionId;
 
     @FindBy(xpath = "//input[contains(@aria-owns,'divisionId_list')]")

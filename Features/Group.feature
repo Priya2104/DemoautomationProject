@@ -5,7 +5,7 @@ Feature: Merchandise Group Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "DUNNS"
+    And User Can Select Company "AVENIDA"
     And Click on merchandise Menu
    # Then The user should be redirected to the Merchandise Page
 
@@ -29,13 +29,13 @@ Feature: Merchandise Group Setup page
 
   @GroupFilters
   Scenario Outline: Verify the filter functionality in Group view page
-    When The user on the Merchandise Pages
+    #When The user on the Merchandise Pages
     And click on group tab
     Then I apply group filters "<BusinessUnit>","<DivisionUnit>","<Accountable>","<Responsible>","<Reporting Category>","<Alternate Hierarchy>","<Status>"
-    And I Reset and check the group filter results
+    #And I Reset and check the group filter results
     Examples:
       | BusinessUnit | DivisionUnit | Accountable   | Responsible | Reporting Category | Alternate Hierarchy | Status |
-      | SmartPhone   | SmartPhone   | Clark, Ronald |             | Footwear           | Kids,Avengers,Jeans | Active |
+      | 1975   | 1173   |  |             | RC_SK1207           | ALTH_SK1207 | Active |
       #| PEP00432     | SmartPhone   |               |               |                    |                     |          |
       #| PEP00432     | SmartPhone   |               |               | Bath               | Avengers            | Active   |
       #| PEP00432     | SmartPhone   |               |               | Bath               | Jeans               | Inactive |

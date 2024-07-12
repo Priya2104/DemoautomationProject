@@ -237,10 +237,10 @@ public class MerchandiseDivisionPage extends BasePage {
     WebElement inpDivName;
 
     //filter selection xpaths
-    @FindBy(xpath = "//div[@id='businessUnitId']")
+    @FindBy(xpath = "//div[@id='merchBusinessUnitPkid']")
     WebElement filtersVale_businessUnitId;
 
-    @FindBy(xpath = "//input[contains(@aria-owns,'businessUnitId_list')]")
+    @FindBy(xpath = "//input[contains(@aria-owns,'merchBusinessUnitPkid_list')]")
     WebElement filterValue_BUsearch;
 
     @FindBy(xpath ="//select[@id='itemTypeDropdown']/option[text()='Mobile']")
@@ -1093,6 +1093,7 @@ public class MerchandiseDivisionPage extends BasePage {
            
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).build().perform();
+            Thread.sleep(8000);
             actions.sendKeys(Keys.ENTER).build().perform();
 
   }

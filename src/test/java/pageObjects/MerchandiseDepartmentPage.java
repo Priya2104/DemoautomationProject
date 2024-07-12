@@ -50,7 +50,7 @@ public class MerchandiseDepartmentPage extends BasePage {
 	WebElement filterValue_Grpsearch;
     @FindBy(xpath = "//input[@id='departmentName']")
     WebElement inpDeptName;
-	@FindBy(xpath = "//div[@id='groupId']")
+	@FindBy(xpath = "//div[@id='merchGroupPkid']")
 	WebElement filtersVale_groupId;
 	
 	@FindBy(xpath = "//span[contains(text(),'Add Department')]")
@@ -195,6 +195,7 @@ public class MerchandiseDepartmentPage extends BasePage {
 			Thread.sleep(1000);
 
 			actions.sendKeys(Keys.TAB).build().perform();
+			Thread.sleep(3000);
 			actions.sendKeys(Keys.ENTER).build().perform();
 		}
 	}
