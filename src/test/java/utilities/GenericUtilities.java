@@ -1170,12 +1170,13 @@ public class GenericUtilities {
 	}
 
 	
-	public void slowkeyenterValue(WebElement element, String text, long delay)
+	public void slowkeyenterValue(WebElement element, String text, long delay) throws InterruptedException
 	{
 		
 	slowSendKeys(element,text,delay);
 	Actions actions = new Actions(driver);
-    actions.sendKeys(Keys.TAB).build().perform();
+	Thread.sleep(10000);
+	actions.sendKeys(Keys.TAB).build().perform();
     actions.sendKeys(Keys.ENTER).build().perform(); 
 	}
 
@@ -1342,7 +1343,7 @@ public class GenericUtilities {
     	  return tablesize-2;
     	}
     public int  rowcountusinfcss() {
-    	wiatScreen(6500);
+    	waitScreen(6500);
     int ssize=	driver.findElements(By.cssSelector("table tr")).size();
     //System.out.println("Number of records are "+(ssize-2));
     return ssize-2;
@@ -1355,7 +1356,7 @@ public class GenericUtilities {
     	
     }
     
-    public void wiatScreen(long mils) {
+    public void waitScreen(long mils) {
     	try {
 			Thread.sleep(mils);
 		} catch (InterruptedException e) {
@@ -1430,14 +1431,14 @@ public class GenericUtilities {
        }
         
         public void sendkeys_ele(WebElement ele, String str,long delay) {
-        	wiatScreen(2000);
+        	waitScreen(2000);
         	explicit_Wait(ele, delay);
         	ele.click();
         	ele.clear();
         	ele.sendKeys(str);
         }
         public void sendkeys_ele_Date(WebElement ele, String str,long delay) {
-        	wiatScreen(2000);
+        	waitScreen(2000);
         	explicit_Wait(ele, delay);
         	
         	ele.clear();
@@ -1457,7 +1458,7 @@ public class GenericUtilities {
         	System.out.println(st);
         	
         		explicit_Wait(ele, delay);
-        		wiatScreen(1000);
+        		waitScreen(1000);
             	ele.click();
             	
         		for(int i=0;i<st.length;i++) {
@@ -1532,7 +1533,7 @@ public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElemen
         }
         public void clickElementWithJavaScript1(WebElement element) {
             try {
-          	wiatScreen(3500);
+            	waitScreen(3500);
             	waitForElementToBeClickablewithFluentWait(element, 250);
 //                JavascriptExecutor executor = (JavascriptExecutor) driver;
 //                executor.executeScript("arguments[0].click();", element);
@@ -1580,7 +1581,7 @@ public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElemen
         }
         
         public void effective_Frm_Date(WebElement ele,List<WebElement> effdate) {
-        	wiatScreen(2000);
+        	waitScreen(2000);
         	String cal=calender_Current_Date().split("/")[0];
         	if(cal.startsWith("0")) {
         	cal=cal.replaceAll("0","");
@@ -1600,7 +1601,7 @@ public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElemen
         	            }
         }
   public void effective_To_Date(WebElement ele,WebElement  calender_next_arrow, List<WebElement> effdate) {
-        	wiatScreen(2000);
+	  waitScreen(2000);
         	String cal=calender_Current_Date().split("/")[0];
         	if(cal.startsWith("0")) {
         	cal=cal.replaceAll("0","");

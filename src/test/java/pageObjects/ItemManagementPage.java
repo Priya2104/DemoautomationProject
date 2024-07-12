@@ -1073,7 +1073,7 @@ public class ItemManagementPage extends BasePage {
             hierarchy.put("alternateHierarchyPkId", 168);
             hierarchy.put("althierchyName", "q");
             hierarchy.put("althierchyDescription", "q");
-            hierarchy.put("companyPkId", 1);
+            hierarchy.put("companyPkId", 2);
             hierarchy.put("isActive", true);
             hierarchy.put("isDeleted", false);
 
@@ -1151,7 +1151,7 @@ public class ItemManagementPage extends BasePage {
             hierarchy.put("alternateHierarchyPkId", 168);
             hierarchy.put("althierchyName", "q");
             hierarchy.put("althierchyDescription", "q");
-            hierarchy.put("companyPkId", 1);
+            hierarchy.put("companyPkId", 2);
             hierarchy.put("isActive", true);
             hierarchy.put("isDeleted", false);
 

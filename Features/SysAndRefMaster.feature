@@ -50,7 +50,7 @@ Scenario Outline: add new citymaster
   
   Examples:
 		  | City Code | City Name | Country Name | State Name | TimeZone | Status |
-		  | Cit | CNa | 66 | CS22 |(GMT +5:30) Bombay, Calcutta, Madras, New Delhi | Active |
+		  | Cit | CAN | CANADA | demo |Eniwetok | Active |
 
 @AddDGMasterAdd
 Scenario Outline: Add new DG master
@@ -199,7 +199,51 @@ Scenario Outline: add new State
   
   Examples:
 		  | StateCode | StateCode | CountryAssociated | TimeZone | Status |
-		  | RGT | RGTSK | 090 |  | Active |		  
+		  | RGT | RGTSK | 090 |  | Active |
+		  
+@TransferZoneAdd
+Scenario Outline: add new TransferZone
+  When I click on TRANSFER ZONE
+  And I create a TRANSFER ZONE "<TransferZoneCode>","<TransferZoneDescription>","<Remarks>","<Status>","<HierarchyLevel>","<HierarchyValue>"
+  Then I should validate TRANSFER ZONE in the table
+  
+  Examples:
+		  | TransferZoneCode | TransferZoneDescription | Remarks | Status | HierarchyLevel |HierarchyValue|
+		  | TZS | TZS | Remarks | Active |Region  | chain09	|
+
+@VATRegionMaster
+  Scenario Outline: Verify Adding the VAT Region Master
+    When I will select the VAT Region Master from the Master options
+    And I will select Add VAT Region option to enter the details
+    And I will add the VAT Region Master fields "<VAT Region Code>","<VAT Region Name>","<Remarks>","<Status>"
+    And I will click on save button and verify success message
+
+    Examples: 
+      | VAT Region Code | VAT Region Name | Remarks       | Status |
+      | RC              | Auto            | Remarks added | Active |
+
+ @VATMaster
+  Scenario Outline: Verify Adding the VAT Master
+    When I will select the VAT Master from the Master options
+    And I will select Add item option to enter the details
+    And I will add the VAT Master fields "<VAT Region>","<VAT Code>","<VAT Type>","<VAT Rate>","<Effective Date>","<Remarks>","<Status>"
+    And I will verify the VAT Description is prepopulated "<VAT Code>"
+    And I will click on save button
+
+    Examples: 
+      | VAT Region     | VAT Code   | VAT Type      | VAT Rate | Effective Date    | Remarks       | Status |
+      | Angola Central | VAT Exempt | General Sales |       23 | 10/September/2024 | Remarks added | Active |
+      
+     @VATMaster
+  Scenario Outline: Verify editing the VAT Master
+    When I will select the VAT Master from the Master options
+    Then I will search for the newly created record from the VAT Region filters and select Edit
+    And I will update the VAT Master fields "<VAT Type>","<VAT Rate>","<Effective Date>","<Remarks>","<Status>"
+    And I will click on save button
+
+    Examples: 
+      | VAT Type | VAT Rate | Effective Date   | Remarks         | Status   |
+      | Purchase |       35 | 20/December/2024 | Remarks updated | Inactive |		  
 		  
 		  
 		 

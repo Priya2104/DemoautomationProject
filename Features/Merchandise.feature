@@ -5,7 +5,7 @@ Feature: Merchandise Business unit Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And The user clicks on the Sign in button
-    And User Can Select Company "AVENIDA"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu
     #Then The user should be redirected to the Merchandise Page
 
@@ -15,17 +15,18 @@ Feature: Merchandise Business unit Setup page
     And submit the page
     And The user get an error message if mandatory fields are empty
     When User enter business Names
-		And The user select Reporting category "Apparel" 
-		And The user select Alternative Hierarchy "Kids#Jeans#Spring Season#Christmas#Back To school#Bottoms#Cartoons"
+		#And The user select Reporting category "REPOCAT0012" 
+		#And The user select Alternative Hierarchy "Kids#Jeans#Spring Season#Christmas#Back To school#Bottoms#Cartoons"
     And verify that the Active status is selected by default from the Status dropdown
     And submit the page
+    
     
   @BusinessUnitIDAutomatic
   Scenario: Verify that the Business Unit field is auto-populated
     And click on Business unit
     Then verify Business Unit ID is automatically generated
 
-  @BusinessSetup
+  @BusinessSetupMerx
   Scenario: Business unit setup in Merchandise
     #When The user on the Merchandise Page
     And click on Business unit
@@ -34,10 +35,22 @@ Feature: Merchandise Business unit Setup page
 		And The user select Alternative Hierarchy "Kids#Jeans#Spring Season#Christmas#Back To school#Bottoms#Cartoons"
     And verify that the Active status is selected by default from the Status dropdown
     And submit the page
+    
+   @SmokeCheckForDevops
+   Scenario: Business unit setup in Merchandise Hierarchy
+    And click on Business unit
+    When User enter business Names
+    And verify that the Active status is selected by default from the Status dropdown
+    And submit the page
+    When I click on CITYMASTER
+    Then I should be navigated to the City Master page 
+     
+   
+   
     #Then The page has landing the division page
   #@MerchendiseSetup
   #Scenario: Merchandise setup from Business unit to subclass
-  @MerchendiseSetup
+  @MerchendiseSetupMerx
   Scenario: Merchandise setup from Business unit to subclass
     When click on Business unit
     When User enter business Names

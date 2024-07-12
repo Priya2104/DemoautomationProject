@@ -5,20 +5,20 @@ Feature: Merchandise Department Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "AVENIDA"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu
     #Then The user should be redirected to the Merchandise Page
 
 
-  @DepartmentSetup
+  @DepartmentSetupHierarchy
   Scenario: Verify Department setup
     When I Create Merchandise data with API request
     When click on department tab
     When User select group name in department
     And Enter department Name
     And The user select Reporting category "REPOCAT0012"
-    And User select item Type "AutomationTest"
-    And The user select Alternative Hierarchy "ALT-0112#ALT-0207"
+    And User select item Type "TESTITEM101"
+    And The user select Alternative Hierarchy "ALT-130624#ALT-1206"
     And verify that the Active status is selected by default from the Status dropdown
     And submit the page
     #Then The page has landing the class page

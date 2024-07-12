@@ -183,6 +183,28 @@ public class MerchandiseSteps {
 		Mnp.btnSaveContunuebutton();
 
 	}
+	
+	
+	
+	
+	@When("I click on CITYMASTER")
+	public void I_click_on_CITY_MASTER() throws InterruptedException {
+        Thread.sleep(1000);
+		Mnp.clickOnMaster();
+		
+	}
+
+	
+	@Then("I should be navigated to the City Master page")
+	
+	public void I_should_be_navigated_to_the_City_Master_page() throws InterruptedException
+		
+	{
+		boolean isCityMasterDisplayed = Mnp.verifyCityMasterPage();
+	    assert isCityMasterDisplayed : "City Master page is not displayed";
+	    System.out.println("City Master page has been displaying +"+ isCityMasterDisplayed);
+	}
+	
 
 	@When("The page has landing the division page")
 	public void The_page_has_landing_the_division_page() throws InterruptedException {

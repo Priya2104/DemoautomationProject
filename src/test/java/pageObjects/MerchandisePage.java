@@ -206,7 +206,13 @@ public class MerchandisePage extends BasePage {
 	@FindBy(xpath = "//*[contains(text(),'Foundation data')]")
 	WebElement founddationdatamenu;
 	
-
+    @FindBy(xpath ="//span[text()='City Master']")
+    WebElement cityMaster; 
+    
+    
+    @FindBy(xpath = "//span[contains(text(), 'Masters')]")
+    WebElement masterMenu;
+    
 	
 
 	@FindBy(xpath = "//*[contains(text(),'Merchandise Hierarchy')]")
@@ -249,12 +255,37 @@ public class MerchandisePage extends BasePage {
 			return (false);
 		}
 	}
+	
+	
+	 public void clickOnMaster() throws InterruptedException
+	    {
+	    	
+	    	Thread.sleep(7000);
+	    	utils.waitForElementclickable(Duration.ofSeconds(60), masterMenu);
+	    	Thread.sleep(2000);
+	    	//utils.clickElementWithJavaScript(masterMenu);
+	    	utils.clickOnWebElement(masterMenu);
+	    	System.out.println("click on Master menu");
+	    }
+	    
 
 	public void clickonBUUNitTab() {
 
 		// Click on BU Unit
 		utils.clickOnWebElement(BUUnit);
 	}
+
+
+
+	
+	public boolean verifyCityMasterPage() throws InterruptedException {
+		
+		Thread.sleep(10000);
+	    boolean blnTrue = cityMaster.isDisplayed();
+	    return blnTrue;
+	}
+
+
 
 	public void clickMerchandiseMenu() {
 

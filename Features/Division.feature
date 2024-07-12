@@ -5,18 +5,18 @@ Feature: Merchandise Division Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "AVENIDA"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu    
     
 
-  @DivisionSetup
+  @DivisionSetupHierarchy
   Scenario: Verify Division setup
     When I Create Merchandise data with API request
     And  click on division tab
     When select business Unit in division page
     When  Enter Division Name
     And The user select Reporting category "REPOCAT0012" 
-    #And The user select Alternative Hierarchy "Kids#Jeans#Spring Season#Christmas#Back To school#Bottoms#Cartoons"
+    And The user select Alternative Hierarchy "ALT-130624#ALT-1206"
     And   verify that the Active status is selected by default from the Status dropdown in division
     And   The user click on save and continue button
     #Then  The user receive confirmation message on the division page

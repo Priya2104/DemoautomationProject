@@ -536,7 +536,7 @@ public class MerchandiseDivisionPage extends BasePage {
             utils.clickOnWebElement(drpDwnBusinessUnit);
             
            // utils.waitForPageLoad();   
-            utils.slowkeyenterValue(SearchBoxText, BusinessUnit,500);
+            utils.slowkeyenterValue(SearchBoxText, BusinessUnit,1000);
             
             
         	//String BusinessUnit = testdata.getProperty("businessUnitName");           
