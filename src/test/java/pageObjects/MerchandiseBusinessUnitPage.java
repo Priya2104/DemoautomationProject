@@ -234,6 +234,7 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 		} else {
 			clickVisibleClearButtons();
 			recordInitialFilterCount();
+			Thread.sleep(3000);
 			utils.waitForElementToBeClickablewithFluentWait(filtersVale_reportCategory, 10);
 			utils.selectAndSearchDropdown(filtersVale_reportCategory,
 					By.xpath("//li[@aria-label='" + Reporting_Category + "']"), Reporting_Category);

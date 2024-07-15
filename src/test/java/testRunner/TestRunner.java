@@ -28,7 +28,7 @@ import org.testng.annotations.DataProvider;
                	 
         //tags="@BUMandatoryFieldEmptyError or @DivisionErrorMessage or @GropuErrorMessage or @DepartmentErrorMessage or @ClassErrorMessage or @SubClassErrorMessage or @LogoMasterDesktop or @LogoMasterMobile or @LogoMasterDesktopError or @LogoMasterMobileError or @LanguageMasterAdd or @CityMasterAdd or @AddDGMasterAdd or @PKHD-338_CurrencyMaster or @PKHD-338_View_and_edit_CurrencyMaster or @PKHD-4842 or @PKHD-339_CountryMaster or @PKHD-4843 or @PKHD-4845 or @PKHD-4846 or @PKHD-4847 or @PKHD-4848 or @PKHD-507_HTSMaster or @PKHD-609_Search_edit_HTS or @StateMasterAdd"
        //tags="@DivisionSetup"
-        tags="@DivisionFilters"
+        tags="@PKHD-250"
 		)
 public class TestRunner extends AbstractTestNGCucumberTests
 {
