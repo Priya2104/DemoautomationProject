@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factory.BaseClass;
@@ -538,6 +539,86 @@ public class SystemAndReferenceMasterPage extends BasePage {
 	WebElement txt_VATRegionname;
 
 	// end by vinay code
+	
+	//Differentiators xpaths
+ 	@FindBy(xpath = "(//a/span[contains(text(), 'Differentiator')])[1]")
+    WebElement Differentiator_Menu;
+
+    @FindBy(xpath = "(//span[contains(text(), 'Differentiator Type')])[1]")
+    WebElement Differentiator_Type;
+
+    @FindBy(xpath = "(//span[contains(text(), 'Differentiator Value')])[1]")
+    WebElement Differentiator_Value;
+
+    @FindBy(xpath = "//button[contains(.,'Add Diff Type')]")
+    WebElement AddDifferentiatorType;
+
+    @FindBy(xpath = "//button[contains(.,'Add Diff Value')]")
+    WebElement AddDifferentiatorValue;
+
+    @FindBy(xpath = "//a/span[contains(.,'Differentiators')]")
+    WebElement differentiatorMenu;
+    
+    //Diff type table values
+    @FindBy(xpath = "//thead[@role='rowgroup']//tr/th[contains(.,' Diff Type ID ')]")
+    WebElement diffTypeIdColumn;
+
+    @FindBy(xpath = "//thead[@role='rowgroup']/tr[@class='ng-star-inserted']/th[@scope='col' and text()=' Diff Type ']")
+    WebElement diffTypesColumn;
+
+    @FindBy(xpath = "//thead[@role='rowgroup']/tr[@class='ng-star-inserted']/th[@scope='col' and text()=' Remarks ']")
+    WebElement remarksColumn;
+
+    @FindBy(xpath = "//thead[@role='rowgroup']/tr[@class='ng-star-inserted']/th[@scope='col' and text()=' Status ']")
+    WebElement statusColumn;
+    
+    @FindBy(xpath = "//label[contains(text(), 'Differentiator Type *')]/following-sibling::div/input")
+    WebElement DifferentiatorTypeName;
+
+    @FindBy(xpath = "//label[contains(text(), 'Remarks')]/following-sibling::div/input")
+    WebElement RemarksXpath;
+
+    @FindBy(xpath = "//div[@id='isActive']/span")
+    WebElement StatusXpath;
+    
+    @FindBy(xpath = "//h3[contains(.,'Differentiator Type')]")
+    WebElement DiffTypePageTitle;
+    
+    @FindBy(xpath = "//button[contains(.,'Save')]")
+    WebElement SaveButton;
+    
+    @FindBy(xpath = "//button/span[contains(.,'Cancel')]")
+    WebElement CancelButton;
+    
+    @FindBy(xpath = "//a/span[contains(.,'Edit')]")
+    WebElement EditButton;
+
+    @FindBy(xpath = "//p-dropdown[@styleclass='p-paginator-rpp-options']")
+    WebElement diffPaginationDropdown;
+
+    @FindBy(xpath = "//li/span[contains(.,'1000')]")
+    WebElement diffPagination1000;
+    
+    @FindBy (xpath = "//input[@id='field?.modelName']/following-sibling::p[contains(@class, 'text-red-500') and contains(text(), 'Maximum 100 characters allowed')]")
+    WebElement diffTypeErrMsg;
+    
+    @FindBy (xpath = "//input[@id='field?.modelName']/following-sibling::p[contains(@class, 'text-red-500') and contains(text(), 'Maximum 20 characters allowed')]")
+    WebElement diffRemarksErrMsg;
+    
+    @FindBy(xpath = "//button[contains(.,'No')]")
+    WebElement NoButton;
+
+    @FindBy(xpath = "//button[contains(.,'Yes')]")
+    WebElement YesButton;
+
+    @FindBy(xpath = "(//div[contains(@role,'alertdialog')]//span)[2]")
+    WebElement CancelPopupMsg;
+    
+    @FindBy(xpath = "//h2[contains(.,'Differentiator Type')]")
+    WebElement diffValueHeader;
+    
+    @FindBy(xpath = "//a/span[contains(.,'Masters')]")
+    WebElement mastersMenu;
 
 	public SystemAndReferenceMasterPage(WebDriver driver) {
 		super(driver);
@@ -1774,4 +1855,188 @@ public class SystemAndReferenceMasterPage extends BasePage {
 		}
 
 	}
+	
+	// Method to open the "Masters" dropdown if it is closed
+    public void openMastersDropdownIfClosed() {
+        if(Differentiator_Menu.isDisplayed()) {
+            System.out.println("Master Dropdown already displayed");
+        }
+        else {
+            //click on this selector ul > li.ng-tns-c3391058336-194.ng-tns-c3391058336-191.ng-star-inserted > a
+            //WebElement element = driver.findElement(By.cssSelector("ul > li.ng-tns-c3391058336-194.ng-tns-c3391058336-191.ng-star-inserted > a"));
+            mastersMenu.click();
+            System.out.println("Master Dropdown Opened");
+        }
+    }
+
+    public void openDifferentiatorDropdownIfClosed() throws InterruptedException {
+        Thread.sleep(2000);
+        openMastersDropdownIfClosed();
+        differentiatorMenu.click();
+        Thread.sleep(2000);
+
+    }
+
+
+    public void clickDifferentiatorTypeDropdown() {
+        openMastersDropdownIfClosed();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(Differentiator_Type));
+        utils.clickElementWithJavaScript(Differentiator_Type);
+    }
+
+    public void validateViewDifferentiatorPageAvailability() {
+    	wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(diffTypeIdColumn));
+        wait.until(ExpectedConditions.visibilityOf(diffTypesColumn));
+        wait.until(ExpectedConditions.visibilityOf(remarksColumn));
+        wait.until(ExpectedConditions.visibilityOf(statusColumn));
+        assert(diffValueHeader.isDisplayed());
+    }
+
+    public void clickOnAddDifferentiatorType() {
+        validateViewDifferentiatorPageAvailability();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(AddDifferentiatorType));
+        wait.until(ExpectedConditions.elementToBeClickable(AddDifferentiatorType));
+        AddDifferentiatorType.click();
+    }
+    
+    public void enterDifferentiatorTypeDetails(String diffType, String Remarks, String Status) {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(DifferentiatorTypeName));
+        DifferentiatorTypeName.sendKeys(diffType);
+        RemarksXpath.sendKeys(Remarks);
+        String CurrentStatus=StatusXpath.getText();
+        if(CurrentStatus.equalsIgnoreCase(Status) )
+        {
+            System.out.println("Status already set");
+        }
+        else if(CurrentStatus.equalsIgnoreCase("Active"))
+        {
+            StatusXpath.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+        }
+        else if(CurrentStatus.equalsIgnoreCase("Inactive"))
+        {
+            StatusXpath.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+        }
+    }
+    
+    public void validateTypePage() {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(DiffTypePageTitle));
+        System.out.println("DiffTypePage.getText() : "+DiffTypePageTitle.getText());
+        wait.until(ExpectedConditions.visibilityOf(SaveButton));
+        wait.until(ExpectedConditions.visibilityOf(CancelButton));
+        wait.until(ExpectedConditions.elementToBeClickable(SaveButton));
+        wait.until(ExpectedConditions.elementToBeClickable(CancelButton));
+    }
+    
+    public void verifyDifferentiatorTypeDetails(String diffType, String Remarks, String Status) {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(DifferentiatorTypeName));
+
+        wait.until(ExpectedConditions.attributeToBeNotEmpty(DifferentiatorTypeName, "value"));
+        System.out.println("DifferentiatorTypeName.getText() : "+DifferentiatorTypeName.getAttribute("value"));
+        System.out.println("diffType : "+diffType);
+        wait.until(ExpectedConditions.attributeToBeNotEmpty(RemarksXpath, "value"));
+        System.out.println("RemarksXpath.getText() : "+RemarksXpath.getAttribute("value"));
+        System.out.println("Remarks : "+Remarks);
+        System.out.println("StatusXpath.getText() : "+StatusXpath.getText());
+        System.out.println("Status : "+Status);
+
+        Assert.assertEquals(DifferentiatorTypeName.getAttribute("value"), diffType);
+        Assert.assertEquals(RemarksXpath.getAttribute("value"), Remarks);
+        Assert.assertEquals(StatusXpath.getText(), Status);
+    }
+    
+    public void clickOnSaveButton() {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(SaveButton));
+        SaveButton.click();
+    }
+    
+   // public void expandRecordsto1000()
+    //{
+    	
+   // }
+    
+    public void clickOnEditBtn(String diffTypeName) throws InterruptedException {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.elementToBeClickable(diffPaginationDropdown));
+        diffPaginationDropdown.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(diffPagination1000));
+        diffPagination1000.click();
+        
+        validateViewDifferentiatorPageAvailability();
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//tr[td[contains(text(), '"+diffTypeName+"')]]//button[@data-pc-name='button']")));
+        driver.findElement(By.xpath("//tr[td[contains(text(), '"+diffTypeName+"')]]//button[@data-pc-name='button']")).click();
+        wait.until(ExpectedConditions.visibilityOf(EditButton));
+        EditButton.click();
+    }
+    
+    public void validateErrorMessages() {
+        //wait until the element is clickable
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(diffTypeErrMsg));
+        wait.until(ExpectedConditions.visibilityOf(diffRemarksErrMsg));
+        assert(diffTypeErrMsg.isDisplayed());
+        System.out.println("diffTypeErrMsg.getText() : "+diffTypeErrMsg.getText());
+        assert(diffRemarksErrMsg.isDisplayed());
+        System.out.println("diffRemarksErrMsg.getText() : "+diffRemarksErrMsg.getText());
+    }
+    
+    public void clickOnCancelButton() {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+        wait.until(ExpectedConditions.elementToBeClickable(CancelButton));
+        CancelButton.click();
+        wait.until(ExpectedConditions.visibilityOf(CancelPopupMsg));
+        assert(CancelPopupMsg.getText().contains("Are you sure you want to exit the flow ?"));
+
+        //wait until the element is clickable
+        wait.until(ExpectedConditions.elementToBeClickable(NoButton));
+        NoButton.click();
+
+        validateTypePage();
+
+        CancelButton.click();
+        wait.until(ExpectedConditions.visibilityOf(CancelPopupMsg));
+        assert(CancelPopupMsg.getText().contains("Are you sure you want to exit the flow ?"));
+
+        wait.until(ExpectedConditions.elementToBeClickable(YesButton));
+        YesButton.click();
+
+        validateViewDifferentiatorPageAvailability();
+
+    }
+    public void modifyDifferentiatorTypeDetails(String Remarks, String Status) {
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        RemarksXpath.clear();
+        RemarksXpath.sendKeys(Remarks);
+
+        String CurrentStatus=StatusXpath.getText();
+        if(CurrentStatus.equalsIgnoreCase(Status) )
+        {
+            System.out.println("Status already set");
+        }
+        else
+        {
+            StatusXpath.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+            WebElement Status_Update = driver.findElement(By.xpath("//li[contains(@aria-label,'" + Status + "')]"));
+            Status_Update.click();
+        }
+    }
 }

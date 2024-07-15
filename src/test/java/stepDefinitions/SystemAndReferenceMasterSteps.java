@@ -88,13 +88,10 @@ public class SystemAndReferenceMasterSteps {
 
 		Assert.assertEquals(strlangName, langName);
 
-	
 	}
 
 	@Then("I should validate CITY MASTER in the table")
 	public void validateCityMasterInTable() throws IncorrectXpathException, InterruptedException {
-
-	
 
 		sysandrefmaster.validateCityMaster(cityCode, cityName);
 
@@ -118,7 +115,7 @@ public class SystemAndReferenceMasterSteps {
 		System.out.println(strDGSubClass);
 
 		Assert.assertEquals(strDGSubClass, DgSubClassCode);
-		
+
 	}
 
 	@When("I click on CITY MASTER")
@@ -145,7 +142,7 @@ public class SystemAndReferenceMasterSteps {
 		inpUNUnimber = utils.generateRandomNumbers(4);
 
 		System.out.println(inpUNUnimber);
-		
+
 		sysandrefmaster.addDGMasterbutton();
 		sysandrefmaster.AddDGMaster(dgCode, dgDescription, status, DgSubClassCode, strDgSubDesc, inpUNUnimber,
 				inpUNUDescription);
@@ -229,7 +226,7 @@ public class SystemAndReferenceMasterSteps {
 	public void user_navigate_to_the_currency_page() {
 		String currencyHeader = " CURRENCY MASTER ".trim();
 		String headercur = sysandrefmaster.addCurrencyMaster_Click();
-		
+
 		org.testng.Assert.assertEquals(headercur, currencyHeader);
 		sysandrefmaster.addCurrency_Click();
 
@@ -453,8 +450,6 @@ public class SystemAndReferenceMasterSteps {
 
 		Assert.assertEquals(strStateName, stateName);
 
-		
-
 	}
 
 	public static String transferZoneCode, transferZoneDesciption;
@@ -500,8 +495,6 @@ public class SystemAndReferenceMasterSteps {
 
 		Assert.assertEquals(strZoneDescription, transferZoneDesciption);
 
-	
-
 	}
 
 	@When("I will select the VAT Region Master from the Master options")
@@ -545,10 +538,8 @@ public class SystemAndReferenceMasterSteps {
 	@And("I will select Add item option to enter the details")
 	public void selectAddItemOption() throws InterruptedException {
 		sysandrefmaster.ClickAddVat();
-		
-	}
 
-	
+	}
 
 	@When("I will add the VAT Master fields {string},{string},{string},{string},{string},{string},{string}")
 	public void i_will_add_the_vat_master_fields(String VAT_Region, String VAT_Code, String VAT_Type, String VAT_Rate,
@@ -597,6 +588,84 @@ public class SystemAndReferenceMasterSteps {
 		sysandrefmaster.verifysuccessfullcreationofVATMaster();
 	}
 
-	
+	// Differentiators
+	public static String DiffTypeName, DiffTypeRemarks, DiffTypeStatus, NewDiffTypeStatus, ItemType, DiffValueTypeName,
+			DiffValue;
+
+	@When("I click on Differentiators dropdown")
+	public void iClickOnDifferentiatorsDropdown() throws InterruptedException {
+		sysandrefmaster.openMastersDropdownIfClosed();
+		sysandrefmaster.openDifferentiatorDropdownIfClosed();
+	}
+
+	@And("I click on Differentiator Type dropdown")
+	public void iClickOnDifferentiatorTypeDropdown() {
+		sysandrefmaster.clickDifferentiatorTypeDropdown();
+
+	}
+
+	@Then("I click on Add Differentiator Type")
+	public void iClickOnAddDifferentiatorType() {
+		sysandrefmaster.validateViewDifferentiatorPageAvailability();
+		sysandrefmaster.clickOnAddDifferentiatorType();
+	}
+
+	@And("I enter the details for Differentiator Type {string},{string},{string}")
+	public void iEnterTheDetailsForDifferentiatorType(String diffType, String Remarks, String Status) {
+		DiffTypeName = diffType + " " + utils.generateRandomChars(3);
+		DiffTypeRemarks = Remarks;
+		DiffTypeStatus = Status;
+		sysandrefmaster.enterDifferentiatorTypeDetails(DiffTypeName, DiffTypeRemarks, DiffTypeStatus);
+	}
+
+	@And("I click on Save button")
+	public void iClickOnSaveButton() {
+		sysandrefmaster.clickOnSaveButton();
+	}
+
+	@Then("I verify the following details {string},{string},{string} in Edit Page")
+	public void iVerifyTheFollowingDetailsInEditPage(String diffType, String Remarks, String Status)
+			throws InterruptedException {
+		sysandrefmaster.validateViewDifferentiatorPageAvailability();
+		sysandrefmaster.clickOnEditBtn(DiffTypeName);
+		sysandrefmaster.validateTypePage();
+		sysandrefmaster.verifyDifferentiatorTypeDetails(DiffTypeName, Remarks, Status);
+	}
+
+	@And("I enter the details for Differentiator Type with more than maximum limit data on {string},{string},{string}")
+	public void iEnterTheDetailsForDifferentiatorTypeWithMoreThanMaximumLimitDataOn(String diffType, String Remarks,
+			String Status) {
+		DiffTypeName = diffType + " " + utils.generateRandomChars(20);
+		DiffTypeRemarks = Remarks + " " + utils.generateRandomChars(100);
+		sysandrefmaster.enterDifferentiatorTypeDetails(DiffTypeName, DiffTypeRemarks, Status);
+	}
+
+	@Then("I verify Error Messages")
+	public void iVerifyErrorMessages() {
+		sysandrefmaster.validateErrorMessages();
+	}
+
+	@And("I click on Cancel button and verify popup")
+	public void iClickOnCancelButtonAndVerifyPopup() {
+		sysandrefmaster.clickOnCancelButton();
+	}
+
+	@And("Modify the values for {string},{string} and Click on Save")
+	public void modifyTheValuesForAndClickOnSave(String Remarks, String Status) {
+		DiffTypeRemarks = Remarks + " " + utils.generateRandomChars(3);
+		NewDiffTypeStatus = Status.equalsIgnoreCase("Active") ? "Inactive" : "Active";
+		System.out.println("DiffStatus: " + NewDiffTypeStatus);
+		sysandrefmaster.modifyDifferentiatorTypeDetails(DiffTypeRemarks, NewDiffTypeStatus);
+		sysandrefmaster.clickOnSaveButton();
+	}
+
+	@Then("Check the modified data in Edit page")
+	public void checkTheModifiedDataInEditPage() throws InterruptedException {
+		Thread.sleep(4000);
+		sysandrefmaster.validateViewDifferentiatorPageAvailability();
+		sysandrefmaster.clickOnEditBtn(DiffTypeName);
+		sysandrefmaster.validateTypePage();
+		sysandrefmaster.verifyDifferentiatorTypeDetails(DiffTypeName, DiffTypeRemarks, NewDiffTypeStatus);
+	}
 
 }
