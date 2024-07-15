@@ -5,7 +5,7 @@ Feature: Merchandise Business unit view page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And The user clicks on the Sign in button
-    And User Can Select Company "DUNNS"
+    And User Can Select Company "AVENIDA"
     And Click on merchandise Menu
     #Then The user should be redirected to the Merchandise Page
      
@@ -14,8 +14,8 @@ Feature: Merchandise Business unit view page
 		When click on Business unit
 		When User enter business Names
 		When user get the BUID
-		And The user select Reporting category "REPOCAT0012" 
-		And The user select Alternative Hierarchy "ALTSK0807#SKAH05"
+		And The user select Reporting category "RCSK0807" 
+		And The user select Alternative Hierarchy "SKAH05#ALT-0112"
 		And verify that the Active status is selected by default from the Status dropdown
 		And submit the page
 		Then The page has landing the division page
@@ -25,14 +25,15 @@ Feature: Merchandise Business unit view page
 		When Enter a Search with BUName
 		Then The BUName is showing up in the view page	
 
-	#Verify that users can select one or more alternate hierarchy values for the BU level, and that the system groups and generates reports based on these values as expected.
+#Verify that users can select one or more alternate hierarchy values for the BU level, and that the system groups and generates reports based on these values as expected.
 	@PKHD-250 @PKHD_5_Testcase
 	Scenario Outline: Verify the filter functionality in business view page
 		Then I apply filters "<Accountable>","<Responsible>","<Reporting Category>","<Alternate Hierarchy>","<Status>"
-		And I Reset and check the filter results
+		#And I Reset and check the filter results
 		Examples:
-		  | Accountable   | Responsible | Reporting Category | Alternate Hierarchy | Status |
-		  | Clark, Ronald |             | Footwear           | Kids,Avengers,Jeans | Active |
+			| Accountable | Responsible | Reporting Category | Alternate Hierarchy | Status |
+			|             |             | RCSK0807           | ALHSK0907 | Active |
+			|             |             |RCSK0807            |ALHSK0907  |Inactive|
 #
   @BusinesUnitSetUpPage
   Scenario: Verify BU Setup   

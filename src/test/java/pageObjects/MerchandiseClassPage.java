@@ -181,6 +181,7 @@ public class MerchandiseClassPage extends BasePage {
 
             Actions actions = new Actions(driver);
             actions.sendKeys(Keys.TAB).build().perform();
+            Thread.sleep(2000);
             actions.sendKeys(Keys.ENTER).build().perform();
         }
     }

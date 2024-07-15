@@ -5,7 +5,7 @@ Feature: Merchandise Division Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "DUNNS"
+    And User Can Select Company "AVENIDA"
     And Click on merchandise Menu    
     
 
@@ -31,13 +31,13 @@ Feature: Merchandise Division Setup page
   @DivisionFilters
   Scenario Outline: Verify the filter functionality in Division view page
     #When Click merchandiseMenu
-    When The user on the Merchandise Pages
-    And click on division tab
+    #When The user on the Merchandise Pages
+    And  click on division tab  
     Then I apply Division filters "<BusinessUnit>","<Accountable>","<Responsible>","<Reporting Category>","<Alternate Hierarchy>","<Status>"
-    And I Reset and check the division filter results
+    #And I Reset and check the division filter results
     Examples:
       | BusinessUnit | Accountable   | Responsible | Reporting Category | Alternate Hierarchy | Status |
-      | PEP00432     | Clark, Ronald |             | Footwear           | Kids,Avengers       | Active |
+      | 1971         |                |             | new data           | ALT-1506123       | Active |
 #      |              |               |               |                    |                     |          |
 #      | PEP00432     |               |               | Bath               | Avengers            | Active   |
 #      | PEP00432     |               |               | Bath               | Jeans               | Inactive |

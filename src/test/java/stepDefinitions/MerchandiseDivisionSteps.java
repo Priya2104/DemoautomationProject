@@ -467,20 +467,23 @@ public class MerchandiseDivisionSteps {
 
 	@Then("I apply Division filters {string},{string},{string},{string},{string},{string}")
 	public void i_apply_Division_filters(String BusinessUnit,String Accountable, String Responsible, String Reporting_Category, String Alternate_Hierarchy, String Status) throws InterruptedException, IOException {
-		BUPage.clickOnFilter();
-
+		//BUPage.clickOnFilter();
+		Thread.sleep(8000);
 		BUPage.recordInitialFilterCount();
 		MndivisionPage.applyBusinessUnitFilter(BusinessUnit);
+		BUPage.applyFilter();
+		BUPage.validateFilterAfterApply();
+		
+		BUPage.validateResetNoFilter();
+		BUPage.validateResetFilter();
+		
 		BUPage.selectAccountableFilter(Accountable);
 		BUPage.selectResponsibleFilter(Responsible);
 		BUPage.selectReportingCategoryFilter(Reporting_Category);
 		BUPage.selectAlternateHierarchyFilter(Alternate_Hierarchy);
 		BUPage.selectStatusFilter(Status);
 
-		BUPage.applyFilter();
-
-
-		BUPage.validateFilterAfterApply();
+		
 
 	}
 

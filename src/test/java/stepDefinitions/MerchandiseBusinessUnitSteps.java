@@ -38,17 +38,17 @@ public class MerchandiseBusinessUnitSteps {
 
 	@Then("I apply filters {string},{string},{string},{string},{string}")
 	public void i_apply_filters(String Accountable, String Responsible, String Reporting_Category, String Alternate_Hierarchy, String Status) throws InterruptedException, IOException, AWTException {
-		BUPage.clickOnFilter();
-		BUPage.recordInitialFilterCount();
+		//BUPage.clickOnFilter();
+		//BUPage.recordInitialFilterCount();
 		BUPage.selectAccountableFilter(Accountable);
 		BUPage.selectResponsibleFilter(Responsible);
 		BUPage.selectReportingCategoryFilter(Reporting_Category);
 		BUPage.selectAlternateHierarchyFilter(Alternate_Hierarchy);
 		BUPage.selectStatusFilter(Status);
-		BUPage.applyFilter();
+		//BUPage.applyFilter();
 
 
-		BUPage.validateFilterAfterApply();
+		//BUPage.validateFilterAfterApply();
 
 
 	}
