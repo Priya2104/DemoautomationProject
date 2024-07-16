@@ -283,7 +283,7 @@ Feature: Merchandise Business unit view page
       | Type | Remarks | Status |
       | Type | Type    | Active |
 
-  @DiffType1
+  @DiffType
   Scenario Outline: Verify Differentiator Type Edit functionality
     When I click on Differentiators dropdown
     And I click on Differentiator Type dropdown
@@ -311,3 +311,31 @@ Feature: Merchandise Business unit view page
     Examples: 
       | Type | Remarks | Status |
       | Type | Type    | Active |
+
+  @DiffValue
+  Scenario Outline: Verify Differentiator value setup
+    When I click on Differentiators dropdown
+    And I click on Differentiator Value dropdown
+    Then I click on Add Differentiator Value
+    And I enter the details for Differentiator Value "<ItemType>","<DiffType>","<DiffValue>","<Status>"
+    And I click on Save and Apply button
+    Then I verify the following details "<ItemType>","<DiffType>","<DiffValue>","<Status>" in Edit Diff value Page
+
+    Examples: 
+      | ItemType       | DiffType       | DiffValue | Status |
+      | AutomationTest | AutomationTest | value     | Active |
+
+  @DiffValue
+  Scenario Outline: Verify Differentiator Value Edit functionality
+    When I click on Differentiators dropdown
+    And I click on Differentiator Value dropdown
+    Then I click on Add Differentiator Value
+    And I enter the details for Differentiator Value "<ItemType>","<DiffType>","<DiffValue>","<Status>"
+    And I click on Save and Apply button
+    Then I verify the following details "<ItemType>","<DiffType>","<DiffValue>","<Status>" in Edit Diff value Page
+    And Modify the values for "<Status>" and Click on Save
+    Then Check the modified Diff Value data in Edit page
+
+    Examples: 
+      | ItemType       | DiffType       | DiffValue | Status |
+      | AutomationTest | AutomationTest | value     | Active |

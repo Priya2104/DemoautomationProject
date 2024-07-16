@@ -589,8 +589,7 @@ public class SystemAndReferenceMasterSteps {
 	}
 
 	// Differentiators
-	public static String DiffTypeName, DiffTypeRemarks, DiffTypeStatus, NewDiffTypeStatus, ItemType, DiffValueTypeName,
-			DiffValue;
+	public static String DiffTypeName,DiffTypeRemarks,DiffTypeStatus,NewDiffTypeStatus,ItemType,DiffValueTypeName,DiffValue;
 
 	@When("I click on Differentiators dropdown")
 	public void iClickOnDifferentiatorsDropdown() throws InterruptedException {
@@ -667,5 +666,59 @@ public class SystemAndReferenceMasterSteps {
 		sysandrefmaster.validateTypePage();
 		sysandrefmaster.verifyDifferentiatorTypeDetails(DiffTypeName, DiffTypeRemarks, NewDiffTypeStatus);
 	}
+	
+	//Diff Value
+    @And("I click on Differentiator Value dropdown")
+    public void iClickOnDifferentiatorValueDropdown() throws InterruptedException{
+    	sysandrefmaster.clickDifferentiatorValueDropdown();
+
+    }
+
+    @Then("I click on Add Differentiator Value")
+    public void iClickOnAddDifferentiatorValue() throws InterruptedException
+    {
+    	Thread.sleep(2000);
+    	sysandrefmaster.clickOnAddDifferentiatorValue();
+    }
+    
+    @And("I enter the details for Differentiator Value {string},{string},{string},{string}")
+    public void iEnterTheDetailsForDifferentiatorValue(String ItemTypeData, String diffTypeData, String DiffValueData, String Status) throws InterruptedException
+    {
+    	ItemType = ItemTypeData;
+        DiffValueTypeName = diffTypeData;
+        DiffValue = DiffValueData + " "+utils.generateRandomChars(4);
+        sysandrefmaster.enterDifferentiatorValueDetails(ItemType,DiffValueTypeName,DiffValue,Status);
+    }
+    
+    @And("I click on Save and Apply button")
+    public void iClickOnSaveAndApplyButton()
+    {
+    	sysandrefmaster.clickonSaveAndApply();
+    }
+    
+    @Then("I verify the following details {string},{string},{string},{string} in Edit Diff value Page")
+    public void iVerifyTheFollowingDetailsInEditValuePage(String ItemTypeData, String DiffValueTypeName, String DiffValues,String status) throws InterruptedException
+    {
+    	Thread.sleep(3000);
+    	
+    	sysandrefmaster.clickOnEditBtn(DiffValue);
+    	sysandrefmaster.verifyDifferentiatorValueDetails(ItemType,DiffValueTypeName,DiffValue,status);
+    }
+    
+    @And("Modify the values for {string} and Click on Save")
+    public void modifyTheValuesForStatusAndClickOnSave(String Status) throws InterruptedException
+    {
+        NewDiffTypeStatus = Status.equalsIgnoreCase("Active") ? "Inactive" : "Active";
+        System.out.println("DiffStatus: "+NewDiffTypeStatus);
+        sysandrefmaster.modifyDifferentiatorValueDetails(NewDiffTypeStatus);
+        sysandrefmaster.clickOnUpdateButton();
+    }
+    
+    @Then("Check the modified Diff Value data in Edit page")
+    public void checkTheModifiedDiffValueDataInEditPage() throws InterruptedException
+    {
+    	sysandrefmaster.clickOnEditBtn(DiffValue);
+    	sysandrefmaster.verifyDifferentiatorValueDetails(ItemType,DiffValueTypeName,DiffValue,NewDiffTypeStatus);
+    }
 
 }

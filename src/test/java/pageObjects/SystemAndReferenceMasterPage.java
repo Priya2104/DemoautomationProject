@@ -578,7 +578,7 @@ public class SystemAndReferenceMasterPage extends BasePage {
     @FindBy(xpath = "//label[contains(text(), 'Remarks')]/following-sibling::div/input")
     WebElement RemarksXpath;
 
-    @FindBy(xpath = "//div[@id='isActive']/span")
+    @FindBy(xpath = "//label[contains(text(),'Status')]/following::p-dropdown[1]/div/span")
     WebElement StatusXpath;
     
     @FindBy(xpath = "//h3[contains(.,'Differentiator Type')]")
@@ -619,6 +619,9 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     @FindBy(xpath = "//a/span[contains(.,'Masters')]")
     WebElement mastersMenu;
+    
+    @FindBy(xpath = "//button[contains(.,'Update')]")
+    WebElement UpdateButton;
 
 	public SystemAndReferenceMasterPage(WebDriver driver) {
 		super(driver);
@@ -2038,5 +2041,131 @@ public class SystemAndReferenceMasterPage extends BasePage {
             WebElement Status_Update = driver.findElement(By.xpath("//li[contains(@aria-label,'" + Status + "')]"));
             Status_Update.click();
         }
+    }
+    
+    public void clickDifferentiatorValueDropdown() throws InterruptedException
+    {
+    	Thread.sleep(4000);
+    	 wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+         wait.until(ExpectedConditions.visibilityOf(Differentiator_Value));
+         wait.until(ExpectedConditions.elementToBeClickable(Differentiator_Value));
+         Differentiator_Value.click();
+    }
+    
+    public void clickOnAddDifferentiatorValue()
+    {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(AddDifferentiatorValue));
+        wait.until(ExpectedConditions.elementToBeClickable(AddDifferentiatorValue));
+        AddDifferentiatorValue.click();
+    }
+    @FindBy(xpath = "(//p-dropdown[contains(@optionvalue,'itemTypeId')])[1]")
+    WebElement DifferentiatorItemType;
+
+    @FindBy(xpath ="(//p-dropdown[contains(@optionvalue,'id')])[1]")
+    WebElement DiffTypeDropDown;
+
+    @FindBy(xpath = "//input[contains(@id,'diffValueId')]")
+    WebElement DiffValueInput;
+
+    @FindBy(xpath = "//input[contains(@role,'searchbox')]")
+    WebElement SearchBox;
+
+    @FindBy(xpath ="//label[contains(text(), 'Status')]/following-sibling::div//span[@role='combobox']")
+    WebElement diffValueStatus;
+
+	public void enterDifferentiatorValueDetails(String ItemType,String DiffValueTypeName,String DiffValue,String Status) throws InterruptedException {
+		
+        Actions actions = new Actions(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(DifferentiatorItemType));
+        DifferentiatorItemType.click();
+        utils.slowSendKeys(SearchBox, ItemType, 500);
+  
+        WebElement SelectItem = driver.findElement(By.xpath("//p-dropdownitem/li[contains(.,'" + ItemType + "')]"));
+        utils.clickElementWithJavaScript(SelectItem);
+        Thread.sleep(2000);
+        
+        DiffTypeDropDown.click();
+        utils.slowSendKeys(SearchBox, DiffValueTypeName, 500);
+        WebElement SelectDiffTypeValue = driver.findElement(By.xpath("//p-dropdownitem/li[contains(.,'" + DiffValueTypeName + "')]"));
+        utils.clickElementWithJavaScript(SelectDiffTypeValue);
+        Thread.sleep(2000);
+        
+        DiffValueInput.sendKeys(DiffValue);
+        String CurrentStatus=diffValueStatus.getText();
+        if(CurrentStatus.equalsIgnoreCase(Status) )
+        {
+            System.out.println("Status already set");
+        }
+        else if(CurrentStatus.equalsIgnoreCase("Active"))
+        {
+            diffValueStatus.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+        }
+        else if(CurrentStatus.equalsIgnoreCase("Inactive"))
+        {
+            StatusXpath.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+        }
+		
+	}
+
+
+	@FindBy(xpath = "//span[contains(.,'Save & Apply')]")
+    WebElement saveAndapply;
+    public void clickonSaveAndApply()
+    {
+        saveAndapply.click();
+    }
+
+
+	public void verifyDifferentiatorValueDetails(String itemType, String diffValueTypeName, String diffValue,
+			String status) throws InterruptedException {
+		Thread.sleep(5000);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
+        wait.until(ExpectedConditions.visibilityOf(DifferentiatorItemType));
+        System.out.println("itemType.getText() : "+DifferentiatorItemType.getText());
+        System.out.println("itemType : "+itemType);
+        
+        System.out.println("DiffTypeDropDown.getText() : "+DiffTypeDropDown.getText());
+        System.out.println("DiffTypeDropDown : "+diffValueTypeName);
+        
+        System.out.println("DiffValueInput.getText() : "+DiffValueInput.getAttribute("value"));
+        System.out.println("DiffValueInput : "+diffValue);
+        
+        System.out.println("StatusXpath.getText() : "+StatusXpath.getText());
+        System.out.println("Status : "+status);
+
+        Assert.assertEquals(DifferentiatorItemType.getText(), itemType);
+        Assert.assertEquals(DiffTypeDropDown.getText(), diffValueTypeName);
+        Assert.assertEquals(DiffValueInput.getAttribute("value"), diffValue);
+        Assert.assertEquals(StatusXpath.getText(), status);
+		
+	}
+	
+	public void modifyDifferentiatorValueDetails(String Status) throws InterruptedException {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        String CurrentStatus=StatusXpath.getText();
+        if(CurrentStatus.equalsIgnoreCase(Status) )
+        {
+            System.out.println("Status already set");
+        }
+        else
+        {
+            StatusXpath.click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+            WebElement Status_Update = driver.findElement(By.xpath("//li[contains(@aria-label,'" + Status + "')]"));
+            Status_Update.click();
+            Thread.sleep(2000);
+            YesButton.click();
+        }
+    }
+	
+	public void clickOnUpdateButton() {
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(UpdateButton));
+        UpdateButton.click();
     }
 }
