@@ -42,8 +42,8 @@ Feature: Merchandise Business unit Setup page
     When User enter business Names
     And verify that the Active status is selected by default from the Status dropdown
     And submit the page
-    When I click on CITYMASTER
-    Then I should be navigated to the City Master page 
+    When I click on Logo Master
+    Then I should be navigated to the Logo Master page 
      
    
    

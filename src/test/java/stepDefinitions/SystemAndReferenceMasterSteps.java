@@ -173,6 +173,17 @@ public class SystemAndReferenceMasterSteps {
 
 		}
 	}
+	
+	@Then("I should be navigated to the Logo Master page")
+	
+	public void I_should_be_navigated_to_the_Logo_Master_page () throws InterruptedException
+	{
+		boolean blnPagecheck=sysandrefmaster.headerpageCheck();
+		
+		Assert.assertEquals(blnPagecheck, true);
+		
+			
+	}
 
 	@When("I upload an image for {string} logo less {string} {string}")
 	public void I_upload_an_image_for_Desktop_logo_less_than_5MB(String strType, String strSize, String strColor)
