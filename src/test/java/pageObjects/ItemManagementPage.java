@@ -114,7 +114,8 @@ public class ItemManagementPage extends BasePage {
     @FindBy(xpath = "//li[@id='divisionId_0']")
     WebElement DivisionSearch;
 
-    @FindBy(xpath = "//span[@aria-label='Select']")
+    //@FindBy(xpath = "//div[@id='groupId']/..//span[@role='combobox' and contains(@class, 'p-dropdown-label') and @aria-label='Select']")
+    @FindBy(xpath ="//div[@id='groupId']")
     WebElement GropDivId;
     
     
@@ -143,13 +144,15 @@ public class ItemManagementPage extends BasePage {
     @FindBy(xpath = "//div[@id='departmentId']")
     WebElement deptId;
 
-    @FindBy(xpath = "//div[@id='classId']")
+    //@FindBy(xpath = "//div[@id='classId']")
+    @FindBy(xpath="//div[@id='classId']//..//..//*[contains(@aria-label, 'Select')]")
     WebElement classId;
 
     @FindBy(xpath = "//li[@id='classId_0']")
     WebElement classIdValeSelectITem;
 
-    @FindBy(xpath = "//div[@id='subclassId']")
+    //@FindBy(xpath ="//div[@id='subclassId']")
+    @FindBy(xpath ="//div[@id='subclassId']//..//..//*[contains(@aria-label, 'Select')]")
     WebElement subclassId;
 
     @FindBy(xpath = "//li[@id='subclassId_0']")
@@ -160,7 +163,7 @@ public class ItemManagementPage extends BasePage {
     WebElement deptIdValeSelectITem;
 
 
-    @FindBy(xpath = "//div[@id='reportCategoryId']")
+    @FindBy(xpath = "//div[@id='reportCategoryId']/..//span[@role='combobox' and contains(@class, 'p-dropdown-label') and @aria-label='Select']")
     WebElement reportingCategoryinITem;
 
     @FindBy(xpath = "//li[@id='reportCategoryId_0']")
@@ -287,8 +290,9 @@ public class ItemManagementPage extends BasePage {
         //System.out.println(MndivisionPage.strDivNameVal);
 
         //utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), BUUNitField);
+   	 Thread.sleep(6000);
+    	
         
-        utils.waitForElementToBeVisiblewithFluentWait(BUUNitField,waittime);
           
         //utils.clickElementWithJavaScript(DivisionField);
         
@@ -413,13 +417,13 @@ public class ItemManagementPage extends BasePage {
 
     public void selectItemCreation1(WebElement clickdropdownval,WebElement ClickonMerchandiseval, String merchName, String Flow) throws InterruptedException {
        // utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), clickdropdownval);
-        
-    	clickdropdownval.isDisplayed();
-    	clickdropdownval.isDisplayed();
+
+  	  Thread.sleep(12000); 
+  	  
+  	
+    
     	
-    	Thread.sleep(waittime);
-    	
-        utils.waitForElementToBeVisiblewithFluentWait(clickdropdownval,waittime);
+        //utils.waitForElementToBeVisiblewithFluentWait(clickdropdownval,waittime);
         
 
         // to check value runtime
@@ -474,7 +478,7 @@ public class ItemManagementPage extends BasePage {
     	
     	//utils.waitForElementToBeClickable(GropDivId,20);
     	
-    	Thread.sleep(waittime);
+    	Thread.sleep(12000);
       
         utils.clickElementWithJavaScript(GropDivId);
 
@@ -493,7 +497,7 @@ public class ItemManagementPage extends BasePage {
         //utils.clickElementWithJavaScript(GropSearchID);
         
        // utils.waitForElementToBeClickablewithFluentWait(GropSearchID,5);
-        utils.waitForElementToBeVisiblewithFluentWait(GropSearchID,waittime);
+       // utils.waitForElementToBeVisiblewithFluentWait(GropSearchID,waittime);
         
         utils.clickOnWebElement(GropSearchID);
         
@@ -508,7 +512,8 @@ public class ItemManagementPage extends BasePage {
 
     public void selectBusinessUnit(String BusinessUnitAPI) throws InterruptedException {
         // wait the element is visible
-        //utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), BUUNitField);
+    	 utils.waitForElementToBeClickablewithFluentWait(BUUNitField, 50);
+    	 Thread.sleep(6000);
         utils.waitForElementToBeVisiblewithFluentWait(BUUNitField,waittime);
         // Click on business unit.
         System.out.println("check on business unit appearing");
@@ -523,17 +528,24 @@ public class ItemManagementPage extends BasePage {
 
         //utils.slowSendKeys(SearchBox, Mnp.strBuNameVal, 500);
         
-        utils.slowSendKeys(SearchBox, BusinessUnitAPI, 500);
+        utils.slowSendKeys(SearchBox, BusinessUnitAPI, 600);
         
         Actions actions = new Actions(driver);
+        
         actions.sendKeys(Keys.TAB).build().perform();
-        actions.sendKeys(Keys.ENTER).build().perform();      
+        actions.sendKeys(Keys.TAB).build().perform();
+        actions.sendKeys(Keys.TAB).build().perform();
+        
+        actions.sendKeys(Keys.ENTER).build().perform();
+        
+        Thread.sleep(1000);
 
     }
     
     public void selectMerchandiseInItem(WebElement element,String strval) throws InterruptedException {
     	
-    	 utils.waitForElementToBeVisiblewithFluentWait(element,waittime);
+    	  Thread.sleep(10000); 
+    	utils.waitForElementToBeVisiblewithFluentWait(element,waittime);
     	 
     	 System.out.println("check on click on "+ element +" appearing");
     	 
@@ -544,6 +556,8 @@ public class ItemManagementPage extends BasePage {
     	 utils.slowSendKeys(SearchBox,strval,500);
     	 
     	 Actions actions = new Actions(driver);
+         actions.sendKeys(Keys.TAB).build().perform();
+         actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.ENTER).build().perform();  	 
     	  	 

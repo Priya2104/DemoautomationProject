@@ -5,7 +5,7 @@ Feature: Merchandise Item Creation Process
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And The user clicks on the Sign in button
-    And User Can Select Company "AVENIDA"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu
    # Then The user should be redirected to the Merchandise Page
   
@@ -16,7 +16,7 @@ Feature: Merchandise Item Creation Process
     When Select Business Unit from Item Management
     When Select Division from Item Management
     When select Group from Item Management
-    And The user select Reporting category Item "Apparel"
+    And The user select Reporting category Item "REPOCAT0012"
     And submit Item Creation
     And select Department from Item Management
     And select class from Item management
