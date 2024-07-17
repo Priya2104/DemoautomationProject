@@ -9,7 +9,7 @@ node('selenium') {
 		sh '''
 			env | sort
 			apk update
-			apk add --no--cache chromium
+			apk add --no-cache chromium
 			apk add --no-cache chromium-chromedriver
 			#apk add chromium
 			#apk add chromium-chromedriver
