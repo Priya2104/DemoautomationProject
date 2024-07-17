@@ -84,14 +84,16 @@ public class BaseClass {
 			switch (getProperties().getProperty("browser").toLowerCase()) {
 				case "chrome":
 				     ChromeOptions options = new ChromeOptions();
+				     /*
 				        options.addArguments("--headless");
 				        options.addArguments("--disable-gpu");
 				        options.addArguments("--no-sandbox");
 				        options.addArguments("--disable-dev-shm-usage");
 				        options.addArguments("--window-size=1920,1080");
 					    driver.set(new ChromeDriver(options));
+					    */
 					    
-					   // driver.set(new ChromeDriver());
+					   driver.set(new ChromeDriver());
 					    
 					break;
 				case "edge":
