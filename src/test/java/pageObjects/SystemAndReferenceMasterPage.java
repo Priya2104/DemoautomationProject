@@ -622,6 +622,9 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     @FindBy(xpath = "//button[contains(.,'Update')]")
     WebElement UpdateButton;
+    
+    @FindBy(xpath ="//h3[contains(text(), ' Logo Master ')]")
+    WebElement HeaderpageLogOMaster;
 
 	public SystemAndReferenceMasterPage(WebDriver driver) {
 		super(driver);
@@ -687,6 +690,17 @@ public class SystemAndReferenceMasterPage extends BasePage {
 
 		utils.waitForElementclickable(Duration.ofSeconds(60), desktopSelectdButton);
 		// utils.clickOnWebElement(desktopSelectdButton);
+	}
+	
+	
+	public boolean headerpageCheck() throws InterruptedException
+	{
+		Thread.sleep(10000);
+		boolean blntru=HeaderpageLogOMaster.isDisplayed();
+		
+		return blntru;
+		
+		
 	}
 
 	public void validateLanguageMaster(String strLangCode, String strLang)
