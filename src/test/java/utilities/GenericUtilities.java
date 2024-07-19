@@ -793,7 +793,7 @@ public class GenericUtilities {
 		  for (String selection : ongoingSelections) {
 			  System.out.println(selection);
 		  String xpath = String.format("//input[@type='checkbox']/"
-		          + "..//..//..//..//li[@aria-label='%s']", selection);
+		          + "..//..//..//..//li[contains(text(),'%s')]", selection);
 		  WebElement checkbox = driver.findElement(By.xpath(xpath));
 		  if (!checkbox.isSelected()) {
 		    checkbox.click();
@@ -1176,6 +1176,8 @@ public class GenericUtilities {
 	slowSendKeys(element,text,delay);
 	Actions actions = new Actions(driver);
 	Thread.sleep(10000);
+	actions.sendKeys(Keys.TAB).build().perform();
+	actions.sendKeys(Keys.TAB).build().perform();
 	actions.sendKeys(Keys.TAB).build().perform();
     actions.sendKeys(Keys.ENTER).build().perform(); 
 	}
@@ -1672,7 +1674,41 @@ SimpleDateFormat sim=new SimpleDateFormat("dd/MM/yyyy");
 		    System.out.println("Next month specific date "+specificDate);
 	  }
 	
+	  public String randomString() {
+			String alpha = "AbCDef123456cndjcu78jbkqs2d98@@&^H&%^)(^%$";
+			Random ran = new Random();
+			StringBuffer sb = new StringBuffer();
+			int len = 3;
+			for (int i = 0; i < len; i++) {
+				int index = ran.nextInt(alpha.length());
+				char rch = alpha.charAt(index);
+				sb.append(rch);
+
+			}
+			return sb.toString();
+		}	
+
+	public void explicit_Ele_Forvisibility(WebElement ele)  {
+	    WebDriverWait wait=new WebDriverWait(BaseClass.getDriver(), Duration.ofSeconds(220)) ;
+	wait.until(ExpectedConditions.visibilityOf(ele));
+	try {
+		Thread.sleep(300);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+
+	}
 	
+public void range_Search_Filter_Select(WebElement ele2, String cname) {
+      	
+      	explicit_Wait(ele2,120);
+      	sendkeys_ele(ele2, cname, 120);
+      	Actions a=new Actions(BaseClass.getDriver());
+      	a.sendKeys(Keys.ENTER).build().perform();
+      	
+      	
+      }
 	
 	// end by Anji
 	

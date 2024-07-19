@@ -33,7 +33,7 @@ Feature: Merchandise Item Creation Process
     When Select Business Unit from Item Management
     When Select Division from Item Management
     When select Group from Item Management
-    And The user select Reporting category Item "Apparel"
+    And The user select Reporting category Item "REPOCAT0012"
     And submit Item Creation
     And select Department from Item Management
     And select class from Item management

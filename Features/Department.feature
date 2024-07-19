@@ -5,7 +5,7 @@ Feature: Merchandise Department Setup page
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And  The user clicks on the Sign in button
-    And User Can Select Company "AVENIDA"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu
     #Then The user should be redirected to the Merchandise Page
 

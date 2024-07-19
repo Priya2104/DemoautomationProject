@@ -78,7 +78,7 @@ public class MerchandiseDivisionSteps {
 		BaseClass.getLogger().info("Click on group Tab.");
 	}
 	@When("Click on Group Add button")
-	public void click_on_Group_Add_button() throws IncorrectXpathException
+	public void click_on_Group_Add_button() throws IncorrectXpathException, InterruptedException
 	{
 		MndivisionPage.clickAddButtonGroup();
 	}

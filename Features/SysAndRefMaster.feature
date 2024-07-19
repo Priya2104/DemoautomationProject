@@ -339,3 +339,29 @@ Feature: Merchandise Business unit view page
     Examples: 
       | ItemType       | DiffType       | DiffValue | Status |
       | AutomationTest | AutomationTest | value     | Active |
+ 
+ @DifferentiatorGroup
+  Scenario Outline: Verify Differentiator Type setup
+    When I click on Differentiators dropdown
+    And I click on Differentiator Group dropdown
+    Then I click on Add Differentiator Group
+    And I enter the details for Differentiator Type "<ItemType>","<DiffType>","<GroupDescription>","<Status>","<GroupValues>","<Remarks>"
+    And I click on Save button
+   Then I should validate DIFF GROUP in the table
+
+    Examples: 
+      |    ItemType     |    DiffType       | GroupDescription | Status  | GroupValues| Remarks |
+      | AutomationTest  |   AutomationTest  |   DiffGroup      | Active  |            | Remarks123 |
+
+@DiffRange
+  Scenario Outline: Verify Differentiator Range setup
+    When I click on Differentiators dropdown
+    And I click on Differentiator Range dropdown
+    Then I click on Add Differentiator Range
+    And I enter the details for Differentiator Range "<ItemType>","<diff type>","<diff group description>","<diff range description>","<diff group range>","<Remarks>","<status>"
+    Then User Validate the success message as "Record saved successfully, now continue to next step"
+    And I verify the following details "<diff range description>" in Edit Page
+
+    Examples: 
+      | ItemType       | diff type      | diff group description | diff range description | diff group range | Remarks | status |
+      | AutomationTest | AutomationTest | Group12345             | Diffrange              | value M9DM       | ramarks | Active |

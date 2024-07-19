@@ -435,6 +435,8 @@ public class MerchandiseDivisionPage extends BasePage {
 			  
 			  Actions actions = new Actions(driver);
 		        actions.sendKeys(Keys.TAB).build().perform();
+		        actions.sendKeys(Keys.TAB).build().perform();
+		        actions.sendKeys(Keys.TAB).build().perform();
 		        actions.sendKeys(Keys.ENTER).build().perform();  
 			  
 			  
@@ -550,11 +552,12 @@ public class MerchandiseDivisionPage extends BasePage {
 
     }
 
-    public void clickAddButtonGroup() throws IncorrectXpathException
+    public void clickAddButtonGroup() throws IncorrectXpathException, InterruptedException
     {
+    	Thread.sleep(5000);
     	utils.explicit_Wait(btnGroup,2000);
     	//utils.doesElementExist(btnGroup);
-    	driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
+    	//driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
     	
     	clickAddButton(btnGroup);
     }
@@ -586,7 +589,7 @@ public class MerchandiseDivisionPage extends BasePage {
         
         utils.waitForElementclickable(Duration.ofSeconds(60), element);
         
-    	utils.clickOnWebElement(element);
+    	utils.clickElementWithJavaScript(element);
  
     }
 

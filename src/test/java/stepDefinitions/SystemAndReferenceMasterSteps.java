@@ -32,6 +32,7 @@ public class SystemAndReferenceMasterSteps {
 	public static String langCode, langName, langshortcode;
 	public static String DgSubClassCode, inpUNUnimber;
 	public static String stateCode, stateName;
+	public static String diffRange_des,remarks;
 
 	String TestData_filePath = "testData/TestData.properties";
 	PropertiesReader testdata = new PropertiesReader(TestData_filePath);
@@ -731,5 +732,65 @@ public class SystemAndReferenceMasterSteps {
     	sysandrefmaster.clickOnEditBtn(DiffValue);
     	sysandrefmaster.verifyDifferentiatorValueDetails(ItemType,DiffValueTypeName,DiffValue,NewDiffTypeStatus);
     }
+    
+public static String diffGroupDescription;
+	
+	@When("I click on Differentiator Group dropdown")
+	public void i_click_on_differentiator_group_dropdown() {
+		sysandrefmaster.clickDifferentiatorGroupDropdown();
+	}
+	@Then("I click on Add Differentiator Group")
+	public void i_click_on_add_differentiator_group() {
+		//sysandrefmaster.validateViewDifferentiatorPageAvailability();
+		sysandrefmaster.clickOnAddDifferentiatorGroup();
+	}
+	@Then("I enter the details for Differentiator Type {string},{string},{string},{string},{string},{string}")
+	public void i_enter_the_details_for_differentiator_type(String itemType, String diffType, String groupDescription, String status, String groupValue, String remarks) {
+		 diffGroupDescription = groupDescription + " " + utils.generateRandomChars(4);
+		
+		sysandrefmaster.enterDifferentiatorGroupDetails(itemType, diffType, diffGroupDescription,status,groupValue,remarks);
+	}
+	@Then("I should validate DIFF GROUP in the table")
+	public void i_should_validate_diff_group_in_the_table() throws IncorrectXpathException, InterruptedException {
+		sysandrefmaster.validateDiffGroup(diffGroupDescription);
 
+		String strDiffGroupId = Mnp.getCellValue(3, 1);
+		System.out.println(strDiffGroupId);
+		System.out.println(strDiffGroupId);
+		
+		//Assert.assertEquals(strDiffGroupId, transferZoneCode);
+
+		String strDiffGroupDescription = Mnp.getCellValue(3, 2);
+		System.out.println(strDiffGroupDescription);
+		Assert.assertEquals(strDiffGroupDescription, diffGroupDescription);
+
+	}
+	
+	@When("I click on Differentiator Range dropdown")
+	public void i_click_on_differentiator_range_dropdown() {
+		sysandrefmaster.diffRangeMenu_Click();
+	}
+	@Then("I click on Add Differentiator Range")
+	public void i_click_on_add_differentiator_range() {
+		sysandrefmaster.adddiffRange_button_Click();
+	}
+	@Then("I enter the details for Differentiator Range {string},{string},{string},{string},{string},{string},{string}")
+	public void i_enter_the_details_for_differentiator_range(String itemtype,String difftype,String diffgroupdesription,String diffRange_de,String grouprange,String remark,String status) {
+		diffRange_des=diffRange_de+" "+sysandrefmaster.randomString();
+		System.out.println("Diff GroupRange des is: "+diffRange_des);
+		remarks=remark+" "+sysandrefmaster.randomString();
+		sysandrefmaster.provide_DiffRange_Values(itemtype, difftype, diffgroupdesription,diffRange_des, grouprange, remarks, status);
+	}
+	@Then("I verify the following details {string} in Edit Page")
+	public void i_verify_the_following_details_in_edit_page(String diffRange_de) {
+		diffRange_de=diffRange_des;
+		sysandrefmaster.provide_difRangedetails_forSearchField(diffRange_de);
+
+		
+	}
+	
 }
+
+
+
+

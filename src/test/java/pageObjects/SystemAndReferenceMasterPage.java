@@ -625,6 +625,78 @@ public class SystemAndReferenceMasterPage extends BasePage {
     
     @FindBy(xpath ="//h3[contains(text(), ' Logo Master ')]")
     WebElement HeaderpageLogOMaster;
+    
+    @FindBy(xpath = "(//span[contains(text(),'Differentiator Group')])[1]")
+	WebElement diffGroup;
+	
+	@FindBy(xpath = "//span[contains(text(),'Add Diff Group')]")
+	WebElement addDiffGroupBtn;
+	
+	@FindBy(xpath = "(//span[@aria-label='Select'][normalize-space()='Select'])[1]")
+	WebElement itemTypedd;
+	
+	@FindBy(xpath = "//input[@type='text' and @role='searchbox']")
+	WebElement searchbox;
+	
+	@FindBy(xpath = "//li[@id='itemType_0']")
+	WebElement itemList;
+	
+	@FindBy(xpath = "(//span[@aria-label='Select'])[1]")
+	WebElement diffTypedd;
+	
+	@FindBy(xpath = "(//input[@role='searchbox'])[1]")
+	WebElement diffTypeSearch;
+	
+	
+	@FindBy(xpath = "(//span[@class='ng-star-inserted'])[1]")
+	WebElement diffTypeList;
+	
+	@FindBy(xpath = "//input[@type='text' and @id='diffGroupDescription']")
+	WebElement diffGroupDescription;
+	
+	@FindBy(xpath = "//span[@aria-label='Active']/parent::div[@id='status']")
+	WebElement diffGroupStatus;
+	
+	@FindBy(xpath = "(//div[@class='p-multiselect-label p-placeholder'])[1]")
+	WebElement diffGroupValues;
+	
+	@FindBy(xpath = "(//span[@class='ng-star-inserted'])[1]")
+	WebElement valuesCheckbox;
+	
+	@FindBy(xpath = "//input[@type='text' and @id='remarks']")
+	WebElement groupRemarks;
+	
+	@FindBy(xpath = "//span[contains(text(),'Save')]")
+	WebElement groupSaveBtn;
+	
+	@FindBy(xpath = "//input[@type='text' and @placeholder='Search Diff Group Description']")
+	WebElement groupDescription_View;
+	
+	@FindBy(xpath="//span[text()='Differentiator Range']") WebElement diffrangemenu;
+	@FindBy(xpath="//span[text()='Add Diff Range']") WebElement adddiffrange_button;
+	@FindBy(xpath="(//div[@id='status'])[1]") WebElement Itemtype_dropdown;
+	@FindBy(xpath="(//div[@id='status'])[2]") WebElement Difftype_dropdown;
+	@FindBy(xpath="(//div[@id='status'])[3]") WebElement statusdropdown;
+	@FindBy(css="li#status_0") WebElement OptionDropdownClick;
+	@FindBy(css="div#diffGroupDescription") WebElement diffgroupdes;
+	@FindBy(css="li#diffGroupDescription_0") WebElement optiondiffgroupdes;
+	@FindBy(css="li#diffGroupRange_0") WebElement optiondiffgrouprange;
+	@FindBy(css="input#diffRangeDescription") WebElement Diffrangedes_input;
+	@FindBy(css="div#diffGroupRange") WebElement Diffgrouprangedrop;
+	@FindBy(css="#remarks") WebElement remarks_input;
+	
+	
+	//Search
+	@FindBy(xpath="(//tbody/tr/td)[1]") WebElement DiffRangeid_text;
+	@FindBy(xpath="(//tbody/tr/td)[2]") WebElement DiffRangeDes_text;
+	@FindBy(xpath="(//tbody/tr/td)[3]") WebElement DifItemtype_text;
+	@FindBy(xpath="(//tbody/tr/td)[4]") WebElement DiffType_text;
+	@FindBy(xpath="(//tbody/tr/td)[5]") WebElement Diffgroupdescri_text;
+	@FindBy(xpath="(//tbody/tr/td)[6]") WebElement Diffgrouprange_text;
+	@FindBy(xpath="(//tbody/tr/td)[7]") WebElement Diffgroupremarks_text;
+	@FindBy(xpath="(//tbody/tr/td)[8]") WebElement Diffgroupstatus_text;
+	
+	@FindBy(xpath="(//p-dropdown)[1]") WebElement ItemTypeText;
 
 	public SystemAndReferenceMasterPage(WebDriver driver) {
 		super(driver);
@@ -2182,4 +2254,117 @@ public class SystemAndReferenceMasterPage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(UpdateButton));
         UpdateButton.click();
     }
+	
+	  public void clickDifferentiatorGroupDropdown() {
+	        openMastersDropdownIfClosed();
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(diffGroup));
+	        utils.clickElementWithJavaScript(diffGroup);
+	    }
+	    public void clickOnAddDifferentiatorGroup() {
+	        //validateViewDifferentiatorPageAvailability();
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.visibilityOf(addDiffGroupBtn));
+	        wait.until(ExpectedConditions.elementToBeClickable(addDiffGroupBtn));
+	        addDiffGroupBtn.click();
+	    }
+	    
+	    public void enterDifferentiatorGroupDetails(String itemType,String diffType,String groupDescription,String Status,String groupValue,String Remarks) {
+	        //wait until the element is clickable
+	    	
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        wait.until(ExpectedConditions.elementToBeClickable(itemTypedd));
+	        itemTypedd.click();
+	        searchbox.sendKeys(itemType);
+	        itemList.click();
+	        wait.until(ExpectedConditions.elementToBeClickable(diffTypedd));
+	        diffTypedd.click();
+	        diffTypeSearch.sendKeys(diffType);
+	        diffTypeList.click();
+	        wait.until(ExpectedConditions.elementToBeClickable(diffGroupDescription));
+	        diffGroupDescription.sendKeys(groupDescription);
+	       
+	        String CurrentStatus=diffGroupStatus.getText();
+	        if(CurrentStatus.equalsIgnoreCase(Status) )
+	        {
+	            System.out.println("Status already set");
+	        }
+	        else if(CurrentStatus.equalsIgnoreCase("Active"))
+	        {
+	            StatusXpath.click();
+	            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+	        }
+	        else if(CurrentStatus.equalsIgnoreCase("Inactive"))
+	        {
+	            StatusXpath.click();
+	            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(@aria-label,'"+Status+"')]")));
+	        }
+	        
+	        wait.until(ExpectedConditions.elementToBeClickable(diffGroupValues));
+	        diffGroupValues.click();
+	        valuesCheckbox.click();
+	        wait.until(ExpectedConditions.elementToBeClickable(groupRemarks));
+	        groupRemarks.sendKeys(Remarks);
+	        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	    }
+	    public void validateDiffGroup(String diffGroupDescription)
+				throws IncorrectXpathException, InterruptedException {
+			utils.setValueInEditBox(groupDescription_View, diffGroupDescription);
+
+			// utils.doesElementExist(filterIcon);
+			Thread.sleep(2000);
+
+			groupDescription_View.sendKeys(Keys.ENTER);
+
+			Thread.sleep(5000);
+
+		}
+	    
+	   
+	    	
+	    	public void validatetherecord_Ele() {
+	    		utils.explicit_Ele_Forvisibility(DiffRangeid_text);
+	    		utils.explicit_Ele_Forvisibility(DiffRangeDes_text);
+	    		utils.explicit_Ele_Forvisibility(DifItemtype_text);
+	    		utils.explicit_Ele_Forvisibility(DiffType_text);
+	    		utils.explicit_Ele_Forvisibility(Diffgroupdescri_text);
+	    		utils.explicit_Ele_Forvisibility(Diffgrouprange_text);
+	    	} 
+	    	
+	    	
+	    	public void diffRangeMenu_Click() {
+	    		utils.explicit_Wait(diffrangemenu, 120);
+	    	    utils.clickElement_using_Size("//span[text()='Differentiator Range']", diffrangemenu);
+	    		
+	    	}
+	    	
+	    	public void adddiffRange_button_Click() {
+	    		utils.getSuccessmsg(Header_in_view_page);
+	    		
+	    		utils.explicit_Wait(adddiffrange_button, 120);
+	    	    utils.clickElement_using_Size("//span[text()='Add Diff Range']", adddiffrange_button);
+	    	   
+	    	}
+	    	
+	    	public void provide_DiffRange_Values(String itemtype,String difftype,String diffgroupdesription,String diffRange_des,String grouprange,String remarks,String status) {
+	    		    utils.coutry_Select(Itemtype_dropdown, itemtype, coutryinput, OptionDropdownClick, 120);
+	    		    utils.coutry_Select(Difftype_dropdown, difftype, coutryinput, OptionDropdownClick, 120);
+	    		    utils.coutry_Select(diffgroupdes, diffgroupdesription, coutryinput, optiondiffgroupdes, 120);
+	    		    utils.sendkeys_ele(Diffrangedes_input, diffRange_des, 120);
+	    		    utils.coutry_Select(Diffgrouprangedrop, "", coutryinput, optiondiffgrouprange, 120);
+	    		    utils.sendkeys_ele(remarks_input, remarks, 120);
+	    		    status_Options(status,statusdropdown);
+	    		    validateCancel_Save();
+	    			
+	    	}
+	    	
+	    	public void provide_difRangedetails_forSearchField(String diffrangedescription) {
+
+	    		utils.waitScreen(3000);
+	    		utils.range_Search_Filter_Select(SearchCurrencyName, diffrangedescription);
+	    		validatetherecord_Ele();
+	    		utils.edit_Click(threedots, edit);
+
+
+	    	}
 }

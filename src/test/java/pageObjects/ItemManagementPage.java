@@ -441,16 +441,24 @@ public class ItemManagementPage extends BasePage {
       
         
        
-
-        utils.setValueTextBox(SearchBox, merchName, Flow);
+             
+        //utils.setValueTextBox(SearchBox, merchName, Flow);
+        
+        
+        utils.slowSendKeys(SearchBox,merchName,500);
+        
+        clickAction();
+        
 
         System.out.println("After set the value into search box");
         //utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), ClickonMerchandiseval);
         
-        
+        /*
         utils.waitForElementToBeVisiblewithFluentWait(ClickonMerchandiseval,waittime);
 
         utils.clickOnWebElement(ClickonMerchandiseval);
+        
+        */
         
         System.out.println("After selcting reporting category value");
 
@@ -478,7 +486,7 @@ public class ItemManagementPage extends BasePage {
     	
     	//utils.waitForElementToBeClickable(GropDivId,20);
     	
-    	Thread.sleep(12000);
+    	Thread.sleep(15000);
       
         utils.clickElementWithJavaScript(GropDivId);
 
@@ -555,16 +563,27 @@ public class ItemManagementPage extends BasePage {
     	 
     	 utils.slowSendKeys(SearchBox,strval,500);
     	 
+    	 clickAction();
+    	 
+    	 /*
     	 Actions actions = new Actions(driver);
          actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.ENTER).build().perform();  	 
-    	  	 
+    	  */	 
     	
     }
     
     
+    public void clickAction()
+    {
+    	 Actions actions = new Actions(driver);
+         actions.sendKeys(Keys.TAB).build().perform();
+         actions.sendKeys(Keys.TAB).build().perform();
+         actions.sendKeys(Keys.TAB).build().perform();
+         actions.sendKeys(Keys.ENTER).build().perform();  
+    }
     
 
     public boolean GroupIDName() {
@@ -589,6 +608,8 @@ public class ItemManagementPage extends BasePage {
     public void selectSubTypeItem() throws InterruptedException
         
     {
+    	Thread.sleep(15000);
+    	
     	utils.clickOnWebElement(subTypeItemselectClick);
     	
     	
@@ -1143,19 +1164,19 @@ public class ItemManagementPage extends BasePage {
                     // json.put("code", DepartmentAPI_ID);
                     json.put("name", "Dept" + GenericUtilities.getSystemDate().replace("_", ""));
                     json.put("merchGroupPkid", GroupAPI_responsePkid);
-                    json.put("itemTypePkid","11");
+                    json.put("itemTypePkid","153");
                     break;
                 case "classes":
                     // json.put("code", ClassAPI_ID);
                     json.put("name", "Class" + GenericUtilities.getSystemDate().replace("_", ""));
                     json.put("merchDepartmentPkid", DepartmentAPI_responsePkid);
-                    json.put("itemTypePkid","11");
+                    json.put("itemTypePkid","153");
                     break;
                 case "sub-classes":
                     // json.put("code", SubClassAPI_ID);
                     json.put("name", "SubClass" + GenericUtilities.getSystemDate().replace("_", ""));
                     json.put("merchClassPkid", ClassAPI_responsePkid);
-                    json.put("itemTypePkid","11");
+                    json.put("itemTypePkid","153");
                     break;
             }
             //json.put("companyId", CompanyAPI_responseID);
