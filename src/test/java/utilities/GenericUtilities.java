@@ -802,6 +802,25 @@ public class GenericUtilities {
 		  }
 		}
 	
+	
+	public boolean verifyElementExistsWithXpath( String selection) {
+        String xpathTemplate = "//input[@type='checkbox']/../../../../li[contains(text(),'%s')]";
+        String xpath = String.format(xpathTemplate, selection);
+
+        try 
+        {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+        return element != null;
+        } catch (Exception e) {
+        	return false;
+
+		}
+		
+       
+        }
+    
+
+	
 	/**
 	 * @return void
 	 * @name : waitForPageLoad
@@ -1709,6 +1728,29 @@ public void range_Search_Filter_Select(WebElement ele2, String cname) {
       	
       	
       }
+
+public void multi_Select(WebElement ele,String str,List<WebElement> eleclick,long delay) {
+	
+	String [] st=str.split(",");
+//	System.out.println(st);
+	
+		explicit_Wait(ele, delay);
+		waitScreen(1000);
+    	ele.click();
+    	for(int i=0;i<st.length;i++) {
+    		System.out.println("datat is : "+st[i]);
+		for(int j=0;j<eleclick.size();j++) {
+			if(eleclick.get(j).getText().equalsIgnoreCase(st[i])) {
+				eleclick.get(j).click();
+				break;
+			}
+			
+		}
+	//	clickElementWithJavaScript1(ele);
+		
+    	}
+	ele.click();
+}
 	
 	// end by Anji
 	
