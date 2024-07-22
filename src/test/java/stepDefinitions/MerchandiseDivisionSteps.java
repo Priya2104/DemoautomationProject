@@ -365,6 +365,8 @@ public class MerchandiseDivisionSteps {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	@When("The user click on SubClass tab")
 	public void The_user_click_on_SubClass_tab() {

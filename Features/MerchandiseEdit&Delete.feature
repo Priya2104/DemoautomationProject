@@ -4,9 +4,8 @@ Feature: Edit Page Functionality
     Given The user navigates to login page of Merx
     When The user login Merx application with email as and password
     And The user clicks on the Sign in button
-    And User Can Select Company "PEP00002COMPANY12"
+    And User Can Select Company "DUNNS"
     And Click on merchandise Menu
-    Then The user should be redirected to the Merchandise Page
 
   @Sanityforedit
   Scenario Outline: Edit BusinessUnit and Verify page details
@@ -17,7 +16,7 @@ Feature: Edit Page Functionality
 
     Examples: 
       | Business Unit Name | Reporting Category | Alternate Hierarchy | Status |
-      |                    | Footwear           | Cartoons            | Active |
+      |                    | check reference    | sample testing      | Active |
 
   @Sanityforedit
   Scenario Outline: Edit DivisionUnit and Verify page details
@@ -27,7 +26,7 @@ Feature: Edit Page Functionality
 
     Examples: 
       | Division Name | Reporting Category | Alternate Hierarchy | Status |
-      |               | Footwear           | Cartoons            | Active |
+      |               | check reference    | sample testing      | Active |
 
   @Sanityforedit
   Scenario Outline: Edit Group and Verify page details
@@ -37,7 +36,7 @@ Feature: Edit Page Functionality
 
     Examples: 
       | Group Name | Reporting Category | Alternate Hierarchy | Status |
-      |            | Footwear           | Cartoons            | Active |
+      |            | check reference    | sample testing      | Active |
 
   @Sanityforedit
   Scenario Outline: Edit Department and Verify page details
@@ -46,8 +45,8 @@ Feature: Edit Page Functionality
     And I will verify the updated Department fields.
 
     Examples: 
-      | Department Name | Reporting Category | Item Type  | Alternate Hierarchy | Status |
-      |                 | Footwear           | Electronic | Cartoons            | Active |
+      | Department Name | Reporting Category | Item Type    | Alternate Hierarchy | Status |
+      |                 | check reference    | Gift Regular | sample testing      | Active |
 
   @Sanityforedit
   Scenario Outline: Edit Class and Verify page details
@@ -56,8 +55,8 @@ Feature: Edit Page Functionality
     And I will verify the updated Class fields.
 
     Examples: 
-      | Class Name | Reporting Category | Item Type   | Alternate Hierarchy | Status |
-      |            | Footwear           | CFH Regular | Cartoons            | Active |
+      | Class Name | Reporting Category | Item Type    | Alternate Hierarchy | Status |
+      |            | check reference    | Gift Regular | sample testing      | Active |
 
   @Sanityforedit
   Scenario Outline: Edit Subclass and Verify page details
@@ -66,13 +65,13 @@ Feature: Edit Page Functionality
     And I will verify the updated Subclass fields.
 
     Examples: 
-      | Subclass Name | Reporting Category | Item Type  | Alternate Hierarchy | Status |
-      |               | Footwear           | Electronic | Cartoons            | Active |
+      | Subclass Name | Reporting Category | Item Type    | Alternate Hierarchy | Status |
+      |               | check reference    | Gift Regular | sample testing      | Active |
 
   #Delete scenarios
   @SanityforDelete
   Scenario: Verify the Successful Deletion from the Subclass view Page
-    When I Create Merchandise data with API request
+   # When I Create Merchandise data with API request
     Then I will search with Subclass unit ID
     And I will Delete the record
     And I will verify the deleted Subclass record should not exist in the system

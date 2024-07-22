@@ -778,6 +778,10 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 	// end by vinay code 
 
 	// New Methods for edit and delete records
+	  
+	  
+	  
+	  
 
 		public String GetBUValue() { // Getting the Busineess unit ID and name
 			BuID = BU_HomePage.strBusinessUnits;
@@ -964,6 +968,8 @@ public class MerchandiseBusinessUnitPage extends BasePage {
 			}
 
 		}
+		
+		
 
 		public void verifyrecorddeleted() { // verifying the delete record is exist or not in the system
 			if (Norecordsmsgdisplayed()) {

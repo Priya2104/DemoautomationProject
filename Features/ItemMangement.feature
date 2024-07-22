@@ -24,7 +24,7 @@ Feature: Merchandise Item Creation Process
     And select subtype 
     And Create Family Item with name "familyDescval","Active","longDescriptionval","POS value2 Test1","POS value2 Test2","Clothing Color#Clothing Size#Clothing Pattern#Clothing Fabric"
     And Create ChildItem "Red#xxl#Skinny#Cotton" 
-   Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
+    Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
    
    @PKHD-VMI
   Scenario: Verify Item management VMI setup

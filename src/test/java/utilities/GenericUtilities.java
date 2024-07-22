@@ -1751,6 +1751,25 @@ public void multi_Select(WebElement ele,String str,List<WebElement> eleclick,lon
     	}
 	ele.click();
 }
+
+public void sendDataforrepotingCategory(WebElement rep,String repdata,WebElement rep1,String re1,WebElement rep2,String rep2d ) {
+	
+	rep.clear();
+	rep.sendKeys(repdata);
+	rep.sendKeys(Keys.TAB);
+	
+	rep1.clear();
+	rep1.sendKeys(re1);
+	rep1.sendKeys(Keys.TAB);
+	
+	rep2.clear();
+	rep2.sendKeys(rep2d);
+	rep2.sendKeys(Keys.TAB);
+	
+	
+	
+	
+}
 	
 	// end by Anji
 	

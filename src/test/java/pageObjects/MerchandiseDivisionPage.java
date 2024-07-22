@@ -706,6 +706,10 @@ public class MerchandiseDivisionPage extends BasePage {
     public void clickDepartment() throws InterruptedException {
 
         utils.clickOnWebElement(DepartmentTab);
+        Thread.sleep(3000);
+              
+        utils.waitForElementclickable(Duration.ofSeconds(120), btnAddDeparment);
+        utils.clickOnWebElement(btnAddDeparment);
     }
 
 
