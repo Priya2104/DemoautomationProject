@@ -47,7 +47,6 @@ public class SystemParametersPage extends BasePage {
     
     //@FindBy(xpath = "//span[contains(text(), 'Alternate Hierarchy')]")
     @FindBy(xpath = "//span[@class='p-tabview-title ng-star-inserted' and text()='Alternate Hierarchy']")
-
     WebElement systemParamterbutton;
     
     @FindBy(xpath="//button/span[contains(.,'Save and Apply')]")
@@ -56,6 +55,8 @@ public class SystemParametersPage extends BasePage {
     @FindBy(xpath="//input[@id='althierchyName']")
     WebElement inpAlternateHierarchy;
     
+    @FindBy(xpath="//*[@placeholder='Description']")
+    WebElement inpSearchBoxAlternateHierarchy;
     
     public void clickOnSystemParameterMenu() throws InterruptedException {
 		
@@ -76,8 +77,8 @@ public class SystemParametersPage extends BasePage {
     
     public void clickOnSystemParamterButton() throws InterruptedException
     {
-    	Thread.sleep(60000);
-    	utils.clickableElement(systemParamterbutton);
+    	Thread.sleep(6000);
+    	utils.clickElementWithJavaScript1(systemParamterbutton);
     }
     
     public void submitAlternateHierarhy(String AlternateHierarchy,String Description) throws InterruptedException
@@ -86,14 +87,21 @@ public class SystemParametersPage extends BasePage {
     {
     	
     	
-    	utils.setFieldValue(inDeptID, AlternateHierarchy, "AlternateHierarchy");
+    	utils.setFieldValue(inpAlternateHierarchy, AlternateHierarchy, "AlternateHierarchy");
     	
-    	utils.setFieldValue(inDeptID, Description, "Description");
+    	utils.setFieldValue(inpSearchBoxAlternateHierarchy, Description, "Description");
     	
     	
     	utils.clickOnWebElement_click(saveAndContinue);
     	
     	
+    }
+    
+    public void clickonAlternateHierarchy(String strAlternateHierarchy) throws InterruptedException
+    {
+    	Mnp.clickOnAlterNative();
+    	
+    	utils.setFieldValue(inpSearchBoxAlternateHierarchy, strAlternateHierarchy, "Alternate Hierarchy");
     }
     
     

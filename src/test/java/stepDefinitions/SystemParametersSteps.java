@@ -48,16 +48,20 @@ public class SystemParametersSteps {
 	}
 	
 	@When("Submit the Alternate Hierarhy details {string},{string}")
-	public void Submit_the_Alternate_Hierarhy_details(String AlternateHierarchy,String Description) throws InterruptedException
+	public void Submit_the_Alternate_Hierarhy_details(String AlternateHierarchy,String Descriptionval) throws InterruptedException
 	{
-		AlterNateHiearhyval=AlternateHierarchy+utils.generateRandomChars(6);
-		sysparamter.submitAlternateHierarhy(AlterNateHiearhyval, Description);
+		System.out.println(AlternateHierarchy);
+		AlterNateHiearhyval=AlternateHierarchy+"-"+utils.generateRandomChars(6);
+		System.out.println(AlterNateHiearhyval);
+		sysparamter.submitAlternateHierarhy(AlterNateHiearhyval, Descriptionval);
 	}
 	
 	@Then("Validate Alternate Hierarhy in the table grid")
 	public void Validate_Alternate_Hierarhy_in_the_able_grid() throws InterruptedException
 	{
 		
+		sysparamter.clickonAlternateHierarchy(AlterNateHiearhyval);
+						
 		
 		
 		Thread.sleep(1000);
