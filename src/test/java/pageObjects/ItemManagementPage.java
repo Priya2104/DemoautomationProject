@@ -52,9 +52,9 @@ public class ItemManagementPage extends BasePage {
     final private CloseableHttpClient client;
     
     private int CompanyAPI_responsePkid,BusinessUnitAPI_responsePkid, DivisionAPI_responsePkid, GroupAPI_responsePkid, DepartmentAPI_responsePkid, ClassAPI_responsePkid, SubClassAPI_responsePkid;
-    private String CompanyAPI_ID, BusinessUnitAPI_ID, DivisionAPI_ID, GroupAPI_ID, DepartmentAPI_ID, ClassAPI_ID, SubClassAPI_ID;
+    public static String CompanyAPI_ID, BusinessUnitAPI_ID, DivisionAPI_ID, GroupAPI_ID, DepartmentAPI_ID, ClassAPI_ID, SubClassAPI_ID;
     private int CompanyAPI_responseID, BusinessUnitAPI_responseID, DivisionAPI_responseID, GroupAPI_responseID, DepartmentAPI_responseID, ClassAPI_responseID, SubClassAPI_responseID;
-    private String CompanyAPI_responseName,BusinessUnitAPI_responseName, DivisionAPI_responseName, GroupAPI_responseName, DepartmentAPI_responseName, ClassAPI_responseName, SubClassAPI_responseName;
+    public static String CompanyAPI_responseName,BusinessUnitAPI_responseName, DivisionAPI_responseName, GroupAPI_responseName, DepartmentAPI_responseName, ClassAPI_responseName, SubClassAPI_responseName;
     
     String TestData_filePath = "testData/TestData.properties";
     String Config_filePath ="src/test/resources/config.properties";
@@ -286,11 +286,11 @@ public class ItemManagementPage extends BasePage {
 
     }
 
-    public void selectDivisionVal(String DivisionAPI) throws InterruptedException {
+    public void selectDivisionVal() throws InterruptedException {
         //System.out.println(MndivisionPage.strDivNameVal);
 
         //utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), BUUNitField);
-   	 Thread.sleep(6000);
+   	 Thread.sleep(10000);
     	
         
           
@@ -305,10 +305,25 @@ public class ItemManagementPage extends BasePage {
         
         utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
         
-    
-        //utils.setValueTextBox(SearchBox, MndivisionPage.strDivNameVal, "selectDivInItemCreation");      
+                
+        utils.slowSendKeys(SearchBox, DivisionAPI_responseName, 600);
         
-        utils.setValueTextBox(SearchBox,DivisionAPI, "selectDivInItemCreation");       
+        Actions actions = new Actions(driver);
+        
+        actions.sendKeys(Keys.TAB).build().perform();
+        actions.sendKeys(Keys.TAB).build().perform();
+        actions.sendKeys(Keys.TAB).build().perform();
+        
+        actions.sendKeys(Keys.ENTER).build().perform();
+        
+        
+        
+    
+        //utils.setValueTextBox(SearchBox, MndivisionPage.strDivNameVal, "selectDivInItemCreation");    
+        
+        /*
+        
+        utils.setValueTextBox(SearchBox,DivisionAPI_responseName, "selectDivInItemCreation");       
    
         
         utils.waitForElementToBeVisiblewithFluentWait(DivisionSearch,waittime);
@@ -316,7 +331,8 @@ public class ItemManagementPage extends BasePage {
         //utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), DivisionSearch);
         
                        
-        utils.clickOnWebElement(DivisionSearch);   
+        utils.clickOnWebElement(DivisionSearch);  
+        */ 
         
         System.out.println("Click on submit button in the  division");
 
@@ -388,29 +404,29 @@ public class ItemManagementPage extends BasePage {
     	}
 
 
-    public void selectDepartmentItem(String DepartmentAPI) throws InterruptedException {
+    public void selectDepartmentItem() throws InterruptedException {
         //selectItemCreation1(deptId, SearchBox, deptIdValeSelectITem, deptPage.strDepNameVal, "Department");
     	//selectItemCreation1(deptId, SearchBox, deptIdValeSelectITem, "SanityAutoTestsExecution", "Department");
     	 
-    	selectMerchandiseInItem(deptId,DepartmentAPI);
+    	selectMerchandiseInItem(deptId);
     	 
        
     }
 
 
-    public void selectClassItem(String ClassAPI) throws InterruptedException {
+    public void selectClassItem() throws InterruptedException {
        // selectItemCreation1(classId, SearchBox, classIdValeSelectITem, classPage.strClassNameVal, "class");
         
-        selectItemCreation1(classId, classIdValeSelectITem, ClassAPI, "class");
+        selectItemCreation1(classId, classIdValeSelectITem,ClassAPI_responseName , "class");
         
         
     }
 
 
-    public void selectSubClassItem(String SubClassAPI) throws InterruptedException {
+    public void selectSubClassItem() throws InterruptedException {
         //selectItemCreation1(subclassId, SearchBox, subclassIdValeSelectITem, subclassPage.strsubclassNameVal, "subclass");
         
-        selectItemCreation1(subclassId, subclassIdValeSelectITem, SubClassAPI, "subclass");
+        selectItemCreation1(subclassId, subclassIdValeSelectITem,SubClassAPI_responseName , "subclass");
         
     }
 
@@ -418,7 +434,7 @@ public class ItemManagementPage extends BasePage {
     public void selectItemCreation1(WebElement clickdropdownval,WebElement ClickonMerchandiseval, String merchName, String Flow) throws InterruptedException {
        // utils.waitForElementVisibilityFor(Duration.ofSeconds(waittime), clickdropdownval);
 
-  	  Thread.sleep(12000); 
+  	  Thread.sleep(20000); 
   	  
   	
     
@@ -439,13 +455,13 @@ public class ItemManagementPage extends BasePage {
         SearchBox.isDisplayed();
         SearchBox.isDisplayed(); 
       
-        
+        Thread.sleep(1000);
        
              
         //utils.setValueTextBox(SearchBox, merchName, Flow);
         
         
-        utils.slowSendKeys(SearchBox,merchName,500);
+        utils.slowSendKeys(SearchBox,merchName,800);
         
         clickAction();
         
@@ -461,11 +477,11 @@ public class ItemManagementPage extends BasePage {
         */
         
         System.out.println("After selcting reporting category value");
-
+        Thread.sleep(15000);
 
     }
 
-    public void selectGrouDivVal(String GroupAPI) throws InterruptedException, TimeoutException {
+    public void selectGrouDivVal() throws InterruptedException, TimeoutException {
 
         //System.out.println();
 
@@ -497,7 +513,7 @@ public class ItemManagementPage extends BasePage {
         
         utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
         
-        utils.setValueTextBox(SearchBox,GroupAPI, "selectGrpInItemCreation");
+        utils.setValueTextBox(SearchBox,GroupAPI_responseName, "selectGrpInItemCreation");
 
         
         
@@ -518,10 +534,10 @@ public class ItemManagementPage extends BasePage {
 
     }
 
-    public void selectBusinessUnit(String BusinessUnitAPI) throws InterruptedException {
+    public void selectBusinessUnit() throws InterruptedException {
         // wait the element is visible
     	 utils.waitForElementToBeClickablewithFluentWait(BUUNitField, 50);
-    	 Thread.sleep(6000);
+    	 Thread.sleep(10000);
         utils.waitForElementToBeVisiblewithFluentWait(BUUNitField,waittime);
         // Click on business unit.
         System.out.println("check on business unit appearing");
@@ -536,7 +552,9 @@ public class ItemManagementPage extends BasePage {
 
         //utils.slowSendKeys(SearchBox, Mnp.strBuNameVal, 500);
         
-        utils.slowSendKeys(SearchBox, BusinessUnitAPI, 600);
+        
+        
+        utils.slowSendKeys(SearchBox, BusinessUnitAPI_responseName, 600);
         
         Actions actions = new Actions(driver);
         
@@ -546,13 +564,13 @@ public class ItemManagementPage extends BasePage {
         
         actions.sendKeys(Keys.ENTER).build().perform();
         
-        Thread.sleep(1000);
+        Thread.sleep(15000);
 
     }
     
-    public void selectMerchandiseInItem(WebElement element,String strval) throws InterruptedException {
+    public void selectMerchandiseInItem(WebElement element) throws InterruptedException {
     	
-    	  Thread.sleep(10000); 
+    	  Thread.sleep(20000); 
     	utils.waitForElementToBeVisiblewithFluentWait(element,waittime);
     	 
     	 System.out.println("check on click on "+ element +" appearing");
@@ -561,7 +579,7 @@ public class ItemManagementPage extends BasePage {
     	 
     	 utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
     	 
-    	 utils.slowSendKeys(SearchBox,strval,500);
+    	 utils.slowSendKeys(SearchBox,DepartmentAPI_responseName,500);
     	 
     	 clickAction();
     	 
@@ -572,7 +590,7 @@ public class ItemManagementPage extends BasePage {
          actions.sendKeys(Keys.TAB).build().perform();
          actions.sendKeys(Keys.ENTER).build().perform();  	 
     	  */	 
-    	
+    	 Thread.sleep(15000);
     }
     
     
@@ -1215,12 +1233,3 @@ public class ItemManagementPage extends BasePage {
         return result;
     }
 }
-
-	
-		
-	
-	
-
-	
-	
-
