@@ -48,8 +48,10 @@ public class ItemManagementSteps {
 	@When("Select Business Unit from Item Management")
 	public void The_user_on_the_Merchandise_Page() throws IOException, InterruptedException {
 		System.out.println("Before select business unit");
-		String BusinessUnit = testdata.getProperty("businessUnitName");
-		ItemMngt.selectBusinessUnit(BusinessUnit);
+		//String BusinessUnit = testdata.getProperty("businessUnitName");
+				//CompanyAPI_ID
+	//String BusinessUnit = ItemMngt.CompanyAPI_ID;
+		ItemMngt.selectBusinessUnit();
 		/*
 		 * boolean buValdaton = ItemMngt.clickBuValidations();
 		 * System.out.println(buValdaton); Assert.assertEquals(buValdaton, true);
@@ -58,8 +60,8 @@ public class ItemManagementSteps {
 
 	@When("Select Division from Item Management")
 	public void Select_Division_from_Item_Mangement() throws InterruptedException {
-		String Divsision = testdata.getProperty("divisionName");
-		ItemMngt.selectDivisionVal(Divsision);
+		//String Divsision = testdata.getProperty("divisionName");
+		ItemMngt.selectDivisionVal();
 		/*
 		 * boolean divValdaton = ItemMngt.clickDivValidations();
 		 * System.out.println(divValdaton); Assert.assertEquals(divValdaton, true);
@@ -78,8 +80,8 @@ public class ItemManagementSteps {
 
 	@When("select class from Item management")
 	public void select_class_from_Item_management() throws InterruptedException {
-		String Class = testdata.getProperty("className");
-		ItemMngt.selectClassItem(Class);
+		//String Class = testdata.getProperty("className");
+		ItemMngt.selectClassItem();
 		/*
 		 * boolean isValid = ItemMngt.classIdName(); // boolean isValid =
 		 * validateClick(ItemMngt.strDivNameVa); if (isValid) { // Click validation
@@ -92,8 +94,8 @@ public class ItemManagementSteps {
 
 	@When("select subclass from Item management")
 	public void select_subclass_from_Item_management() throws InterruptedException {
-		String SubClass = testdata.getProperty("subClassName");
-		ItemMngt.selectSubClassItem(SubClass);
+		//String SubClass = testdata.getProperty("subClassName");
+		ItemMngt.selectSubClassItem();
 		/*
 		 * boolean isValid = ItemMngt.subClassIdName(); // boolean isValid =
 		 * validateClick(ItemMngt.strDivNameVa); if (isValid) { // Click validation
@@ -105,8 +107,8 @@ public class ItemManagementSteps {
 
 	@When("select Department from Item Management")
 	public void select_Department_from_Item_Mangement() throws InterruptedException {
-		String Department = testdata.getProperty("departmentName");
-		ItemMngt.selectDepartmentItem(Department);
+		//String Department = testdata.getProperty("departmentName");
+		ItemMngt.selectDepartmentItem();
 
 		/*
 		 * boolean isValid = ItemMngt.DeptIDName(); // boolean isValid =
@@ -148,8 +150,8 @@ public class ItemManagementSteps {
 
 	@When("select Group from Item Management")
 	public void select_Group_from_Item_Mangement() throws InterruptedException, TimeoutException {
-		String Group = testdata.getProperty("groupName");
-		ItemMngt.selectGrouDivVal(Group);
+		//String Group = testdata.getProperty("groupName");
+		ItemMngt.selectGrouDivVal();
 		/*
 		 * boolean isValid = ItemMngt.GroupIDName(); // boolean isValid =
 		 * validateClick(ItemMngt.strDivNameVa); if (isValid) { // Click validation
