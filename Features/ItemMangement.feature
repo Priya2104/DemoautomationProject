@@ -8,6 +8,11 @@ Feature: Merchandise Item Creation Process
     And User Can Select Company "DUNNS"
     And Click on merchandise Menu
    # Then The user should be redirected to the Merchandise Page
+   
+   @ItemVAT
+  Scenario: Verify Assigning VAT to the Style Item
+    When I search with created Family item and select edit.
+    And I will select the Item VAT from Item Association in the Maintain screen
   
   @PKHD-251 @PKHD-217 @PKHD-215 @RegressionTesting @SanityTesting @PKHD-496
   Scenario: Verify Item management setup
@@ -42,5 +47,16 @@ Feature: Merchandise Item Creation Process
     And Create Family Item with name "familyDescval","Active","longDescriptionval","POS value2 Test1","POS value2 Test2","Clothing Color#Clothing Size#Clothing Pattern#Clothing Fabric"
     And Create ChildItem "Red#xxl#Skinny#Cotton" 
    Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
+   
+   @RelatedItem
+   Scenario: Verify Related Item from the Item assoication
+    When I search with created Family item and select edit.
+    And I will select the Item Related from Item Association in the Maintain screen
+    And  I submit a new Related Item "test","Sprint9 Sanity CFH1"
+    Then Created Related Item Displayed in Results grid "test","Sprint9 Sanity CFH1"  
+    
+    
+   
+   
    
    

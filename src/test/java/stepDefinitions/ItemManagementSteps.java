@@ -161,11 +161,58 @@ public class ItemManagementSteps {
 		 */
 
 	}
+	
+	
+	@When("I search with created Family item and select edit.")
+    public void i_search_with_created_family_item_and_select_edit() throws InterruptedException {
+        System.out.println("checking...");
+        ItemMngt.click_maintainitem();
+        //ItemMngt.searchitem("10000315");
+        //ItemMngt.click_threedots();
+        ItemMngt.SelectFamilyitem();
+    }
+    
+    @When("I will select the Item VAT from Item Association in the Maintain screen")
+    public void i_will_select_the_item_vat_from_item_association_in_the_maintain_screen() throws InterruptedException {
+        
+        ItemMngt.ClickItemAssociation();
+        ItemMngt.ClickItemVAT();
+    }
+    
+    @When("I will select the Item Related from Item Association in the Maintain screen")
+    public void i_will_select_the_item_Related_from_item_association_in_the_maintain_screen() throws InterruptedException {
+        
+        ItemMngt.ClickItemAssociation();
+        ItemMngt.selectRelatedItem();
+    }
 
 	@When("I Create Merchandise data with API request")
 	public void iCreateMerchansiseDataWithApiRequest() {
 		//ItemMngt.getCreateMerchandiseDataIDs();
 		ItemMngt.CreateMerchandiseData();
 	}
+	
+	 @When("I submit a new Related Item {string},{string}")
+	    public void submitNewRelatedItem(String strSKUCODE,String RelatedItemDes) throws InterruptedException {
+		 ItemMngt.fillItemDetails(strSKUCODE,RelatedItemDes);
+	       // ItemMngt.submitItem();
+	    }
+
+	    @Then("Created Related Item Displayed in Results grid {string},{string}")
+	    public void verifyCreatedItemDisplayed(String strSKUCODE,String RelatedItemDes) {
+	    	//ItemMngt.verifyItemDisplayed("test", "Sprint9 Sanity CFH1");
+	    	
+	    	String strSKUItemDescription = Mnp.getCellValue(2, 2);
+			System.out.println(strSKUItemDescription);
+
+			Assert.assertEquals(strSKUItemDescription, strSKUCODE);
+
+			String strRelatedItemDes = Mnp.getCellValue(2, 4);
+			System.out.println(strRelatedItemDes);
+
+			Assert.assertEquals(strRelatedItemDes, RelatedItemDes);
+	    	
+	    	
+	    }
 
 }

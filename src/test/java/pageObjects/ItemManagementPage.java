@@ -42,7 +42,7 @@ import java.util.logging.Logger;
 
 public class ItemManagementPage extends BasePage {
 
-    public int waittime = 6000;
+    public int waittime = 3000;
 
     public String strDivId;
     public String strDivNameVal;
@@ -173,7 +173,7 @@ public class ItemManagementPage extends BasePage {
     @FindBy(xpath = "//button/span[contains(.,'Continue')]")
     WebElement continueButton;
     
-    @FindBy(xpath="//button/span[contains(.,'Save and Apply')]")
+    @FindBy(xpath="//button[contains(.,'Save & Apply')]")
     WebElement saveAndContinue;
 
     @FindBy(xpath="//*[@id='itemSubtypeId']/span")
@@ -272,8 +272,50 @@ public class ItemManagementPage extends BasePage {
     @FindBy(xpath="(//input[@type='text' and @role='searchbox'])[4]")
     WebElement searchDiffGrpVal4;
     
+    
+    @FindBy(xpath="//label[contains(text(), 'SKU Code *')]/.. //span[@role='combobox' and @aria-label='Select']")
+	WebElement clickSKUCode;
+    
+    
+    @FindBy(xpath="//label[contains(text(), 'Related Item *')]/.. //span[@role='combobox' and @aria-label='Select']")
+    WebElement RelatedItem;
 
-  
+     
+    @FindBy(xpath="//label[contains(text(), 'SKU Code *')]/.. //span[@class='ng-star-inserted']")
+    WebElement skucodeDropDownSelect;
+    
+    
+    @FindBy(xpath="(//label[contains(text(), 'Related Item *')]/.. //span[@class='ng-star-inserted'])[1]")
+    WebElement RelatedDropDownSelect;
+    
+    @FindBy(xpath = "//span[contains(text(),'Maintain Item')]")
+	WebElement Maintain_item;
+	
+    @FindBy(xpath="(//p-button[@class='p-element p-frozen-column ng-star-inserted']/button/span)[1]")
+	WebElement threedots;
+    
+    @FindBy(xpath="//span[contains(text(),'Edit Family Item')]")
+    WebElement EditFamily_btn;
+    
+    @FindBy(xpath="//h3[contains(text(),'MAINTAIN FAMILY ITEM')]")
+	WebElement txt_maintainfamilyitem;
+    
+    @FindBy(xpath = "//span[contains(text(),'Item Association')]")
+	WebElement ItemAssociation_btn;
+    
+    
+    @FindBy(xpath = "//input[@role='searchbox']")
+	WebElement searchBox;
+    
+        
+   
+    
+    @FindBy(xpath = "//span[contains(text(),'Item VAT')]")
+	WebElement ItemVAT_btn;
+ 
+    @FindBy(xpath = "//span[contains(text(),'Item Related')]")
+	WebElement ItemItemRelated;
+ 
 
     public void clickonCreateItem() throws InterruptedException {
 
@@ -337,6 +379,47 @@ public class ItemManagementPage extends BasePage {
         System.out.println("Click on submit button in the  division");
 
 
+    }
+    
+    public void fillItemDetails(String strSKUCODE, String relatedItem) throws InterruptedException {
+    
+    	Thread.sleep(2000);
+    	
+        utils.clickOnWebElement_click(clickSKUCode);
+        Thread.sleep(1000);
+        
+        utils.setValueInEditBox(searchBox, strSKUCODE);
+        
+        Thread.sleep(2000);
+        
+        utils.clickOnWebElement_click(skucodeDropDownSelect);
+        
+       
+        utils.clickOnWebElement_click(RelatedItem);
+        
+        utils.setValueInEditBox(searchBox, relatedItem);
+        
+        Thread.sleep(2000);
+        
+        utils.clickOnWebElement_click(RelatedDropDownSelect);
+        
+        
+        Thread.sleep(3000);
+        
+        utils.clickOnWebElement(saveAndContinue);
+        
+        
+               
+           }
+
+    public void submitItem() {
+      
+    }
+
+    public void verifyItemDisplayed(String SKUCODE,String RelatedItem ) {
+    	
+    	
+     
     }
 
     public void clickonContinueButton() {
@@ -973,6 +1056,115 @@ public class ItemManagementPage extends BasePage {
         return result;
     }
 
+    //vinay code 
+
+    public void click_maintainitem() {
+		try {
+			;
+			utils.waitForElementToBeClickablewithFluentWait(Maintain_item, 10);
+			utils.clickOnWebElement(Maintain_item);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public void searchitem(String item) {
+		try {
+			// utils.waitForElementToBeClickablewithFluentWait(Search_item, 10);
+			// utils.clickOnWebElement(Search_item);
+			// utils.setValueInEditBox(Search_item, item);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	 public void click_threedots()
+		{
+			try
+			{
+				//utils.waitForElementclickable(Duration.ofSeconds(10), threedots);
+				utils.waitForElementToBeClickablewithFluentWait(threedots, 10);
+				utils.clickOnWebElement(threedots);
+		    }
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	 public void click_EditFamilyItem_btn()
+		{
+			try
+			{
+				utils.waitForElementToBeClickablewithFluentWait(EditFamily_btn, 10);
+				utils.clickOnWebElement(EditFamily_btn);
+		    }
+			catch(Exception e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+	 public void SelectFamilyitem() throws InterruptedException { // selecting the edit button
+	 		try {
+	 			// three dots
+	 			click_threedots();
+	 			// click edit
+	 			click_EditFamilyItem_btn();
+	 			Thread.sleep(waittime); // Hard wait cannot be removed because of the performance issue.
+	 		} catch(Exception e) {
+	 			System.out.println(e.getMessage());
+	 		}
+	 	}
+	 
+	 public boolean verifyMaintainfamilyItem()
+	  {
+		  try
+		  {
+			 utils.waitForElementclickable(Duration.ofSeconds(10), txt_maintainfamilyitem);
+			 boolean formBU= txt_maintainfamilyitem.isEnabled();
+		     System.out.println(formBU);
+		     return formBU;
+		  }
+		  catch(Exception e)
+		  {
+			  return false;
+		  }
+	  }
+	 
+	 public void ClickItemAssociation() throws InterruptedException {
+			if (verifyMaintainfamilyItem()) {
+				utils.waitForElementToBeClickablewithFluentWait(ItemAssociation_btn, 10);
+				utils.clickOnWebElement(ItemAssociation_btn);
+				Thread.sleep(waittime); // Can't remove hard wait coz of the performance issue
+			} else {
+				System.out.println("System is not redirected to Maintain family Item page");
+			}
+		}
+	 
+	 public void ClickItemVAT() throws InterruptedException {
+		  if (ItemVAT_btn.isDisplayed()) {
+		    utils.waitForElementToBeClickablewithFluentWait(ItemVAT_btn, 10); 
+		    utils.clickOnWebElement(ItemVAT_btn);
+		    Thread.sleep(waittime); // Can't remove hard wait coz of the performance issue
+		  } else {
+		    System.out.println("ITem Vat button is not displayed");
+		  }
+		}
+	 
+	 public void selectRelatedItem() throws InterruptedException {
+		  if (ItemItemRelated.isDisplayed()) {
+		    utils.waitForElementToBeClickablewithFluentWait(ItemItemRelated, 10); 
+		    utils.clickOnWebElement(ItemItemRelated);
+		    Thread.sleep(waittime); // Cabuttonn't remove hard wait coz of the performance issue
+		  } else {
+		    System.out.println("ITem Related  is not displayed");
+		  }
+		}
+
+	 
+	 
+
+    
+    // vinay code end
     
   //API data setup
     public void getCreateMerchandiseDataIDs() {
