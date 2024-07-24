@@ -614,9 +614,17 @@ public class ItemManagementPage extends BasePage {
         
         //utils.setValueTextBox(SearchBox,GroupAPI_responseName, "selectGrpInItemCreation");
 
-        utils.setValueTextBox(SearchBox,"Grp18072024150218", "selectGrpInItemCreation");
+        //utils.setValueTextBox(SearchBox,"Grp18072024150218", "selectGrpInItemCreation");
 
+        utils.slowSendKeys(SearchBox, "Grp18072024150218", 600);
         
+        Actions actions = new Actions(driver);
+        
+        actions.sendKeys(Keys.TAB).build().perform();
+        actions.sendKeys(Keys.TAB).build().perform();
+        actions.sendKeys(Keys.TAB).build().perform();
+        
+        actions.sendKeys(Keys.ENTER).build().perform();
         
         
         //utils.clickElementWithJavaScript(GropSearchID);
@@ -624,7 +632,7 @@ public class ItemManagementPage extends BasePage {
        // utils.waitForElementToBeClickablewithFluentWait(GropSearchID,5);
        // utils.waitForElementToBeVisiblewithFluentWait(GropSearchID,waittime);
         
-        utils.clickOnWebElement(GropSearchID);
+        //utils.clickOnWebElement(GropSearchID);
         
         System.out.println("After selection of Group");
 
