@@ -30,7 +30,7 @@ import org.testng.annotations.DataProvider;
       //tags="@PKHD-251 or @MerchendiseSetupMerx or @BUMandatoryFieldEmptyError or @DivisionErrorMessage or @GropuErrorMessage or @DepartmentErrorMessage or @ClassErrorMessage or @SubClassErrorMessage or @LogoMasterDesktop or @LogoMasterMobile or @LogoMasterDesktopError or @LogoMasterMobileError or @LanguageMasterAdd or @CityMasterAdd or @AddDGMasterAdd or @PKHD-338_CurrencyMaster or @PKHD-338_View_and_edit_CurrencyMaster or @PKHD-4842 or @PKHD-339_CountryMaster or @PKHD-4843 or @PKHD-4845 or @PKHD-4846 or @PKHD-4847 or @PKHD-4848 or @PKHD-507_HTSMaster or @PKHD-609_Search_edit_HTS or @StateMasterAdd or @BusinesUnitSetUpPage or @DivisionSetupHierarchy or @GroupSetupHierarchy or @DepartmentSetupHierarchy or @ClassSetupHierarchy or @SubClassSetupHierarchy or @TransferZoneAdd or @VATRegionMaster or @VATMaster or @DiffType or @DiffValue or @DiffRange or @ChainSetup or @RegionSetup or @AreaSetup or @DistrictSetup or @ReportingCategory or @ItemTypeSettingTest or @alternateHierarchy "
        //tags="@BusinesUnitSetUpPage or @DivisionSetupHierarchy or @GroupSetupHierarchy or @DepartmentSetupHierarchy or @ClassSetupHierarchy or @SubClassSetupHierarchy"
         //tags="@ReportingCategory or @ItemTypeSettingTest or @alternateHierarchy"
-        tags="@RelatedItem"
+        tags="@VMI-Consignment"
         
 		)
 public class TestRunner extends AbstractTestNGCucumberTests

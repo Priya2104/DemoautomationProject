@@ -315,6 +315,19 @@ public class ItemManagementPage extends BasePage {
  
     @FindBy(xpath = "//span[contains(text(),'Item Related')]")
 	WebElement ItemItemRelated;
+    
+    @FindBy(xpath="//li[@id='itemSubtypeId_1']")
+    WebElement subTypeVmiSelect;
+    
+    @FindBy(xpath="//*[@id='itemSubtypeClassId']/span")
+	WebElement vmiTypeClick;
+	  
+	@FindBy(xpath="//li[@id='itemSubtypeClassId_0']")
+	WebElement consignment;
+	 
+	@FindBy(xpath="//li[@id='itemSubtypeClassId_1']")
+	WebElement consession;
+
  
 
     public void clickonCreateItem() throws InterruptedException {
@@ -348,7 +361,9 @@ public class ItemManagementPage extends BasePage {
         utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
         
                 
-        utils.slowSendKeys(SearchBox, DivisionAPI_responseName, 600);
+       //utils.slowSendKeys(SearchBox, DivisionAPI_responseName, 600);
+        
+        utils.slowSendKeys(SearchBox, "Div11072024104425", 600);
         
         Actions actions = new Actions(driver);
         
@@ -500,7 +515,8 @@ public class ItemManagementPage extends BasePage {
     public void selectClassItem() throws InterruptedException {
        // selectItemCreation1(classId, SearchBox, classIdValeSelectITem, classPage.strClassNameVal, "class");
         
-        selectItemCreation1(classId, classIdValeSelectITem,ClassAPI_responseName , "class");
+        //selectItemCreation1(classId, classIdValeSelectITem,ClassAPI_responseName , "class");
+        selectItemCreation1(classId, classIdValeSelectITem,"Class10072024182620" , "class");
         
         
     }
@@ -508,8 +524,8 @@ public class ItemManagementPage extends BasePage {
 
     public void selectSubClassItem() throws InterruptedException {
         //selectItemCreation1(subclassId, SearchBox, subclassIdValeSelectITem, subclassPage.strsubclassNameVal, "subclass");
-        
-        selectItemCreation1(subclassId, subclassIdValeSelectITem,SubClassAPI_responseName , "subclass");
+    	 //selectItemCreation1(subclassId, subclassIdValeSelectITem,SubClassAPI_responseName , "subclass");
+        selectItemCreation1(subclassId, subclassIdValeSelectITem,"SubClass11072024112259" , "subclass");
         
     }
 
@@ -596,7 +612,9 @@ public class ItemManagementPage extends BasePage {
         
         utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
         
-        utils.setValueTextBox(SearchBox,GroupAPI_responseName, "selectGrpInItemCreation");
+        //utils.setValueTextBox(SearchBox,GroupAPI_responseName, "selectGrpInItemCreation");
+
+        utils.setValueTextBox(SearchBox,"Grp18072024150218", "selectGrpInItemCreation");
 
         
         
@@ -636,8 +654,8 @@ public class ItemManagementPage extends BasePage {
         //utils.slowSendKeys(SearchBox, Mnp.strBuNameVal, 500);
         
         
-        
-        utils.slowSendKeys(SearchBox, BusinessUnitAPI_responseName, 600);
+        utils.slowSendKeys(SearchBox, "BU11072024102235", 600);
+        //utils.slowSendKeys(SearchBox, BusinessUnitAPI_responseName, 600);
         
         Actions actions = new Actions(driver);
         
@@ -662,7 +680,8 @@ public class ItemManagementPage extends BasePage {
     	 
     	 utils.waitForElementToBeVisiblewithFluentWait(SearchBox,waittime);
     	 
-    	 utils.slowSendKeys(SearchBox,DepartmentAPI_responseName,500);
+    	 //utils.slowSendKeys(SearchBox,DepartmentAPI_responseName,500);
+    	 utils.slowSendKeys(SearchBox,"Dept10072024182910",500);
     	 
     	 clickAction();
     	 
@@ -1160,11 +1179,47 @@ public class ItemManagementPage extends BasePage {
 		  }
 		}
 
+	// vinay code end
 	 
 	 
+	 public void selectVMIConsignment() throws InterruptedException
+	    
+	    {
+	    	Thread.sleep(6000);
+	    	
+	    	utils.clickOnWebElement(subTypeItemselectClick);
+	    	
+	    	
+	    	utils.clickOnWebElement(subTypeVmiSelect);
+	    	
+	    	Thread.sleep(5000);
+	    	utils.clickOnWebElement(vmiTypeClick);
+	    	utils.clickOnWebElement(consignment);
+	    	Thread.sleep(5000);
+	    	utils.clickOnWebElement(continueButton);
+	    		    	
+	    }
+	    
+	 public void selectVMIConsession() throws InterruptedException
+	    
+	    {
+	    	Thread.sleep(15000);
+	    	
+	    	utils.clickOnWebElement(subTypeItemselectClick);
+	    	
+	    	
+	    	utils.clickOnWebElement(subTypeVmiSelect);
+	    	
+	    	Thread.sleep(5000);
+	    	utils.clickOnWebElement(vmiTypeClick);
+	    	utils.clickOnWebElement(consession);
+	    	Thread.sleep(5000);
+	    	utils.clickOnWebElement(continueButton);
+	    		    	
+	    }
 
     
-    // vinay code end
+    
     
   //API data setup
     public void getCreateMerchandiseDataIDs() {

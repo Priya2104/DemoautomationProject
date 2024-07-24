@@ -214,5 +214,16 @@ public class ItemManagementSteps {
 	    	
 	    	
 	    }
+	    
+	    @When("Select VMI Consignment")
+		public void select_vmi_type() throws InterruptedException {
+			ItemMngt.selectVMIConsignment();
+		}
+		
+		@When("Select VMI consession")
+		public void select_vmi_consession() throws InterruptedException {
+		   
+		    ItemMngt.selectVMIConsession();;
+		}
 
 }
