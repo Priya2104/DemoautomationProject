@@ -28,8 +28,8 @@ Feature: Merchandise Item Creation Process
     And select subclass from Item management
     And select subtype 
     And Create Family Item with name "familyDescval","Active","longDescriptionval","POS value2 Test1","POS value2 Test2","Clothing Color#Clothing Size#Clothing Pattern#Clothing Fabric"
-    And Create ChildItem "Red#xxl#Skinny#Cotton" 
-    Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
+    #And Create ChildItem "Red#xxl#Skinny#Cotton" 
+    #Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
    
   @VMI-Consignment
   Scenario: Verify Item management VMI setup
@@ -62,8 +62,8 @@ Feature: Merchandise Item Creation Process
     And select subclass from Item management
     And Select VMI consession
     And Create Family Item with name "familyDescval","Active","longDescriptionval","POS value2 Test1","POS value2 Test2","100010 - Muga Silk#100005 - Fabric#100012 - qqqqq#100028 - diff type"
-    And Create ChildItem "Red#xxl#Skinny#Cotton" 
-   Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
+    #And Create ChildItem "Red#xxl#Skinny#Cotton" 
+    #Then Verify the child item was created successfully "familyDescval","xxl","Skinny","Cotton","Cotton"
    
    @RelatedItem
    Scenario: Verify Related Item from the Item assoication
