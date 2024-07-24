@@ -17,7 +17,17 @@ node('selenium') {
 			mvn clean && mvn install
 			#ls -l		
 		'''
-	}	
+	}
+	stage('Reporting') {
+    publishHTML(target: [
+        allowMissing: false,
+        alwaysLinkToLastBuild: true,
+        keepAll: true,
+        reportDir: 'Report/',
+        reportFiles: 'CucumberExtentReport.html',
+        reportName: 'Merx UI AUTOMATION Report'
+    ])
+}	
 }
 
 
