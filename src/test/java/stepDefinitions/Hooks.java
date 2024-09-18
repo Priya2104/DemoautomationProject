@@ -16,7 +16,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.PropertiesReader;
-import utilities.UploadToXray;
+
 
 public class Hooks {
 
@@ -31,7 +31,9 @@ public class Hooks {
 		driver = BaseClass.initilizeBrowser();
 		p = BaseClass.getProperties();
 		driver.get(p.getProperty("appURL"));
-		Thread.sleep(2000);
+		 String envVarValue = System.getenv("MY_ENV_VAR");
+		 System.out.println(envVarValue);
+		 Thread.sleep(2000);
 	}
 
 
@@ -39,27 +41,7 @@ public class Hooks {
 	public void tearDown(Scenario scenario) throws Exception {
 						
 		BaseClass.quitDriver();
-		// Xray running 
 		
-		/*
-		if(config.getProperty("upload_toXray").contains("Yes"))
-        {
-            UploadToXray xray = new UploadToXray();
-            xray.RemonteResultats();
-        }else
-        {
-            System.out.print("Ignored Xray");
-        }
-        
-        */
-		// Sending an email.
-		if(config.getProperty("send_Email").contains("Yes"))
-		{
-			utilities.EmailSendUtils.sendEmail(10, 5, 4,  1);
-		}else 
-		{
-			System.out.print("Ignored Email Report");
-		}
 		
 	}
 	

@@ -3,8 +3,8 @@
 <suite name="Suite1" data-provider-thread-count="1">
    <test name="Regression_testing" parallel="classes" thread-count="1" preserve-order="true">
     <classes>     
-       <class name="testRunner.TestRunner" /> 
-        <class name="testRunner.TestRunnerXray" />    
+       <class name="testRunner.TestRunner" />
+         
     </classes>
 </test>
 </suite>

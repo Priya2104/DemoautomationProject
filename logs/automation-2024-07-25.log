@@ -1,0 +1,622 @@
+19:42:26.714 [main] TRACE - Resolving type for handle ctfonts6623type
+19:42:26.726 [main] TRACE - Resolving type for handle ctfont14d8type
+19:42:26.733 [main] TRACE - Resolving type for handle ctfills2c6ftype
+19:42:26.735 [main] TRACE - Resolving type for handle ctfill550ctype
+19:42:26.738 [main] TRACE - Resolving type for handle ctborders0d66type
+19:42:26.740 [main] TRACE - Resolving type for handle ctborderf935type
+19:42:26.743 [main] TRACE - Resolving type for handle ctcellxfs1322type
+19:42:26.745 [main] TRACE - Resolving type for handle ctxf97f7type
+19:42:26.748 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+19:42:26.749 [main] TRACE - Resolving type for handle ctdxfsb26atype
+19:42:26.752 [main] TRACE - Resolving type for handle sstf81fdoctype
+19:42:26.755 [main] TRACE - Resolving type for handle ctsst44f3type
+19:42:26.765 [main] TRACE - Resolving type for handle ctrsta472type
+19:42:26.792 [main] TRACE - Resolving type for handle ctdrawing2748type
+19:42:26.804 [main] TRACE - Resolving type for handle workbookec17doctype
+19:42:26.811 [main] TRACE - Resolving type for handle ctworkbook83c3type
+19:42:26.818 [main] TRACE - Resolving type for handle ctsheets49fdtype
+19:42:26.821 [main] TRACE - Resolving type for handle ctsheet4dbetype
+19:42:26.824 [main] TRACE - Resolving type for handle strelationshipid1e94type
+19:42:26.827 [main] TRACE - Resolving type for handle worksheetf539doctype
+19:42:26.833 [main] TRACE - Resolving type for handle ctworksheet530dtype
+19:42:26.843 [main] TRACE - Resolving type for handle ctsheetdata8408type
+19:42:26.847 [main] TRACE - Resolving type for handle ctrowdd39type
+19:42:26.854 [main] TRACE - Resolving type for handle ctcell842btype
+19:42:26.864 [main] TRACE - Resolving type for handle stcellrefe4e0type
+19:42:26.880 [main] TRACE - Resolving type for handle ctcols627ctype
+19:42:26.889 [main] TRACE - Resolving type for handle ctcola95ftype
+19:42:26.996 [main] TRACE - Resolving type for handle ctdefinednamesce48type
+19:42:27.006 [main] TRACE - Resolving type for handle ctbookviewsb864type
+19:42:27.008 [main] TRACE - Resolving type for handle ctbookviewf677type
+19:42:27.015 [main] TRACE - Resolving type for handle stcelltypebf95type
+19:42:27.022 [main] TRACE - Resolving type for handle stxstringf179type
+19:42:32.556 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:42:32.558 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:42:32.559 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+19:42:32.560 [main] DEBUG - Parsing relationship: /_rels/.rels
+19:42:50.741 [main] INFO  - Page has been focused on division page
+17:50:20.559 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+17:50:20.564 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+17:50:20.745 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+17:50:20.986 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+17:50:25.291 [TestNG-PoolService-0] INFO  - element is present
+17:50:25.292 [TestNG-PoolService-0] INFO  - element exists
+10:39:19.660 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:39:19.692 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:39:19.910 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:39:20.152 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:39:23.868 [TestNG-PoolService-0] INFO  - element is present
+10:39:23.868 [TestNG-PoolService-0] INFO  - element exists
+10:42:36.372 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:42:36.383 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:42:36.548 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:42:36.778 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:42:40.501 [TestNG-PoolService-0] INFO  - element is present
+10:42:40.502 [TestNG-PoolService-0] INFO  - element exists
+10:47:09.625 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:47:09.635 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:47:09.843 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:47:10.051 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:47:13.828 [TestNG-PoolService-0] INFO  - element is present
+10:47:13.828 [TestNG-PoolService-0] INFO  - element exists
+10:49:38.157 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:49:38.170 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:49:38.365 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:49:38.746 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:49:43.284 [TestNG-PoolService-0] INFO  - element is present
+10:49:43.285 [TestNG-PoolService-0] INFO  - element exists
+10:52:11.715 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:52:11.726 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:52:11.895 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:52:12.105 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:52:16.214 [TestNG-PoolService-0] INFO  - element is present
+10:52:16.215 [TestNG-PoolService-0] INFO  - element exists
+10:53:35.378 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:53:35.394 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:53:35.586 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:53:35.808 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:53:39.787 [TestNG-PoolService-0] INFO  - element is present
+10:53:39.787 [TestNG-PoolService-0] INFO  - element exists
+11:11:29.486 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+11:11:29.495 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+11:11:55.053 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+11:11:55.440 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+11:11:59.757 [TestNG-PoolService-0] INFO  - element is present
+11:11:59.757 [TestNG-PoolService-0] INFO  - element exists
+15:38:03.135 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+15:38:03.149 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+15:38:03.485 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+15:38:03.987 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+15:38:08.423 [TestNG-PoolService-0] INFO  - element is present
+15:38:08.424 [TestNG-PoolService-0] INFO  - element exists
+15:39:27.565 [TestNG-PoolService-0] INFO  - element is present
+15:39:27.957 [TestNG-PoolService-0] ERROR - Grp18072024150218  is entered
+15:39:27.958 [TestNG-PoolService-0] ERROR - Grp18072024150218  is not entered
+15:43:04.317 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+15:43:04.322 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+15:43:04.324 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+15:43:04.325 [TestNG-PoolService-0] DEBUG - Parsing relationship: /_rels/.rels
+15:43:04.602 [TestNG-PoolService-0] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+15:43:04.608 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+15:43:04.610 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+15:43:04.612 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+15:43:04.613 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+15:43:04.616 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+15:43:04.641 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+15:43:04.642 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+15:43:04.653 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+15:43:04.654 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+15:43:04.656 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+15:43:04.658 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+15:43:04.661 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+15:43:04.663 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+15:43:04.786 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+15:43:04.787 [TestNG-PoolService-0] TRACE - Resolving type for handle themefd26doctype
+15:43:04.902 [TestNG-PoolService-0] TRACE - Resolving type for handle stylesheet5d8bdoctype
+15:43:04.911 [TestNG-PoolService-0] TRACE - Resolving type for handle ctstylesheet4257type
+15:43:04.921 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfonts6623type
+15:43:04.927 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfont14d8type
+15:43:04.938 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfills2c6ftype
+15:43:04.941 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfill550ctype
+15:43:04.944 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborders0d66type
+15:43:04.951 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborderf935type
+15:43:04.962 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellxfs1322type
+15:43:04.969 [TestNG-PoolService-0] TRACE - Resolving type for handle ctxf97f7type
+15:43:04.974 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+15:43:04.980 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdxfsb26atype
+15:43:04.987 [TestNG-PoolService-0] TRACE - Resolving type for handle sstf81fdoctype
+15:43:04.998 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsst44f3type
+15:43:05.011 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrsta472type
+15:43:05.074 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdrawing2748type
+15:43:05.097 [TestNG-PoolService-0] TRACE - Resolving type for handle workbookec17doctype
+15:43:05.106 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworkbook83c3type
+15:43:05.117 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheets49fdtype
+15:43:05.135 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheet4dbetype
+15:43:05.139 [TestNG-PoolService-0] TRACE - Resolving type for handle strelationshipid1e94type
+15:43:05.144 [TestNG-PoolService-0] TRACE - Resolving type for handle worksheetf539doctype
+15:43:05.170 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworksheet530dtype
+15:43:05.191 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheetdata8408type
+15:43:05.200 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrowdd39type
+15:43:05.215 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcell842btype
+15:43:05.238 [TestNG-PoolService-0] TRACE - Resolving type for handle stcellrefe4e0type
+15:43:05.259 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcols627ctype
+15:43:05.272 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcola95ftype
+15:43:05.407 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdefinednamesce48type
+15:43:05.417 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewsb864type
+15:43:05.422 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewf677type
+15:43:05.432 [TestNG-PoolService-0] TRACE - Resolving type for handle stcelltypebf95type
+15:43:05.440 [TestNG-PoolService-0] TRACE - Resolving type for handle stxstringf179type
+16:11:00.939 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+16:11:00.939 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+16:11:01.114 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+16:11:01.323 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+16:11:08.091 [TestNG-PoolService-0] INFO  - element is present
+16:11:08.091 [TestNG-PoolService-0] INFO  - element exists
+16:11:17.871 [TestNG-PoolService-0] INFO  - element is present
+16:11:18.138 [TestNG-PoolService-0] ERROR - SanityAutoTests24072024161116  is entered
+16:11:18.138 [TestNG-PoolService-0] ERROR - SanityAutoTests24072024161116  is not entered
+16:11:18.143 [TestNG-PoolService-0] INFO  - enter business name
+16:11:23.104 [TestNG-PoolService-0] INFO  - element is present
+16:11:23.366 [TestNG-PoolService-0] ERROR - SanityDivisionNameTests24072024161122  is entered
+16:11:23.366 [TestNG-PoolService-0] ERROR - SanityDivisionNameTests24072024161122  is not entered
+16:11:23.366 [TestNG-PoolService-0] INFO  - entered Division name
+16:11:32.523 [TestNG-PoolService-0] INFO  - element is present
+16:11:32.829 [TestNG-PoolService-0] ERROR - SanityGroupName24072024161131  is entered
+16:11:32.829 [TestNG-PoolService-0] ERROR - SanityGroupName24072024161131  is not entered
+16:11:32.832 [TestNG-PoolService-0] INFO  - entered Group name
+16:11:37.777 [TestNG-PoolService-0] INFO  - element is present
+16:11:38.018 [TestNG-PoolService-0] ERROR - SanityDepartment24072024161137  is entered
+16:11:38.018 [TestNG-PoolService-0] ERROR - SanityDepartment24072024161137  is not entered
+16:11:38.018 [TestNG-PoolService-0] INFO  - entered department name
+16:11:50.134 [TestNG-PoolService-0] INFO  - element is present
+16:11:50.357 [TestNG-PoolService-0] ERROR - SanityDepartment24072024161149  is entered
+16:11:50.357 [TestNG-PoolService-0] ERROR - SanityDepartment24072024161149  is not entered
+16:11:50.357 [TestNG-PoolService-0] INFO  - entered class name
+16:12:02.581 [TestNG-PoolService-0] INFO  - element is present
+16:12:02.814 [TestNG-PoolService-0] ERROR - SanitySubClass24072024161201  is entered
+16:12:02.814 [TestNG-PoolService-0] ERROR - SanitySubClass24072024161201  is not entered
+16:12:02.814 [TestNG-PoolService-0] INFO  - entered sub class name
+16:12:20.122 [TestNG-PoolService-0] INFO  - Save and continue button is not present
+19:22:20.241 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+19:22:20.256 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+19:22:20.582 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+19:22:21.034 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+19:22:24.986 [TestNG-PoolService-0] INFO  - element is present
+19:22:24.986 [TestNG-PoolService-0] INFO  - element exists
+19:27:31.560 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+19:27:31.564 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+19:27:31.567 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+19:27:31.570 [TestNG-PoolService-0] DEBUG - Parsing relationship: /_rels/.rels
+19:27:31.836 [TestNG-PoolService-0] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+19:27:31.840 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+19:27:31.842 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+19:27:31.842 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+19:27:31.843 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+19:27:31.845 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+19:27:31.861 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+19:27:31.862 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+19:27:31.868 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+19:27:31.870 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+19:27:31.872 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+19:27:31.873 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+19:27:31.876 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+19:27:31.877 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+19:27:31.955 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+19:27:31.956 [TestNG-PoolService-0] TRACE - Resolving type for handle themefd26doctype
+19:27:32.039 [TestNG-PoolService-0] TRACE - Resolving type for handle stylesheet5d8bdoctype
+19:27:32.047 [TestNG-PoolService-0] TRACE - Resolving type for handle ctstylesheet4257type
+19:27:32.054 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfonts6623type
+19:27:32.057 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfont14d8type
+19:27:32.071 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfills2c6ftype
+19:27:32.076 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfill550ctype
+19:27:32.081 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborders0d66type
+19:27:32.084 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborderf935type
+19:27:32.090 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellxfs1322type
+19:27:32.095 [TestNG-PoolService-0] TRACE - Resolving type for handle ctxf97f7type
+19:27:32.100 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+19:27:32.103 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdxfsb26atype
+19:27:32.106 [TestNG-PoolService-0] TRACE - Resolving type for handle sstf81fdoctype
+19:27:32.116 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsst44f3type
+19:27:32.126 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrsta472type
+19:27:32.154 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdrawing2748type
+19:27:32.165 [TestNG-PoolService-0] TRACE - Resolving type for handle workbookec17doctype
+19:27:32.171 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworkbook83c3type
+19:27:32.180 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheets49fdtype
+19:27:32.184 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheet4dbetype
+19:27:32.187 [TestNG-PoolService-0] TRACE - Resolving type for handle strelationshipid1e94type
+19:27:32.189 [TestNG-PoolService-0] TRACE - Resolving type for handle worksheetf539doctype
+19:27:32.200 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworksheet530dtype
+19:27:32.212 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheetdata8408type
+19:27:32.215 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrowdd39type
+19:27:32.221 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcell842btype
+19:27:32.228 [TestNG-PoolService-0] TRACE - Resolving type for handle stcellrefe4e0type
+19:27:32.246 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcols627ctype
+19:27:32.254 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcola95ftype
+19:27:32.357 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdefinednamesce48type
+19:27:32.362 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewsb864type
+19:27:32.367 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewf677type
+19:27:32.375 [TestNG-PoolService-0] TRACE - Resolving type for handle stcelltypebf95type
+19:27:32.381 [TestNG-PoolService-0] TRACE - Resolving type for handle stxstringf179type
+08:13:08.433 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:13:08.433 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:13:08.615 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:13:08.831 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:13:15.445 [TestNG-PoolService-0] INFO  - element is present
+08:13:15.445 [TestNG-PoolService-0] INFO  - element exists
+08:14:26.492 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:14:26.492 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:14:26.679 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:14:26.859 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:14:32.323 [TestNG-PoolService-0] INFO  - element is present
+08:14:32.323 [TestNG-PoolService-0] INFO  - element exists
+08:15:41.801 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:15:41.804 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:15:41.958 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:15:42.115 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:15:47.560 [TestNG-PoolService-0] INFO  - element is present
+08:15:47.560 [TestNG-PoolService-0] INFO  - element exists
+08:15:57.014 [TestNG-PoolService-0] INFO  - element is present
+08:15:57.249 [TestNG-PoolService-0] ERROR - SanityAutoTests25072024081555  is entered
+08:15:57.249 [TestNG-PoolService-0] ERROR - SanityAutoTests25072024081555  is not entered
+08:15:57.266 [TestNG-PoolService-0] INFO  - enter business name
+08:15:57.915 [TestNG-PoolService-0] INFO  - element is present
+08:15:58.114 [TestNG-PoolService-0] ERROR - REPOCAT0012  is entered
+08:15:58.114 [TestNG-PoolService-0] ERROR - REPOCAT0012  is not entered
+08:16:47.670 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:16:47.673 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:16:47.840 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:16:48.019 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:16:53.294 [TestNG-PoolService-0] INFO  - element is present
+08:16:53.295 [TestNG-PoolService-0] INFO  - element exists
+08:17:31.642 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:17:31.645 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:17:31.802 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:17:31.957 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:17:37.296 [TestNG-PoolService-0] INFO  - element is present
+08:17:37.297 [TestNG-PoolService-0] INFO  - element exists
+08:18:13.013 [TestNG-PoolService-0] INFO  - element is present
+08:18:13.307 [TestNG-PoolService-0] ERROR - SanityDepartment25072024081812  is entered
+08:18:13.309 [TestNG-PoolService-0] ERROR - SanityDepartment25072024081812  is not entered
+08:18:13.309 [TestNG-PoolService-0] INFO  - entered class name
+08:18:13.915 [TestNG-PoolService-0] INFO  - element is present
+08:18:14.148 [TestNG-PoolService-0] ERROR - REPOCAT0012  is entered
+08:18:14.148 [TestNG-PoolService-0] ERROR - REPOCAT0012  is not entered
+08:18:58.721 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:18:58.722 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:18:58.880 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:18:59.073 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:19:04.878 [TestNG-PoolService-0] INFO  - element is present
+08:19:04.878 [TestNG-PoolService-0] INFO  - element exists
+08:19:43.827 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:19:43.828 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:19:43.987 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:19:44.147 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:19:49.470 [TestNG-PoolService-0] INFO  - element is present
+08:19:49.470 [TestNG-PoolService-0] INFO  - element exists
+08:22:05.439 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:22:05.439 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:22:05.599 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:22:05.755 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:22:11.166 [TestNG-PoolService-0] INFO  - element is present
+08:22:11.166 [TestNG-PoolService-0] INFO  - element exists
+08:24:33.628 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:24:33.628 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:24:33.786 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:24:33.944 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:24:39.738 [TestNG-PoolService-0] INFO  - element is present
+08:24:39.738 [TestNG-PoolService-0] INFO  - element exists
+08:24:53.759 [TestNG-PoolService-0] INFO  - Click on division Tab.
+08:25:30.937 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:25:30.937 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:25:31.098 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:25:31.254 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:25:36.584 [TestNG-PoolService-0] INFO  - element is present
+08:25:36.584 [TestNG-PoolService-0] INFO  - element exists
+08:25:40.885 [TestNG-PoolService-0] INFO  - Click on division Tab.
+08:26:13.926 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:26:13.927 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:26:14.100 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:26:14.279 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:26:19.722 [TestNG-PoolService-0] INFO  - element is present
+08:26:19.722 [TestNG-PoolService-0] INFO  - element exists
+08:26:22.163 [TestNG-PoolService-0] INFO  - Click on group Tab.
+08:30:48.422 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:30:48.425 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:31:13.320 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:31:13.566 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:31:19.314 [TestNG-PoolService-0] INFO  - element is present
+08:31:19.314 [TestNG-PoolService-0] INFO  - element exists
+08:31:22.325 [TestNG-PoolService-0] INFO  - Click on group Tab.
+08:32:00.214 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:32:00.214 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:32:00.434 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:32:00.668 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:32:06.175 [TestNG-PoolService-0] INFO  - element is present
+08:32:06.175 [TestNG-PoolService-0] INFO  - element exists
+08:37:27.889 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+08:37:27.889 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+08:37:27.898 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+08:37:27.898 [TestNG-PoolService-0] DEBUG - Parsing relationship: /_rels/.rels
+08:37:28.280 [TestNG-PoolService-0] TRACE - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+08:37:28.280 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+08:37:28.280 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+08:37:28.296 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+08:37:28.296 [TestNG-PoolService-0] TRACE - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+08:37:28.296 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+08:37:28.311 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+08:37:28.327 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+08:37:28.327 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+08:37:28.327 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+08:37:28.343 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+08:37:28.343 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+08:37:28.343 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+08:37:28.349 [TestNG-PoolService-0] TRACE - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+08:37:28.454 [TestNG-PoolService-0] TRACE - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+08:37:28.454 [TestNG-PoolService-0] TRACE - Resolving type for handle themefd26doctype
+08:37:28.611 [TestNG-PoolService-0] TRACE - Resolving type for handle stylesheet5d8bdoctype
+08:37:28.627 [TestNG-PoolService-0] TRACE - Resolving type for handle ctstylesheet4257type
+08:37:28.627 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfonts6623type
+08:37:28.642 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfont14d8type
+08:37:28.658 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfills2c6ftype
+08:37:28.658 [TestNG-PoolService-0] TRACE - Resolving type for handle ctfill550ctype
+08:37:28.658 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborders0d66type
+08:37:28.675 [TestNG-PoolService-0] TRACE - Resolving type for handle ctborderf935type
+08:37:28.675 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellxfs1322type
+08:37:28.690 [TestNG-PoolService-0] TRACE - Resolving type for handle ctxf97f7type
+08:37:28.690 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcellstylexfsa81ftype
+08:37:28.705 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdxfsb26atype
+08:37:28.705 [TestNG-PoolService-0] TRACE - Resolving type for handle sstf81fdoctype
+08:37:28.721 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsst44f3type
+08:37:28.743 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrsta472type
+08:37:28.833 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdrawing2748type
+08:37:28.847 [TestNG-PoolService-0] TRACE - Resolving type for handle workbookec17doctype
+08:37:28.847 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworkbook83c3type
+08:37:28.863 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheets49fdtype
+08:37:28.863 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheet4dbetype
+08:37:28.863 [TestNG-PoolService-0] TRACE - Resolving type for handle strelationshipid1e94type
+08:37:28.878 [TestNG-PoolService-0] TRACE - Resolving type for handle worksheetf539doctype
+08:37:28.910 [TestNG-PoolService-0] TRACE - Resolving type for handle ctworksheet530dtype
+08:37:28.926 [TestNG-PoolService-0] TRACE - Resolving type for handle ctsheetdata8408type
+08:37:28.926 [TestNG-PoolService-0] TRACE - Resolving type for handle ctrowdd39type
+08:37:28.943 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcell842btype
+08:37:28.973 [TestNG-PoolService-0] TRACE - Resolving type for handle stcellrefe4e0type
+08:37:29.005 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcols627ctype
+08:37:29.005 [TestNG-PoolService-0] TRACE - Resolving type for handle ctcola95ftype
+08:37:29.163 [TestNG-PoolService-0] TRACE - Resolving type for handle ctdefinednamesce48type
+08:37:29.163 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewsb864type
+08:37:29.178 [TestNG-PoolService-0] TRACE - Resolving type for handle ctbookviewf677type
+08:37:29.180 [TestNG-PoolService-0] TRACE - Resolving type for handle stcelltypebf95type
+08:37:29.194 [TestNG-PoolService-0] TRACE - Resolving type for handle stxstringf179type
+08:44:30.680 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:44:30.682 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:44:31.072 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:44:31.620 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:44:37.176 [TestNG-PoolService-0] INFO  - element is present
+08:44:37.176 [TestNG-PoolService-0] INFO  - element exists
+08:49:51.453 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+08:49:51.453 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+08:49:51.453 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+08:49:51.453 [TestNG-PoolService-0] DEBUG - Parsing relationship: /_rels/.rels
+08:50:31.623 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:50:31.623 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:50:31.905 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:50:32.312 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:50:37.992 [TestNG-PoolService-0] INFO  - element is present
+08:50:37.992 [TestNG-PoolService-0] INFO  - element exists
+08:56:01.620 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
+08:56:01.620 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+08:56:01.637 [TestNG-PoolService-0] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
+08:56:01.637 [TestNG-PoolService-0] DEBUG - Parsing relationship: /_rels/.rels
+08:56:43.113 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:56:43.113 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:56:43.401 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:56:43.884 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:56:49.693 [TestNG-PoolService-0] INFO  - element is present
+08:56:49.693 [TestNG-PoolService-0] INFO  - element exists
+08:57:55.468 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:57:55.468 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:57:55.767 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:57:56.230 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:58:02.495 [TestNG-PoolService-0] INFO  - element is present
+08:58:02.495 [TestNG-PoolService-0] INFO  - element exists
+08:58:50.621 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+08:58:50.623 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+08:58:50.914 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+08:58:51.337 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+08:58:56.949 [TestNG-PoolService-0] INFO  - element is present
+08:58:56.949 [TestNG-PoolService-0] INFO  - element exists
+08:59:06.804 [TestNG-PoolService-0] INFO  - element is present
+08:59:07.189 [TestNG-PoolService-0] ERROR - SanityAutoTests25072024085905  is entered
+08:59:07.189 [TestNG-PoolService-0] ERROR - SanityAutoTests25072024085905  is not entered
+08:59:07.204 [TestNG-PoolService-0] INFO  - enter business name
+08:59:12.798 [TestNG-PoolService-0] INFO  - element is present
+08:59:13.521 [TestNG-PoolService-0] ERROR - SanityDivisionNameTests25072024085912  is entered
+08:59:13.522 [TestNG-PoolService-0] ERROR - SanityDivisionNameTests25072024085912  is not entered
+08:59:13.523 [TestNG-PoolService-0] INFO  - entered Division name
+08:59:22.988 [TestNG-PoolService-0] INFO  - element is present
+08:59:23.659 [TestNG-PoolService-0] ERROR - SanityGroupName25072024085922  is entered
+08:59:23.659 [TestNG-PoolService-0] ERROR - SanityGroupName25072024085922  is not entered
+08:59:23.659 [TestNG-PoolService-0] INFO  - entered Group name
+08:59:29.379 [TestNG-PoolService-0] INFO  - element is present
+08:59:30.040 [TestNG-PoolService-0] ERROR - SanityDepartment25072024085928  is entered
+08:59:30.040 [TestNG-PoolService-0] ERROR - SanityDepartment25072024085928  is not entered
+08:59:30.040 [TestNG-PoolService-0] INFO  - entered department name
+08:59:43.793 [TestNG-PoolService-0] INFO  - element is present
+08:59:44.418 [TestNG-PoolService-0] ERROR - SanityDepartment25072024085943  is entered
+08:59:44.418 [TestNG-PoolService-0] ERROR - SanityDepartment25072024085943  is not entered
+08:59:44.418 [TestNG-PoolService-0] INFO  - entered class name
+08:59:58.299 [TestNG-PoolService-0] INFO  - element is present
+08:59:58.980 [TestNG-PoolService-0] ERROR - SanitySubClass25072024085957  is entered
+08:59:58.980 [TestNG-PoolService-0] ERROR - SanitySubClass25072024085957  is not entered
+08:59:58.988 [TestNG-PoolService-0] INFO  - entered sub class name
+09:00:17.146 [TestNG-PoolService-0] INFO  - Save and continue button is not present
+09:00:53.732 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:00:53.735 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:00:54.068 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:00:54.525 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:00:59.912 [TestNG-PoolService-0] INFO  - element is present
+09:00:59.912 [TestNG-PoolService-0] INFO  - element exists
+09:07:33.925 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:07:33.925 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:07:34.205 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:07:34.693 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:07:39.478 [TestNG-PoolService-0] INFO  - element is present
+09:07:39.478 [TestNG-PoolService-0] INFO  - element exists
+09:10:16.895 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:10:16.898 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:10:17.179 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:10:17.513 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:10:20.843 [TestNG-PoolService-0] INFO  - element is present
+09:10:20.843 [TestNG-PoolService-0] INFO  - element exists
+09:16:02.074 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:16:02.074 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:16:02.318 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:16:02.690 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:16:07.201 [TestNG-PoolService-0] INFO  - element is present
+09:16:07.201 [TestNG-PoolService-0] INFO  - element exists
+09:18:46.663 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:18:46.665 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:18:46.947 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:18:47.285 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:18:51.207 [TestNG-PoolService-0] INFO  - element is present
+09:18:51.207 [TestNG-PoolService-0] INFO  - element exists
+09:19:28.286 [TestNG-PoolService-0] INFO  - element is present
+09:19:28.736 [TestNG-PoolService-0] ERROR - SanitySubClass25072024091927  is entered
+09:19:28.736 [TestNG-PoolService-0] ERROR - SanitySubClass25072024091927  is not entered
+09:19:28.736 [TestNG-PoolService-0] INFO  - entered sub class name
+09:19:29.470 [TestNG-PoolService-0] INFO  - element is present
+09:19:29.853 [TestNG-PoolService-0] ERROR - REPOCAT0012  is entered
+09:19:29.853 [TestNG-PoolService-0] ERROR - REPOCAT0012  is not entered
+09:20:21.745 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:20:21.745 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:20:21.949 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:20:22.202 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:20:26.630 [TestNG-PoolService-0] INFO  - element is present
+09:20:26.630 [TestNG-PoolService-0] INFO  - element exists
+09:21:07.571 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:21:07.574 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:21:07.782 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:21:08.060 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:21:11.437 [TestNG-PoolService-0] INFO  - element is present
+09:21:11.437 [TestNG-PoolService-0] INFO  - element exists
+09:21:58.944 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:21:58.944 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:21:59.259 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:21:59.576 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:22:02.953 [TestNG-PoolService-0] INFO  - element is present
+09:22:02.953 [TestNG-PoolService-0] INFO  - element exists
+09:22:56.633 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:22:56.633 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:22:56.887 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:22:57.133 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:23:00.559 [TestNG-PoolService-0] INFO  - element is present
+09:23:00.559 [TestNG-PoolService-0] INFO  - element exists
+09:23:51.174 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:23:51.174 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:23:51.441 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:23:51.718 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:23:55.529 [TestNG-PoolService-0] INFO  - element is present
+09:23:55.529 [TestNG-PoolService-0] INFO  - element exists
+09:24:47.686 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:24:47.686 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:24:47.932 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:24:48.191 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:24:51.687 [TestNG-PoolService-0] INFO  - element is present
+09:24:51.687 [TestNG-PoolService-0] INFO  - element exists
+09:26:21.487 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:26:21.487 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:26:21.710 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:26:21.944 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:26:25.594 [TestNG-PoolService-0] INFO  - element is present
+09:26:25.594 [TestNG-PoolService-0] INFO  - element exists
+09:27:27.247 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:27:27.250 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:27:27.489 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:27:27.761 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:27:31.103 [TestNG-PoolService-0] INFO  - element is present
+09:27:31.104 [TestNG-PoolService-0] INFO  - element exists
+09:28:47.117 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:28:47.117 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:28:47.386 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:28:47.649 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:28:51.174 [TestNG-PoolService-0] INFO  - element is present
+09:28:51.174 [TestNG-PoolService-0] INFO  - element exists
+09:34:43.467 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:34:43.467 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:34:43.691 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:34:43.954 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:34:47.709 [TestNG-PoolService-0] INFO  - element is present
+09:34:47.709 [TestNG-PoolService-0] INFO  - element exists
+09:40:14.741 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:40:14.741 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:40:15.028 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:40:15.397 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:40:19.582 [TestNG-PoolService-0] INFO  - element is present
+09:40:19.582 [TestNG-PoolService-0] INFO  - element exists
+09:44:58.567 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:44:58.569 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:44:58.788 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:44:59.070 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:45:03.167 [TestNG-PoolService-0] INFO  - element is present
+09:45:03.167 [TestNG-PoolService-0] INFO  - element exists
+09:50:56.938 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:50:56.938 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:50:57.165 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:50:57.420 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:51:01.126 [TestNG-PoolService-0] INFO  - element is present
+09:51:01.126 [TestNG-PoolService-0] INFO  - element exists
+09:56:31.087 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+09:56:31.088 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+09:56:31.237 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+09:56:31.390 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+09:56:35.469 [TestNG-PoolService-0] INFO  - element is present
+09:56:35.469 [TestNG-PoolService-0] INFO  - element exists
+10:01:16.242 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:01:16.243 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:01:16.348 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:01:16.511 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:01:22.261 [TestNG-PoolService-0] INFO  - element is present
+10:01:22.261 [TestNG-PoolService-0] INFO  - element exists
+10:02:39.536 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:02:39.537 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:02:39.703 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:02:39.971 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:02:46.010 [TestNG-PoolService-0] INFO  - element is present
+10:02:46.011 [TestNG-PoolService-0] INFO  - element exists
+10:04:03.753 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:04:03.754 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:04:03.957 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:04:04.197 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:04:09.676 [TestNG-PoolService-0] INFO  - element is present
+10:04:09.677 [TestNG-PoolService-0] INFO  - element exists
+10:05:34.344 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:05:34.345 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:05:34.545 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:05:34.746 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:05:40.403 [TestNG-PoolService-0] INFO  - element is present
+10:05:40.403 [TestNG-PoolService-0] INFO  - element exists
+10:06:41.700 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:06:41.701 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:07:07.456 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:07:07.647 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:07:13.667 [TestNG-PoolService-0] INFO  - element is present
+10:07:13.668 [TestNG-PoolService-0] INFO  - element exists
+10:08:37.268 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:08:37.268 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:08:37.440 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:08:37.635 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:08:42.828 [TestNG-PoolService-0] INFO  - element is present
+10:08:42.828 [TestNG-PoolService-0] INFO  - element exists
+10:10:15.368 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:10:15.370 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:10:15.532 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:10:15.713 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:10:21.023 [TestNG-PoolService-0] INFO  - element is present
+10:10:21.023 [TestNG-PoolService-0] INFO  - element exists
+10:15:24.874 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+10:15:24.875 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+10:15:25.048 [TestNG-PoolService-0] INFO  - Entering user IDjohndoe@test.com
+10:15:25.231 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+10:15:31.296 [TestNG-PoolService-0] INFO  - element is present
+10:15:31.298 [TestNG-PoolService-0] INFO  - element exists
+10:20:12.758 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.

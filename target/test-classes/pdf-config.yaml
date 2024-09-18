@@ -7,7 +7,7 @@ displayDetailed: true
 displayAttached: false
 displayExpanded: true
 dashboardConfig:
-   title: PEPKOR Merx Automation Execution PDF Report
+   title: WebOrder Automation Execution PDF Report
    dataBackgroundColor: E6F2F0
    titleColor: 00ab41
    dateColor: 969696

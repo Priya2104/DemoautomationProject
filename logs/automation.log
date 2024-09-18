@@ -1,37 +1,74 @@
-19:42:26.714 [main] TRACE - Resolving type for handle ctfonts6623type
-19:42:26.726 [main] TRACE - Resolving type for handle ctfont14d8type
-19:42:26.733 [main] TRACE - Resolving type for handle ctfills2c6ftype
-19:42:26.735 [main] TRACE - Resolving type for handle ctfill550ctype
-19:42:26.738 [main] TRACE - Resolving type for handle ctborders0d66type
-19:42:26.740 [main] TRACE - Resolving type for handle ctborderf935type
-19:42:26.743 [main] TRACE - Resolving type for handle ctcellxfs1322type
-19:42:26.745 [main] TRACE - Resolving type for handle ctxf97f7type
-19:42:26.748 [main] TRACE - Resolving type for handle ctcellstylexfsa81ftype
-19:42:26.749 [main] TRACE - Resolving type for handle ctdxfsb26atype
-19:42:26.752 [main] TRACE - Resolving type for handle sstf81fdoctype
-19:42:26.755 [main] TRACE - Resolving type for handle ctsst44f3type
-19:42:26.765 [main] TRACE - Resolving type for handle ctrsta472type
-19:42:26.792 [main] TRACE - Resolving type for handle ctdrawing2748type
-19:42:26.804 [main] TRACE - Resolving type for handle workbookec17doctype
-19:42:26.811 [main] TRACE - Resolving type for handle ctworkbook83c3type
-19:42:26.818 [main] TRACE - Resolving type for handle ctsheets49fdtype
-19:42:26.821 [main] TRACE - Resolving type for handle ctsheet4dbetype
-19:42:26.824 [main] TRACE - Resolving type for handle strelationshipid1e94type
-19:42:26.827 [main] TRACE - Resolving type for handle worksheetf539doctype
-19:42:26.833 [main] TRACE - Resolving type for handle ctworksheet530dtype
-19:42:26.843 [main] TRACE - Resolving type for handle ctsheetdata8408type
-19:42:26.847 [main] TRACE - Resolving type for handle ctrowdd39type
-19:42:26.854 [main] TRACE - Resolving type for handle ctcell842btype
-19:42:26.864 [main] TRACE - Resolving type for handle stcellrefe4e0type
-19:42:26.880 [main] TRACE - Resolving type for handle ctcols627ctype
-19:42:26.889 [main] TRACE - Resolving type for handle ctcola95ftype
-19:42:26.996 [main] TRACE - Resolving type for handle ctdefinednamesce48type
-19:42:27.006 [main] TRACE - Resolving type for handle ctbookviewsb864type
-19:42:27.008 [main] TRACE - Resolving type for handle ctbookviewf677type
-19:42:27.015 [main] TRACE - Resolving type for handle stcelltypebf95type
-19:42:27.022 [main] TRACE - Resolving type for handle stxstringf179type
-19:42:32.556 [main] DEBUG - Parsing relationship: /xl/_rels/workbook.xml.rels
-19:42:32.558 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-19:42:32.559 [main] DEBUG - Parsing relationship: /xl/worksheets/_rels/sheet2.xml.rels
-19:42:32.560 [main] DEBUG - Parsing relationship: /_rels/.rels
-19:42:50.741 [main] INFO  - Page has been focused on division page
+13:12:44.963 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:12:44.974 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:12:45.086 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:12:47.897 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+13:16:46.278 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:16:46.291 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:16:46.402 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:16:48.658 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+13:22:26.596 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:22:26.605 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:22:26.726 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:22:29.094 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+13:55:07.411 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:55:07.420 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:55:07.533 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:55:10.361 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+13:57:14.584 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:57:14.595 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:57:14.744 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:57:17.016 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+13:58:35.052 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+13:58:35.077 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+13:58:35.177 [TestNG-PoolService-0] INFO  - Entering user IDTester
+13:58:37.491 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:02:46.596 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:02:46.609 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:02:46.731 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:02:51.792 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:11:40.308 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:11:40.324 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:11:40.449 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:11:43.359 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:12:03.426 [TestNG-PoolService-0] INFO  - The user has landing to the Order Page
+14:13:40.506 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:13:40.523 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:13:40.630 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:13:42.952 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:15:03.212 [TestNG-PoolService-0] INFO  - The user has landing to the Order Page
+14:20:48.347 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:20:48.362 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:20:48.504 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:20:50.930 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:30:36.466 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:30:36.477 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:30:36.652 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:30:39.173 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:33:54.130 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:33:54.161 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:33:54.315 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:33:56.723 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:42:34.060 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:42:34.076 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:42:34.224 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:42:36.989 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:53:26.530 [TestNG-PoolService-0] INFO  - Goto my Merx Application-->Click on Login.
+14:53:26.546 [TestNG-PoolService-0] INFO  - Entering email and password.. 
+14:53:26.709 [TestNG-PoolService-0] INFO  - Entering user IDTester
+14:53:30.198 [TestNG-PoolService-0] INFO  - clicked on Sign in button...
+14:55:03.161 [TestNG-PoolService-1] INFO  - Goto my Merx Application-->Click on Login.
+14:55:03.173 [TestNG-PoolService-1] INFO  - Entering email and password.. 
+14:55:03.314 [TestNG-PoolService-1] INFO  - Entering user IDTester
+14:55:08.061 [TestNG-PoolService-1] INFO  - clicked on Sign in button...
+15:15:50.441 [TestNG-PoolService-1] INFO  - Goto my Merx Application-->Click on Login.
+15:15:50.455 [TestNG-PoolService-1] INFO  - Entering email and password.. 
+15:15:50.626 [TestNG-PoolService-1] INFO  - Entering user IDTester
+15:15:55.783 [TestNG-PoolService-1] INFO  - clicked on Sign in button...
+15:28:10.124 [TestNG-PoolService-1] INFO  - Goto my Merx Application-->Click on Login.
+15:28:10.139 [TestNG-PoolService-1] INFO  - Entering email and password.. 
+15:28:10.310 [TestNG-PoolService-1] INFO  - Entering user IDTester
+15:28:12.586 [TestNG-PoolService-1] INFO  - clicked on Sign in button...
+15:33:41.369 [TestNG-PoolService-1] INFO  - Goto my Merx Application-->Click on Login.
+15:33:41.376 [TestNG-PoolService-1] INFO  - Entering email and password.. 
+15:33:41.495 [TestNG-PoolService-1] INFO  - Entering user IDTester
+15:33:43.876 [TestNG-PoolService-1] INFO  - clicked on Sign in button...

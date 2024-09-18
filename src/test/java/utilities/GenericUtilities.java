@@ -1121,18 +1121,9 @@ public class GenericUtilities {
 		}
 	}
 
-	public boolean comparestringvalues(String value) {
-		String expectedvalue = "Record Deleted Successfully";
+	
 
-		if (value.equalsIgnoreCase(expectedvalue)) {
-			return true;
-		} else {
-			return false;
-		}
 
-	}
-
-	// testing purpose
 
 	public void getvalues() {
 		for (int i = 0; i < stringValues.size(); i++) {
@@ -1141,7 +1132,7 @@ public class GenericUtilities {
 			System.out.println(value);
 		}
 
-		// return value;
+	
 
 	}
 
@@ -1178,15 +1169,7 @@ public class GenericUtilities {
 		}
 	}
 
-	// Usage:
-	public void clickSubmitButton() {
-		try {
-			WebElement submitButton = driver.findElement(By.xpath("//button[@id='submit']"));
-			submitButton.click();
-		} catch (NoSuchElementException e) {
-			throw new ElementNotFoundException("Element is not found!");
-		}
-	}
+	
 
 	
 	public void slowkeyenterValue(WebElement element, String text, long delay) throws InterruptedException
@@ -1240,25 +1223,9 @@ public class GenericUtilities {
 	    //    throw new RuntimeException("File upload element is not visible or enabled!");
 	    //}
 	}
-	public void validateImageUpload(WebElement element,  String expectedColor) {
-		String expectedText ="Maximum image size should not exceed 5MB";
-        // Validate text content
-        String actualText = element.getText().trim();
-        System.out.println(actualText);
-        
-     // Assert text content with improved message
-        Assert.assertEquals(expectedText, actualText);
-
-        // Validate color
-        String actualColor = element.getCssValue("color");
-        
-         System.out.println(actualColor);
-         Assert.assertEquals(expectedColor, actualColor);
-    }
-
-	//*****Anjaiah
 	
-	//packs
+	
+
     public void getTextele(WebElement ele) {
     	try {
     	System.out.println(	ele.getText().trim());
@@ -1413,18 +1380,8 @@ public class GenericUtilities {
     ele.click();
     }
         
-        public String getSuccessmsg(WebElement  ele) {
-         try {
-    		Thread.sleep(300);
-    	} catch (InterruptedException e) {
-    		// TODO Auto-generated catch block
-    		e.printStackTrace();
-    	}  
        
-        String str= ele.getText().trim();
-        System.out.println(str);
-        return str;
-        }
+       
         public boolean clickableElement(WebElement ele) {
         	if(ele.isDisplayed()&&(ele.isEnabled())) {
         		return true;
@@ -1473,70 +1430,9 @@ public class GenericUtilities {
         	ele.sendKeys(str);
         }
         
-        public void coutry_Select(WebElement ele,String str,WebElement input,WebElement eleclick,long delay) {
-        	
-        	String [] st=str.split(",");
-        	System.out.println(st);
-        	
-        		explicit_Wait(ele, delay);
-        		waitScreen(1000);
-            	ele.click();
-            	
-        		for(int i=0;i<st.length;i++) {
-        			input.clear();
-        			System.out.println("datat is : "+st[i]);
-        			slowSendKeys(input, st[i], delay);
-                	clickElementWithJavaScript1(eleclick);// li#applicableCountries_0
-        			
-                	
-        		}
-        	
-        	
-        }
-public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElement input,WebElement checkbox,WebElement CountryCheckBoxClick,long delay) {
-        	
-        	String [] st=str.split(",");
-        	System.out.println(st);
-        	
-        		explicit_Wait(ele, delay);
-            	ele.click();
-            	explicit_Wait(checkbox, delay);
-            	checkbox.click();
-            	checkbox.click();
-        		for(int i=0;i<st.length;i++) {
-        			input.clear();
-        			System.out.println(st[i]);
-        			slowSendKeys(input, st[i], delay);
-                	clickElementWithJavaScript1(CountryCheckBoxClick);
-                	
-        		}
-        	
-        	
-        }
-        public void search_filter_select(WebElement ele1,String ccode,WebElement ele2, String cname) {
-        	explicit_Wait(ele1,220);
-        	sendkeys_ele(ele1, ccode, 120);
-        	explicit_Wait(ele2,120);
-        	sendkeys_ele(ele2, cname, 120);
-        	Actions a=new Actions(BaseClass.getDriver());
-        	a.sendKeys(Keys.ENTER).build().perform();
-        	
-        	
-        }
+       
         
-        public void edit_Click(WebElement ele,WebElement ele1) {
-        	try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        	explicit_Wait(ele, 200);
-        	ele.click();
-        	explicit_Wait(ele1, 200);
-        	clickElementWithJavaScript(ele1);
-        	
-        }
+        
         
         public void clickElement_using_Size(String str,WebElement ele) {
         	explicit_Wait(ele, 200);
@@ -1544,14 +1440,7 @@ public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElemen
         		clickElementWithJavaScript1(ele);
         		}
         }
-        public String  clickElement_using_Size_getText(String str,WebElement ele) {
-        	explicit_Wait(ele, 200);
-        	String header = null;
-        	if(driver.findElements(By.xpath(str)).size()>0) {
-        		 getSuccessmsg(ele);
-        		}
-        	return header;
-        }
+       
         public void clickElementWithJavaScript1(WebElement element) {
             try {
             	waitScreen(3500);
@@ -1569,119 +1458,7 @@ public void updateCountrySelectcoutry_Select(WebElement ele,String str,WebElemen
             
         }
         
-        public void javascriptexecuterfor_sendkeys(WebElement element, String text, long delay) {
-    		element.click();
-    		element.clear();
-    		try {
-    			Thread.sleep(1000);
-    		} catch (InterruptedException e) {
-    			// TODO Auto-generated catch block
-    			e.printStackTrace();
-    		}
-    		for (char c : text.toCharArray()) {
-    			element.sendKeys(String.valueOf(c));
-    			try {
-    				Thread.sleep(delay);
-    				
-    			} catch (InterruptedException e) {
-    				e.printStackTrace();
-    			}
-    		}
-    		element.clear();
-    		element.clear();
-    		//element.sendKeys(text);
-    		slowSendKeys(element, text, delay);
-    	}
-        
-        public String calender_Current_Date() {
-        	 Date today = new Date();
-        	    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        	    String formattedDate = formatter.format(today);
-        	    System.out.println("Formatted date: " + formattedDate);
-        	    return formattedDate;
-        }
-        
-        public void effective_Frm_Date(WebElement ele,List<WebElement> effdate) {
-        	waitScreen(2000);
-        	String cal=calender_Current_Date().split("/")[0];
-        	if(cal.startsWith("0")) {
-        	cal=cal.replaceAll("0","");
-        	}
-        	System.out.println(cal);
-        	ele.click();
-        	             List<WebElement> call=  effdate;
-        	            
-        	
-        	for(WebElement aff:call) {
-        	            	
-        		if(aff.getText().equalsIgnoreCase(cal)) {
-        			aff.click();
-        			break;
-        		}
-        		currentMontFirstDate();
-        	            }
-        }
-  public void effective_To_Date(WebElement ele,WebElement  calender_next_arrow, List<WebElement> effdate) {
-	  waitScreen(2000);
-        	String cal=calender_Current_Date().split("/")[0];
-        	if(cal.startsWith("0")) {
-        	cal=cal.replaceAll("0","");
-        	}
-        	System.out.println("Current date :"+cal);
-        	ele.click();
-        	
-        	calender_next_arrow.click();
-        	             List<WebElement> call=  effdate;
-        	            
-        	
-        	for(WebElement aff:call) {
-        	            	if(aff.isDisplayed()&&aff.isEnabled()) {
-        		if(aff.getText().equalsIgnoreCase(cal)) {
-        			aff.click();
-        			break;
-        		}
-        		
-        	            	}else {
-        	            		int cal1=Integer.parseInt(cal);
-        	            	int cal2=	(cal1)-3;
-        	            	String callNextcode=Integer.toString(cal2);
-        	            	System.out.println(callNextcode);
-        	         
-        	            		  WebElement tardate=	driver.findElement(By.xpath("//span[text()="+callNextcode+"]"));
-        	            		  tardate.click();
-        	            		  break;
-        }
-        	}
-        	nextMonth_specific_Date();	
-        	nextMonth_specific_Date();
-  }
- 
-  public void nextMontFirstDate() {
-	  
-	 // Get the current date
-	      LocalDate today = LocalDate.now();
-
-	      // Get the first day of the next month
-	      LocalDate firstOfNextMonth = today.with(TemporalAdjusters.firstDayOfNextMonth());
-
-	      // Print the date
-	      System.out.println(" Next Month data: "+firstOfNextMonth);
-	      
-	    }
-	
-  public void currentMontFirstDate() {
-	  
-		 // Get the current date
-		      LocalDate today = LocalDate.now();
-
-		      // Get the first day of the next month
-		      LocalDate firstOfMonth = today.with(TemporalAdjusters.firstDayOfMonth());
-
-		      // Print the date
-		      System.out.println(" Current Month data: "+firstOfMonth);
-		      
-		    }
-		
+    
 	  public void nextMonth_specific_Date() {
 		  LocalDate today = LocalDate.now();
 SimpleDateFormat sim=new SimpleDateFormat("dd/MM/yyyy");
@@ -1719,15 +1496,7 @@ SimpleDateFormat sim=new SimpleDateFormat("dd/MM/yyyy");
 
 	}
 	
-public void range_Search_Filter_Select(WebElement ele2, String cname) {
-      	
-      	explicit_Wait(ele2,120);
-      	sendkeys_ele(ele2, cname, 120);
-      	Actions a=new Actions(BaseClass.getDriver());
-      	a.sendKeys(Keys.ENTER).build().perform();
-      	
-      	
-      }
+
 
 public void multi_Select(WebElement ele,String str,List<WebElement> eleclick,long delay) {
 	
@@ -1752,26 +1521,6 @@ public void multi_Select(WebElement ele,String str,List<WebElement> eleclick,lon
 	ele.click();
 }
 
-public void sendDataforrepotingCategory(WebElement rep,String repdata,WebElement rep1,String re1,WebElement rep2,String rep2d ) {
-	
-	rep.clear();
-	rep.sendKeys(repdata);
-	rep.sendKeys(Keys.TAB);
-	
-	rep1.clear();
-	rep1.sendKeys(re1);
-	rep1.sendKeys(Keys.TAB);
-	
-	rep2.clear();
-	rep2.sendKeys(rep2d);
-	rep2.sendKeys(Keys.TAB);
-	
-	
-	
-	
-}
-	
-	// end by Anji
 	
 	/**
 	 * @return void

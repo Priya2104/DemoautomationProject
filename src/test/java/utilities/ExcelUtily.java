@@ -36,7 +36,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 			
 			DataFormatter formatter = new DataFormatter();
 			
-			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\TestData\\Merchandise.xlsx");
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\TestData\\WebOrder.xlsx");
 			
 			  XSSFWorkbook workbook = new XSSFWorkbook(fis);
 
