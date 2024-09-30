@@ -72,7 +72,7 @@ public class WebOrderLoginPage 	extends BasePage {
 			//GenericUtilities.isElementPresent(driver,txtPasswords,60);
 			  //utils.isPresent(txtPasswords);
 			    txtPasswords.clear();
-			    txtPasswords.sendKeys(pwd);
+			    //txtPasswords.sendKeys(pwd);
 			  }
 			    
 				  
