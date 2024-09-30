@@ -1,5 +1,7 @@
 package pageObjects;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import java.lang.reflect.Field;
 import java.time.Duration;
 import java.util.NoSuchElementException;
@@ -40,6 +42,16 @@ public class WebOrderLoginPage 	extends BasePage {
 		//@FindBy(xpath = "//*[contains(text(),'Sign In')]")
 		@FindBy(xpath = "//input[@id='ctl00_MainContent_login_button']")
 		WebElement btnLogin;
+		
+		@FindBy(xpath = "(//td[contains(text(),'Clare Jefferson')]/..//td//input)[1]")
+		WebElement selectOrder;
+		
+		@FindBy(xpath = "//input[@class='btnDeleteSelected']")
+		WebElement deleteSelectedOrder;
+		
+		
+		
+		
 		
 
 
@@ -83,4 +95,42 @@ public class WebOrderLoginPage 	extends BasePage {
 			}
 
 
+		public void clickOrderbtn() throws InterruptedException, TimeoutException, NoSuchElementException {
+			  try {
+			    utils.waitForElementToBeClickablewithFluentWait(selectOrder, 5);
+			    JavascriptExecutor executor = (JavascriptExecutor) driver;
+			    executor.executeScript("arguments[0].click();", selectOrder);
+			  } catch (NoSuchElementException e) {
+			    System.out.println("Error: order page not loaded.");
+			  } catch (ElementClickInterceptedException e) {
+			    System.out.println("Error: Unable to click specific order");
+			  }
+			}
+		
+		
+		public void deleteOrderbtn() throws InterruptedException, TimeoutException, NoSuchElementException {
+			  try {
+			    utils.waitForElementToBeClickablewithFluentWait(deleteSelectedOrder, 5);
+			    JavascriptExecutor executor = (JavascriptExecutor) driver;
+			    executor.executeScript("arguments[0].click();", deleteSelectedOrder);
+			  } catch (NoSuchElementException e) {
+			    System.out.println("Error: order page not loaded.");
+			  } catch (ElementClickInterceptedException e) {
+			    System.out.println("Error: Unable to click specific order");
+			  }
+			}
+		
+		public void checkOrderhistory() throws InterruptedException, TimeoutException, NoSuchElementException {
+			  try {
+				  
+				 if(!utils.isPresent(selectOrder)) {
+					 
+				 }
+				  
+				  } catch (NoSuchElementException e) {
+			    System.out.println("Error:element .");
+			  } catch (ElementClickInterceptedException e) {
+			    System.out.println("Error: Unable to click specific order");
+			  }
+			}
 }

@@ -1,5 +1,5 @@
 @WebOrder
-Feature: Web order creation
+Feature: Order Deletion
 
 
   Background: 
@@ -9,8 +9,9 @@ When User Click on the Login Page
 Then The user should be redirected to the WeBpage Page 
     
 
-  @CreateOrder
-  Scenario: Create am Order
-    When I Create Web Order
-    And  create Product information
-    And  Enter Address Information
+  @DeleteOrder
+  Scenario: Delete an specific Order
+    When Select an order 
+    Then Delete specific order
+    Then Check order is deleted or not 
+   

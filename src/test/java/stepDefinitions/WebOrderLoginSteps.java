@@ -16,72 +16,95 @@ import pageObjects.WebOrderCreatedPage;
 import pageObjects.WebOrderLoginPage;
 import utilities.GenericUtilities.IncorrectXpathException;
 
-
 public class WebOrderLoginSteps {
 
+	WebDriver driver;
 
-    WebDriver driver;
+	// MerchandisePage Mnp;
+	WebOrderLoginPage Mnp = new WebOrderLoginPage(BaseClass.getDriver());
 
-    // MerchandisePage Mnp;
-    WebOrderLoginPage Mnp = new WebOrderLoginPage(BaseClass.getDriver());
-    
-    
+	WebOrderLoginPage Mlp;
+	public Properties p;
 
-    
-    
-    WebOrderLoginPage Mlp;
-    public Properties p;
+	String strBusinessUnits;
 
-    String strBusinessUnits;
+	String strBuNameVal;
+	// public static String strBusinessUnits;
 
-    String strBuNameVal;
-    //public static String  strBusinessUnits;
+	@Given("The user navigates to login page of WeoOrder")
+	public void the_user_navigates_to_login_page_of_merx() {
 
+		BaseClass.getLogger().info("Goto my Merx Application-->Click on Login.");
 
-    @Given("The user navigates to login page of WeoOrder")
-    public void the_user_navigates_to_login_page_of_merx() {
+		Mlp = new WebOrderLoginPage(BaseClass.getDriver());
 
-        BaseClass.getLogger().info("Goto my Merx Application-->Click on Login.");
+	}
 
-        Mlp = new WebOrderLoginPage(BaseClass.getDriver());
-        
+	@When("User enters the user name onto the UserName and password")
+	public void The_user_login_Merx_application_with_email_as_and_password()
+			throws IOException, TimeoutException, IncorrectXpathException, NoSuchFieldException, SecurityException,
+			IllegalArgumentException, IllegalAccessException {
+		// public void user_enters_email_as_and_password_as(String email, String pwd)
+		// throws IOException {
+		BaseClass.getLogger().info("Entering email and password.. ");
 
+		Mlp = new WebOrderLoginPage(BaseClass.getDriver());
 
-    }
+		Mlp.setUserId(BaseClass.getProperties().getProperty("UserID"));
 
+		BaseClass.getLogger().info("Entering user ID" + BaseClass.getProperties().getProperty("UserID"));
 
-    @When("User enters the user name onto the UserName and password")
-    public void The_user_login_Merx_application_with_email_as_and_password() throws IOException, TimeoutException, IncorrectXpathException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-        // public void user_enters_email_as_and_password_as(String email, String pwd) throws IOException {
-        BaseClass.getLogger().info("Entering email and password.. ");
+		Mlp.setPasswords(BaseClass.getProperties().getProperty("Password"));
 
-        Mlp = new WebOrderLoginPage(BaseClass.getDriver());
+	}
 
-        Mlp.setUserId(BaseClass.getProperties().getProperty("UserID"));
-
-        BaseClass.getLogger().info("Entering user ID" + BaseClass.getProperties().getProperty("UserID"));
-
-        Mlp.setPasswords(BaseClass.getProperties().getProperty("Password"));
-
-    }
-
-    @When("User Click on the Login Page")
-    public void click_on_login_button() throws InterruptedException {
-        try {
+	@When("User Click on the Login Page")
+	public void click_on_login_button() throws InterruptedException {
+		try {
 			Mlp.clickbtnSignIn();
 		} catch (InterruptedException | TimeoutException e) {
-			
+
 			e.printStackTrace();
 		}
-        BaseClass.getLogger().info("clicked on Sign in button...");
+		BaseClass.getLogger().info("clicked on Sign in button...");
 
+	}
 
-    }
+	@When("Select an order")
+	public void select_an_order() throws InterruptedException {
+		try {
+			Mlp.clickOrderbtn();
+		} catch (InterruptedException | TimeoutException e) {
 
+			e.printStackTrace();
+		}
+		BaseClass.getLogger().info("clicked on specific order...");
 
-   
+	}
 
+	@When("Delete specific order")
+	public void Delete_specific_order() throws InterruptedException {
+		try {
+			
+			Mlp.deleteOrderbtn();
+		} catch (InterruptedException | TimeoutException e) {
 
+			e.printStackTrace();
+		}
+		BaseClass.getLogger().info("clicked on specific order...");
 
+	}
 
+	@When("Check order is deleted or not")
+	public void Check_order_is_deleted_or_not() throws InterruptedException {
+		try {
+			Mlp.checkOrderhistory();
+
+		} catch (InterruptedException | TimeoutException e) {
+
+			e.printStackTrace();
+		}
+		BaseClass.getLogger().info("clicked on specific order...");
+
+	}
 }
